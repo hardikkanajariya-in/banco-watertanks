@@ -19,19 +19,13 @@ export const metadata: Metadata = {
 export default function TechnicalSpecificationsPage() {
   return (
     <>
-      <PageHero
-        eyebrow="Technical Specifications"
-        title="A clean specification page designed to hold brochure data without reading like a catalog dump."
-        description="The current implementation uses organized placeholder tables and notes so verified material, size, accessory, and project data can be inserted quickly once the final brochure content is confirmed."
-        primaryCta={{ label: "Talk to Our Team", href: "/contact" }}
-        secondaryCta={{ label: "View Product Page", href: "/frp-panel-type-water-tank" }}
-      />
+      <PageHero eyebrow="Technical Specifications" />
 
       <section id="spec-summary" className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
         <SectionIntro
           eyebrow="Specification Summary"
-          title="Technical credibility comes from clarity, structure, and restraint."
-          description="This opening block gives consultants and buyers a quick read before they move into the detailed table sets."
+          title="Review the key product specifications for FRP panel type water tank solutions."
+          description="A quick overview of important product details for evaluation and requirement planning."
         />
         <div className="mt-8">
           <TechnicalHighlights items={specificationHighlights} />
@@ -51,11 +45,11 @@ export default function TechnicalSpecificationsPage() {
       </section>
 
       <section id="capacity-or-size-table" className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
-        <div className="rounded-[2rem] border border-dashed border-slate-300 bg-white p-5 shadow-sm sm:p-8">
+        <div className="rounded-[2rem] border border-slate-200 bg-white p-5 shadow-sm sm:p-8">
           <SectionIntro
-            eyebrow="Capacity or Size Matrix"
-            title="Reserved space for verified tank capacities, dimensions, panel details, and accessory combinations."
-            description="This placeholder block keeps the technical page implementation-ready while waiting for final brochure-backed values from the client."
+            eyebrow="Capacity and Configuration"
+            title="Available in multiple capacities and configurations to suit project requirements."
+            description="Tank size, layout, and fitting details can be selected according to your storage requirement."
           />
         </div>
       </section>
@@ -64,8 +58,8 @@ export default function TechnicalSpecificationsPage() {
         <div className="rounded-[2rem] border border-slate-200 bg-white p-5 shadow-sm sm:p-8">
           <SectionIntro
             eyebrow="Installation and Support"
-            title="Installation scope, support structure notes, and supply boundaries should be confirmed on a project basis."
-            description="This section is intentionally concise so public claims stay controlled until the client confirms exactly what should be shown online."
+            title="Installation details and support scope can be discussed based on your project requirement."
+            description="Our team can help you understand the suitable tank configuration, installation considerations, and related product details."
           />
         </div>
       </section>

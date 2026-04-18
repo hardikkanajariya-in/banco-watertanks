@@ -3,16 +3,6 @@ import { ChevronRight } from "@untitledui/icons";
 
 type PageHeroProps = {
   eyebrow: string;
-  title: string;
-  description: string;
-  primaryCta?: {
-    label: string;
-    href: string;
-  };
-  secondaryCta?: {
-    label: string;
-    href: string;
-  };
 };
 
 export function PageHero({ eyebrow }: PageHeroProps) {

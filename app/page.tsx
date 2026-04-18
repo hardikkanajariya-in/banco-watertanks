@@ -57,13 +57,13 @@ export default function HomePage() {
               <div className="flex items-start gap-3">
                 <Building05 className="mt-0.5 size-5 shrink-0 text-teal-700" strokeWidth={1.8} aria-hidden="true" />
                 <p className="text-sm leading-7 text-slate-600">
-                  Built to feel clear and credible for commercial, industrial, and institutional buyers.
+                  Suitable for commercial, industrial, institutional, and residential water storage needs.
                 </p>
               </div>
               <div className="flex items-start gap-3">
                 <LayersThree01 className="mt-0.5 size-5 shrink-0 text-teal-700" strokeWidth={1.8} aria-hidden="true" />
                 <p className="text-sm leading-7 text-slate-600">
-                  Structured for future brochure downloads, certifications, and additional product sections.
+                  Practical for projects that need reliable capacity planning and straightforward technical discussion.
                 </p>
               </div>
             </div>
@@ -111,8 +111,8 @@ export default function HomePage() {
       <section id="benefits" className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
         <SectionIntro
           eyebrow="Benefits"
-          title="Key advantages presented in a clean, scan-friendly grid."
-          description="These cards are designed to communicate practical value quickly without turning the page into a dense brochure dump."
+          title="Key benefits of BANCO FRP panel type water tanks."
+          description="Designed to support durability, hygiene, modular installation, and dependable long-term performance."
         />
         <div className="mt-8">
           <BenefitsGrid items={benefits} />
@@ -126,8 +126,8 @@ export default function HomePage() {
       <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
         <SectionIntro
           eyebrow="Technical Highlights"
-          title="Structured feature communication for trust-focused product evaluation."
-          description="This block bridges the gap between marketing-level product benefits and deeper technical review."
+          title="Important technical highlights for product evaluation."
+          description="A quick summary of construction, suitability, and practical installation considerations."
         />
         <div className="mt-8">
           <TechnicalHighlights items={technicalHighlights} />
@@ -138,7 +138,7 @@ export default function HomePage() {
         <SectionIntro
           eyebrow="Applications"
           title="Relevant across building, utility, institutional, and industrial contexts."
-          description="The site preview highlights common sectors first, then routes users to the fuller applications page."
+          description="Common sectors where FRP panel type water tanks are widely used."
         />
         <div className="mt-8">
           <ApplicationGrid items={applications} compact />
@@ -150,8 +150,8 @@ export default function HomePage() {
       <section id="contact" className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
         <SectionIntro
           eyebrow="Contact"
-          title="Make the inquiry step clear and low-friction."
-          description="The homepage contact block surfaces direct communication details and a simple email-based inquiry form for this static implementation."
+          title="Get in touch for quotations, product details, and project discussions."
+          description="Speak with our team by phone, email, or inquiry form."
         />
         <div className="mt-8">
           <ContactBlock />

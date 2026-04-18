@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Building05, Mail01, Phone } from "@untitledui/icons";
 
 import { Badge } from "@/components/ui/badge";
-import { companyName, contactDetails, footerLinks } from "@/data/site";
+import { contactDetails, footerLinks } from "@/data/site";
 
 export function SiteFooter() {
   const phoneHref = `tel:${contactDetails.phone.replace(/\s+/g, "")}`;
@@ -16,12 +16,12 @@ export function SiteFooter() {
             <span className="inline-flex h-11 items-center rounded-full border border-white/15 bg-white/8 px-4 text-sm font-semibold tracking-[0.24em] text-[#8fc4d0]">
               BANCO
             </span>
-            <p className="text-sm text-white/70">FRP panel type water tank website</p>
+            <p className="text-sm text-white/70">FRP panel type water tank solutions</p>
           </div>
-          <Badge className="bg-white/8 text-[#d8edf2] ring-0">Static Next.js marketing site</Badge>
+          <Badge className="bg-white/8 text-[#d8edf2] ring-0">Reliable water storage solutions</Badge>
           <p className="max-w-xl text-sm leading-7 text-white/70">
-            BANCO Water Tank is presented as a clean, trust-focused product website for modular FRP panel type
-            water tank solutions with a clear path from discovery to inquiry.
+            BANCO Water Tank offers FRP panel type water tank solutions for commercial, industrial, institutional,
+            and residential water storage requirements.
           </p>
         </div>
 

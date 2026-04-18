@@ -26,13 +26,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <PageHero
-        eyebrow="About BANCO"
-        title="A focused company page that answers why this supplier and why this product category."
-        description="This page is structured to build business-level trust through company positioning, practical principles, industry fit, and technical-sales credibility."
-        primaryCta={{ label: "Contact Us", href: "/contact" }}
-        secondaryCta={{ label: "View Product Page", href: "/frp-panel-type-water-tank" }}
-      />
+      <PageHero eyebrow="About BANCO" />
 
       <StatsStrip items={trustItems} />
 
@@ -41,16 +35,16 @@ export default function AboutPage() {
           imageSrc="/images/company-aerial.jpg"
           imageAlt="BANCO company overview"
           eyebrow="Company Overview"
-          title="BANCO is framed as a dependable partner for product-led water storage inquiries."
-          text="The About page avoids generic corporate filler and instead emphasizes product clarity, buyer confidence, and the ability to expand later with verified company details such as history, milestones, certifications, or project references."
+          title="BANCO Water Tank is committed to dependable water storage solutions and professional project support."
+          text="We focus on providing FRP panel type water tank solutions with clear communication, practical guidance, and dependable support for commercial, industrial, institutional, and residential requirements."
         />
       </section>
 
       <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
         <SectionIntro
           eyebrow="Operating Principles"
-          title="Short, credible messages work better here than oversized corporate claims."
-          description="These cards can be kept as-is for launch or replaced later with verified brand language from the client."
+          title="Our approach is built around quality, reliability, and responsive service."
+          description="Every project is supported with a practical, solution-focused approach from initial discussion to final requirement planning."
         />
         <div className="mt-8 grid gap-x-8 gap-y-8 md:grid-cols-2 xl:grid-cols-4">
           {companyPrinciples.map((item) => (
@@ -66,7 +60,7 @@ export default function AboutPage() {
           <div className="border-t border-slate-200 pt-6">
             <SectionIntro
               eyebrow="Why Choose BANCO"
-              title="The page should make supplier selection feel organized, not vague."
+              title="Choose BANCO for dependable quality, clear guidance, and practical project support."
             />
             <div className="mt-6 divide-y divide-slate-200 border-y border-slate-200">
               {whyChooseItems.map((item) => (
@@ -79,7 +73,7 @@ export default function AboutPage() {
           <div className="border-t border-slate-200 pt-6">
             <SectionIntro
               eyebrow="Industries Served"
-              title="Sector breadth helps support trust, even before project references are added."
+              title="Our solutions are suitable for a wide range of sectors and building requirements."
             />
             <div className="mt-6 grid gap-3 sm:grid-cols-2">
               {industries.map((item) => (
@@ -95,8 +89,8 @@ export default function AboutPage() {
       <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
         <SectionIntro
           eyebrow="Quality and Support"
-          title="Reserved space for verified technical credibility, supply detail, and support statements."
-          description="This section is intentionally practical so brochure-derived or client-approved details can be swapped in later without redesigning the page."
+          title="We emphasize product quality, practical support, and long-term customer confidence."
+          description="From technical discussion to requirement planning, our goal is to make every inquiry clear, efficient, and dependable."
         />
         <div className="mt-8 grid gap-x-10 gap-y-6 md:grid-cols-2">
           {qualityItems.map((item) => (

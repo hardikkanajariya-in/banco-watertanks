@@ -15,7 +15,6 @@ import {
   TextField
 } from "react-aria-components";
 
-import { Badge } from "@/components/ui/badge";
 import { contactDetails } from "@/data/site";
 
 export function ContactBlock() {
@@ -25,8 +24,10 @@ export function ContactBlock() {
   return (
     <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
       <div className="border-t border-slate-200 pt-5 sm:pt-7">
-        <Badge>Contact Details</Badge>
         <h3 className="text-2xl font-semibold text-slate-900">Direct Contact</h3>
+        <p className="mt-3 text-sm leading-7 text-slate-600">
+          Call, email, or visit us for quotations, product details, and project discussions.
+        </p>
         <div className="mt-6 divide-y divide-slate-200 border-y border-slate-200 text-sm leading-7 text-slate-600">
           <div className="flex items-start gap-4 py-4">
             <Phone className="mt-0.5 size-5 shrink-0 text-teal-700" strokeWidth={1.8} aria-hidden="true" />
@@ -69,12 +70,8 @@ export function ContactBlock() {
         encType="text/plain"
         className="rounded-[1.5rem] border border-slate-200 bg-white p-5 shadow-sm sm:p-7"
       >
-        <Badge>Inquiry Form</Badge>
         <h3 className="text-2xl font-semibold text-slate-900">Send Inquiry</h3>
-        <p className="mt-3 text-sm leading-7 text-slate-600">
-          This static form is wired to open the default email client. Replace the destination later if a dedicated form
-          workflow is finalized.
-        </p>
+        <p className="mt-3 text-sm leading-7 text-slate-600">Share your requirement and our team will get back to you for further discussion.</p>
         <div className="mt-6 grid gap-4 md:grid-cols-2">
           <TextField name="name" className="space-y-2">
             <Label className="text-sm font-medium text-slate-900">Name</Label>

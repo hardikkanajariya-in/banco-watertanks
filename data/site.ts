@@ -5,7 +5,7 @@ export const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.com"
 export const contactDetails = {
   phone: "+91 98765 43210",
   email: "info@bancowatertank.com",
-  address: "Industrial Area Placeholder, Ahmedabad, Gujarat, India",
+  address: "Ahmedabad, Gujarat, India",
   hours: "Monday to Saturday, 9:00 AM to 6:00 PM"
 };
 
@@ -50,7 +50,7 @@ export const homeHero = {
   eyebrow: "Industrial Water Storage Solutions",
   title: "Reliable FRP panel type water tank systems for modern building and utility requirements.",
   description:
-    "BANCO Water Tank presents a focused product-sales website for modular FRP panel tanks built to support clean water storage, project planning clarity, and straightforward inquiry conversion.",
+    "BANCO Water Tank offers FRP panel type water tanks for clean water storage across residential, commercial, industrial, and institutional projects.",
   primaryCta: { label: "Request a Quote", href: "/contact" },
   secondaryCta: { label: "View Technical Specifications", href: "/technical-specifications" }
 };
@@ -58,18 +58,18 @@ export const homeHero = {
 export const aboutSnapshot = {
   title: "About BANCO",
   text:
-    "BANCO Water Tank is positioned as a professional supplier for FRP panel type water tanks with a sales approach centered on practical product clarity, dependable communication, and project suitability across multiple sectors.",
+    "BANCO Water Tank supplies FRP panel type water tanks with a focus on dependable quality, clear communication, and practical support for a wide range of water storage requirements.",
   points: [
-    "Focused on FRP panel type water tank presentation and inquiry conversion",
-    "Structured content for consultants, contractors, builders, and facility buyers",
-    "Expandable page system for future products, certifications, or brochure downloads"
+    "Suitable for commercial, industrial, institutional, and residential projects",
+    "Clear product guidance for consultants, contractors, builders, and facility teams",
+    "Responsive support for quotations, technical discussions, and project planning"
   ]
 };
 
 export const productOverview = {
   title: "FRP Panel Type Water Tank",
   text:
-    "The FRP panel type water tank is presented as a modular storage solution intended for projects that require durable construction, hygienic water storage, transport-friendly panelized design, and organized technical communication."
+    "FRP panel type water tanks provide modular water storage with durable construction, hygienic performance, and flexibility to suit different capacities, layouts, and site conditions."
 };
 
 export const benefits = [
@@ -100,12 +100,12 @@ export const benefits = [
 ];
 
 export const technicalHighlights = [
-  "Panelized FRP construction for modular water storage layouts",
-  "Segmented design approach suitable for project-based sizing",
-  "Practical integration for rooftop, utility, commercial, and service applications",
-  "Specification-led presentation for contractors and technical evaluators",
-  "Expandable documentation model for accessories, capacities, and detailed matrices",
-  "Clean CTA flow from product interest to direct contact inquiry"
+  "FRP panel construction supports corrosion resistance and dependable service life",
+  "Modular panel design allows practical transport, handling, and on-site assembly",
+  "Flexible sizing helps match tank capacity to project requirements",
+  "Suitable for clean water storage across building, utility, and service applications",
+  "Access points, fittings, and support arrangements can be planned to suit site needs",
+  "Well suited for evaluation by consultants, contractors, builders, and facility teams"
 ];
 
 export const applications = [
@@ -115,7 +115,7 @@ export const applications = [
   },
   {
     title: "Commercial Properties",
-    description: "Useful for offices, shopping complexes, and mixed-use developments with structured service planning."
+    description: "Useful for offices, shopping complexes, and mixed-use developments with regular service water storage needs."
   },
   {
     title: "Industrial Facilities",
@@ -139,7 +139,7 @@ export const applications = [
   },
   {
     title: "Infrastructure Utilities",
-    description: "Useful in structured public or service utility applications requiring tank-based storage."
+    description: "Useful in public utility and service applications requiring dependable tank-based water storage."
   }
 ];
 
@@ -153,31 +153,31 @@ export const industries = [
 ];
 
 export const companyPrinciples = [
-  "Clear technical communication",
-  "Professional inquiry handling",
-  "Practical product presentation",
-  "Expandable project-ready website structure"
+  "Quality-focused supply",
+  "Responsive customer support",
+  "Clear technical guidance",
+  "Practical project coordination"
 ];
 
 export const whyChooseItems = [
-  "Single-product clarity built around FRP panel tank sales",
-  "Balanced presentation of benefits, applications, and technical detail",
-  "Straightforward route structure for fast buyer evaluation",
-  "Trust-focused design direction without unnecessary visual complexity"
+  "Reliable FRP panel type water tank solutions for varied project requirements",
+  "Clear product information for faster evaluation and decision-making",
+  "Practical support for consultants, contractors, builders, and facility teams",
+  "Focus on dependable quality, communication, and service"
 ];
 
 export const qualityItems = [
-  "Structured product messaging for project discussions and quotation requests",
-  "Space to add verified certifications, approvals, and support information later",
-  "Technical tables and diagrams positioned to support consultant review",
-  "Consistent CTA placement across all key pages"
+  "Attention to product quality and long-term service performance",
+  "Clear guidance on tank selection, layout, and project suitability",
+  "Support for quotation requests, technical discussions, and requirement planning",
+  "Technical details and product information shared based on project requirement"
 ];
 
 export const productFeatures = [
-  "Modular panel system suitable for project-based configuration",
-  "Designed to communicate hygiene, durability, and utility value",
-  "Clean visual hierarchy for brochure-to-web conversion",
-  "Expandable specification structure for future capacities and accessories"
+  "Modular panel construction for flexible sizing and layout",
+  "Suitable for clean water storage across multiple sectors",
+  "Practical transport and on-site assembly advantages",
+  "Designed for durability, hygiene, and dependable service"
 ];
 
 export const designCallouts = [
@@ -188,9 +188,9 @@ export const designCallouts = [
 ];
 
 export const useCaseFit = [
-  "Projects needing a clean and organized technical presentation before inquiry",
-  "Sites where modular transport and panel assembly are decision factors",
-  "Consultant or contractor evaluation workflows requiring quick specification access"
+  "Commercial and residential buildings requiring reliable water storage",
+  "Industrial and institutional facilities with planned utility infrastructure",
+  "Projects where modular transport and on-site panel assembly are important"
 ];
 
 export const specificationSections = [
@@ -198,41 +198,42 @@ export const specificationSections = [
     title: "Material and Construction Summary",
     rows: [
       ["Tank Type", "FRP panel type water tank"],
-      ["Construction Format", "Modular panel assembly"],
-      ["Application Intent", "Clean water storage for project-based installations"],
-      ["Presentation Scope", "Brochure-led placeholder content pending verified client tables"]
+      ["Construction Format", "Modular bolted panel assembly"],
+      ["Suitable Use", "Clean water storage for residential, commercial, industrial, and institutional projects"],
+      ["Key Advantage", "Corrosion-resistant, hygienic, and modular design"]
     ]
   },
   {
     title: "Panel and Design Notes",
     rows: [
-      ["Panel System", "Segmented panels arranged for site-led sizing"],
-      ["Design Intent", "Structured storage with modular planning flexibility"],
-      ["Access Consideration", "Inspection and maintenance access to be confirmed per project"],
-      ["Support Requirement", "Base, support frame, and installation details subject to final specification"]
+      ["Panel System", "Segmented panels arranged for flexible tank sizing"],
+      ["Design Approach", "Capacity and layout can be planned to suit site requirement"],
+      ["Access Provision", "Inspection and maintenance arrangements as per project need"],
+      ["Support Structure", "Base frame and support details selected according to site conditions"]
     ]
   },
   {
     title: "Project and Supply Notes",
     rows: [
-      ["Capacity Matrix", "To be finalized from approved brochure or client specification sheets"],
-      ["Accessories", "Inlet, outlet, overflow, drain, and ladder details to be confirmed"],
-      ["Documentation", "Detailed technical sheet can replace these placeholder values later"],
-      ["Inquiry Path", "Exact project requirement to be confirmed through direct contact"]
+      ["Capacity Options", "Multiple capacities and configurations can be discussed"],
+      ["Accessories", "Inlet, outlet, overflow, drain, ladder, and related fittings as required"],
+      ["Installation Planning", "Final installation details depend on site conditions and project scope"],
+      ["Project Inquiry", "Share your requirement for a suitable recommendation and quotation"]
     ]
   }
 ];
 
 export const specificationHighlights = [
-  "Specification page designed for easy future replacement with verified brochure data",
-  "Table format supports detailed rows by panel type, size, and accessory scope",
-  "Technical notes stay concise and readable for consultants and buyers"
+  "Modular FRP panel construction",
+  "Flexible sizing for different project requirements",
+  "Suitable for clean water storage applications",
+  "Practical access and fitting arrangements"
 ];
 
 export const ctaContent = {
   title: "Discuss your project requirement with BANCO Water Tank.",
   text:
-    "Use the contact page to request pricing, share project details, or ask for product and specification guidance.",
+    "Contact our team for quotations, technical discussions, and product recommendations based on your requirement.",
   primary: { label: "Contact Us", href: "/contact" },
   secondary: { label: "View Product Page", href: "/frp-panel-type-water-tank" }
 };
@@ -241,17 +242,17 @@ export const pageMetadata = {
   home: {
     title: "BANCO Water Tank | FRP Panel Type Water Tank",
     description:
-      "Professional static website for BANCO Water Tank featuring FRP panel type water tank overview, applications, specifications, and inquiry access."
+      "BANCO Water Tank offers FRP panel type water tanks for clean water storage across commercial, industrial, institutional, and residential projects."
   },
   about: {
     title: "About BANCO | BANCO Water Tank",
     description:
-      "Learn about BANCO Water Tank, its product focus, professional approach, and suitability for project-driven water storage requirements."
+      "Learn about BANCO Water Tank, our product focus, industry experience, and customer-first approach to water storage solutions."
   },
   product: {
     title: "FRP Panel Type Water Tank | BANCO Water Tank",
     description:
-      "Explore the FRP panel type water tank offering, modular design approach, benefits, applications, and inquiry pathway."
+      "Explore BANCO FRP panel type water tanks, including benefits, modular construction, applications, and technical highlights."
   },
   applications: {
     title: "Applications | BANCO Water Tank",
@@ -261,7 +262,7 @@ export const pageMetadata = {
   technical: {
     title: "Technical Specifications | BANCO Water Tank",
     description:
-      "Review the technical specifications structure for BANCO FRP panel type water tanks, including construction notes and project guidance."
+      "Review technical highlights, construction details, and specification information for BANCO FRP panel type water tanks."
   },
   contact: {
     title: "Contact Us | BANCO Water Tank",

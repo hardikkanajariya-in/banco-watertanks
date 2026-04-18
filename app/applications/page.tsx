@@ -17,19 +17,13 @@ export const metadata: Metadata = {
 export default function ApplicationsPage() {
   return (
     <>
-      <PageHero
-        eyebrow="Applications"
-        title="A sector-led page that helps prospects recognize where FRP panel tank solutions fit."
-        description="This route supports self-qualification by showing the product across common building, service, industrial, and institutional contexts without drifting into unnecessary complexity."
-        primaryCta={{ label: "Discuss Your Requirement", href: "/contact" }}
-        secondaryCta={{ label: "View Product Page", href: "/frp-panel-type-water-tank" }}
-      />
+      <PageHero eyebrow="Applications" />
 
       <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
         <SectionIntro
           eyebrow="Application Overview"
-          title="The purpose here is relevance: visitors should find their context quickly."
-          description="Each card can later be expanded with real project examples, sector notes, or capacity references if the client provides them."
+          title="BANCO FRP panel type water tanks are suitable for a wide range of water storage needs."
+          description="Whether the requirement is residential, commercial, industrial, or institutional, the modular tank design supports practical and reliable storage planning."
           align="center"
         />
         <div className="mt-8">
@@ -41,8 +35,8 @@ export default function ApplicationsPage() {
         <div className="rounded-[2rem] border border-slate-200 bg-white p-5 shadow-sm sm:p-8">
           <SectionIntro
             eyebrow="Why FRP Fits"
-            title="The product’s modular, durable, and project-ready nature makes it broadly usable."
-            description="This block ties the product benefits back to real application logic: organized installation planning, durable material choice, and suitability across multiple sectors."
+            title="FRP panel construction offers durability, hygiene, and flexibility across many types of projects."
+            description="It is a practical choice where clean water storage, modular installation, and long-term performance are important."
           />
         </div>
       </section>
