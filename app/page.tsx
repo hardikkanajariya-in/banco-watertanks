@@ -13,7 +13,6 @@ import { StatsStrip } from "@/components/stats-strip";
 import { TechnicalHighlights } from "@/components/technical-highlights";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
 import {
   aboutSnapshot,
   applications,
@@ -54,33 +53,29 @@ export default function HomePage() {
                 {homeHero.secondaryCta.label}
               </Button>
             </div>
-            <div className="grid gap-3 pt-2 sm:grid-cols-2">
-              <Card className="rounded-[1.25rem] p-4">
-                <div className="flex items-start gap-3">
-                  <Building05 className="mt-0.5 size-5 shrink-0 text-teal-700" strokeWidth={1.8} aria-hidden="true" />
-                  <p className="text-sm leading-7 text-slate-600">
-                    Built to feel clear and credible for commercial, industrial, and institutional buyers.
-                  </p>
-                </div>
-              </Card>
-              <Card className="rounded-[1.25rem] p-4">
-                <div className="flex items-start gap-3">
-                  <LayersThree01 className="mt-0.5 size-5 shrink-0 text-teal-700" strokeWidth={1.8} aria-hidden="true" />
-                  <p className="text-sm leading-7 text-slate-600">
-                    Structured for future brochure downloads, certifications, and additional product sections.
-                  </p>
-                </div>
-              </Card>
+            <div className="grid gap-4 border-t border-slate-200 pt-5 sm:grid-cols-2">
+              <div className="flex items-start gap-3">
+                <Building05 className="mt-0.5 size-5 shrink-0 text-teal-700" strokeWidth={1.8} aria-hidden="true" />
+                <p className="text-sm leading-7 text-slate-600">
+                  Built to feel clear and credible for commercial, industrial, and institutional buyers.
+                </p>
+              </div>
+              <div className="flex items-start gap-3">
+                <LayersThree01 className="mt-0.5 size-5 shrink-0 text-teal-700" strokeWidth={1.8} aria-hidden="true" />
+                <p className="text-sm leading-7 text-slate-600">
+                  Structured for future brochure downloads, certifications, and additional product sections.
+                </p>
+              </div>
             </div>
           </div>
 
-          <div className="overflow-hidden rounded-[2rem] border border-slate-200 bg-white p-3 shadow-sm sm:p-4">
+          <div>
             <Image
               src="/images/hero-industrial.jpg"
               alt="BANCO FRP panel type water tank hero illustration"
               width={960}
               height={780}
-              className="aspect-[4/3] h-full w-full rounded-[1.25rem] object-cover sm:rounded-[1.5rem]"
+              className="aspect-[4/3] h-full w-full rounded-[1.5rem] object-cover"
               priority
             />
           </div>

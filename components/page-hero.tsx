@@ -1,5 +1,5 @@
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { ChevronRight } from "@untitledui/icons";
 
 type PageHeroProps = {
   eyebrow: string;
@@ -15,25 +15,17 @@ type PageHeroProps = {
   };
 };
 
-export function PageHero({ eyebrow, title, description, primaryCta, secondaryCta }: PageHeroProps) {
+export function PageHero({ eyebrow }: PageHeroProps) {
   return (
-    <section className="border-b border-slate-200 bg-gradient-to-b from-teal-50/70 via-white to-slate-50">
-      <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
-        <div className="rounded-[1.75rem] border border-slate-200 bg-white/80 px-5 py-6 shadow-sm backdrop-blur sm:px-7 sm:py-8">
-          <div className="max-w-4xl space-y-4">
-            <Badge>{eyebrow}</Badge>
-            <h1 className="max-w-4xl text-2xl font-semibold leading-tight text-slate-900 sm:text-3xl lg:text-4xl">
-              {title}
-            </h1>
-            <p className="max-w-3xl text-sm leading-7 text-slate-600 sm:text-base sm:leading-7">{description}</p>
-            {(primaryCta || secondaryCta) && (
-              <div className="flex flex-col gap-3 pt-1 sm:flex-row sm:flex-wrap sm:gap-4">
-                {primaryCta ? <Button href={primaryCta.href} className="w-full sm:w-auto">{primaryCta.label}</Button> : null}
-                {secondaryCta ? <Button href={secondaryCta.href} variant="secondary" className="w-full sm:w-auto">{secondaryCta.label}</Button> : null}
-              </div>
-            )}
-          </div>
-        </div>
+    <section className="border-b border-slate-200 bg-white">
+      <div className="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
+        <nav aria-label="Breadcrumb" className="flex flex-wrap items-center gap-2 text-sm text-slate-500">
+          <Link href="/" className="transition hover:text-teal-700">
+            Home
+          </Link>
+          <ChevronRight className="size-4 shrink-0 text-slate-400" strokeWidth={1.8} aria-hidden="true" />
+          <span className="font-medium text-slate-900">{eyebrow}</span>
+        </nav>
       </div>
     </section>
   );

@@ -5,7 +5,7 @@ import {
   LayersThree01
 } from "@untitledui/icons";
 
-import { Card } from "@/components/ui/card";
+import { cn } from "@/lib/utils";
 
 type StatItem = {
   value: string;
@@ -21,20 +21,33 @@ export function StatsStrip({ items }: StatsStripProps) {
 
   return (
     <section className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-      <div className="grid gap-4 rounded-[2rem] border border-slate-200 bg-white p-4 shadow-sm sm:p-6 md:grid-cols-2 xl:grid-cols-4">
+      <div className="overflow-hidden rounded-[2rem] border border-slate-200 bg-white">
         {items.map((item, index) => {
           const Icon = icons[index % icons.length];
+          const dividerClass = cn(
+            index > 0 && "border-t border-slate-200",
+            index === 1 && "md:border-l md:border-t-0",
+            index === 2 && "md:border-t",
+            index === 3 && "md:border-l md:border-t",
+            index > 0 && "xl:border-l xl:border-t-0"
+          );
 
           return (
-            <Card key={item.value} className="rounded-[1.35rem] border-slate-200 p-4 sm:p-5">
-              <div className="flex items-start justify-between gap-4">
+            <article
+              key={item.value}
+              className={cn(
+                "grid gap-4 px-5 py-6 sm:px-6 md:grid-cols-[auto_1fr] md:items-start md:gap-5 xl:grid-cols-1",
+                dividerClass
+              )}
+            >
+              <div className="flex items-center gap-4">
                 <div className="flex h-11 w-11 items-center justify-center rounded-full bg-teal-50 text-teal-700">
                   <Icon className="size-5" strokeWidth={1.8} aria-hidden="true" />
                 </div>
                 <p className="text-lg font-semibold text-teal-700">{item.value}</p>
               </div>
-              <p className="mt-4 text-sm leading-7 text-slate-600">{item.label}</p>
-            </Card>
+              <p className="text-sm leading-7 text-slate-600">{item.label}</p>
+            </article>
           );
         })}
       </div>

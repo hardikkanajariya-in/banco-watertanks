@@ -7,7 +7,6 @@ import { PageHero } from "@/components/page-hero";
 import { SectionIntro } from "@/components/section-intro";
 import { SplitSection } from "@/components/split-section";
 import { TechnicalHighlights } from "@/components/technical-highlights";
-import { Card } from "@/components/ui/card";
 import { benefits, ctaContent, pageMetadata, productFeatures, technicalHighlights, useCaseFit } from "@/data/site";
 
 export const metadata: Metadata = {
@@ -71,11 +70,11 @@ export default function ProductPage() {
           eyebrow="Use-Case Fit"
           title="A short section that helps buyers self-identify whether the tank matches their project."
         />
-        <div className="mt-8 grid gap-5 md:grid-cols-3">
+        <div className="mt-8 grid gap-x-8 gap-y-6 md:grid-cols-3">
           {useCaseFit.map((item) => (
-            <Card key={item} className="rounded-[1.75rem] p-5 text-sm leading-7 text-slate-600 sm:p-6">
+            <div key={item} className="border-t border-slate-200 pt-5 text-sm leading-7 text-slate-600">
               {item}
-            </Card>
+            </div>
           ))}
         </div>
       </section>

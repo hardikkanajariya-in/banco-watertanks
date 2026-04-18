@@ -5,7 +5,6 @@ import { PageHero } from "@/components/page-hero";
 import { SectionIntro } from "@/components/section-intro";
 import { SplitSection } from "@/components/split-section";
 import { StatsStrip } from "@/components/stats-strip";
-import { Card } from "@/components/ui/card";
 import {
   companyPrinciples,
   ctaContent,
@@ -53,43 +52,43 @@ export default function AboutPage() {
           title="Short, credible messages work better here than oversized corporate claims."
           description="These cards can be kept as-is for launch or replaced later with verified brand language from the client."
         />
-        <div className="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+        <div className="mt-8 grid gap-x-8 gap-y-8 md:grid-cols-2 xl:grid-cols-4">
           {companyPrinciples.map((item) => (
-            <Card key={item} className="rounded-[1.75rem] p-5 text-sm leading-7 text-slate-900 sm:p-6">
+            <div key={item} className="border-t border-slate-200 pt-5 text-sm leading-7 text-slate-900">
               {item}
-            </Card>
+            </div>
           ))}
         </div>
       </section>
 
       <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
-        <div className="grid gap-8 lg:grid-cols-2">
-          <Card className="rounded-[1.75rem] p-5 sm:p-7">
+        <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
+          <div className="border-t border-slate-200 pt-6">
             <SectionIntro
               eyebrow="Why Choose BANCO"
               title="The page should make supplier selection feel organized, not vague."
             />
-            <div className="mt-6 space-y-3">
+            <div className="mt-6 divide-y divide-slate-200 border-y border-slate-200">
               {whyChooseItems.map((item) => (
-                <div key={item} className="rounded-[1.25rem] border border-slate-200 px-4 py-3 text-sm leading-7 text-slate-600">
+                <div key={item} className="py-4 text-sm leading-7 text-slate-600">
                   {item}
                 </div>
               ))}
             </div>
-          </Card>
-          <Card className="rounded-[1.75rem] p-5 sm:p-7">
+          </div>
+          <div className="border-t border-slate-200 pt-6">
             <SectionIntro
               eyebrow="Industries Served"
               title="Sector breadth helps support trust, even before project references are added."
             />
-            <div className="mt-6 flex flex-wrap gap-3">
+            <div className="mt-6 grid gap-3 sm:grid-cols-2">
               {industries.map((item) => (
-                <span key={item} className="rounded-full border border-slate-300 bg-slate-100 px-4 py-2 text-sm text-slate-900">
+                <span key={item} className="border-b border-slate-200 pb-3 text-sm text-slate-900">
                   {item}
                 </span>
               ))}
             </div>
-          </Card>
+          </div>
         </div>
       </section>
 
@@ -99,11 +98,11 @@ export default function AboutPage() {
           title="Reserved space for verified technical credibility, supply detail, and support statements."
           description="This section is intentionally practical so brochure-derived or client-approved details can be swapped in later without redesigning the page."
         />
-        <div className="mt-8 grid gap-5 md:grid-cols-2">
+        <div className="mt-8 grid gap-x-10 gap-y-6 md:grid-cols-2">
           {qualityItems.map((item) => (
-            <Card key={item} className="rounded-[1.75rem] p-5 text-sm leading-7 text-slate-600 sm:p-6">
+            <div key={item} className="border-b border-slate-200 pb-5 text-sm leading-7 text-slate-600">
               {item}
-            </Card>
+            </div>
           ))}
         </div>
       </section>
