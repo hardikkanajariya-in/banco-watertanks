@@ -22,7 +22,7 @@ export default function ContactPage() {
         description="The static implementation keeps the page practical: direct phone and email visibility, a simple inquiry form, and clear business information without decorative distractions."
       />
 
-      <section className="mx-auto max-w-7xl px-6 py-12 lg:px-8 lg:py-16">
+      <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
         <SectionIntro
           eyebrow="Contact Details"
           title="Use this page for quotations, technical discussions, or general product inquiries."
@@ -33,8 +33,8 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-12 lg:px-8 lg:py-16">
-        <div className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm">
+      <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+        <div className="rounded-[2rem] border border-slate-200 bg-white p-5 shadow-sm sm:p-8">
           <SectionIntro
             eyebrow="Business Information"
             title="Full address, map embed, and response workflow can be expanded here later if required."

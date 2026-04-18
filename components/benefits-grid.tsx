@@ -27,7 +27,7 @@ export function BenefitsGrid({ items }: BenefitsGridProps) {
         const Icon = icons[index % icons.length];
 
         return (
-          <Card key={item.title} className="rounded-[1.75rem] p-6">
+          <Card key={item.title} className="rounded-[1.75rem] p-5 sm:p-6">
             <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-teal-50 text-teal-700">
               <Icon className="size-6" strokeWidth={1.8} aria-hidden="true" />
             </div>

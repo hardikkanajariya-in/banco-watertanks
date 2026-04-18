@@ -37,7 +37,7 @@ export default function AboutPage() {
 
       <StatsStrip items={trustItems} />
 
-      <section className="mx-auto max-w-7xl px-6 py-12 lg:px-8 lg:py-16">
+      <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
         <SplitSection
           imageSrc="/images/company-aerial.jpg"
           imageAlt="BANCO company overview"
@@ -47,7 +47,7 @@ export default function AboutPage() {
         />
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-12 lg:px-8 lg:py-16">
+      <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
         <SectionIntro
           eyebrow="Operating Principles"
           title="Short, credible messages work better here than oversized corporate claims."
@@ -55,16 +55,16 @@ export default function AboutPage() {
         />
         <div className="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
           {companyPrinciples.map((item) => (
-            <Card key={item} className="rounded-[1.75rem] p-6 text-sm leading-7 text-slate-900">
+            <Card key={item} className="rounded-[1.75rem] p-5 text-sm leading-7 text-slate-900 sm:p-6">
               {item}
             </Card>
           ))}
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-12 lg:px-8 lg:py-16">
+      <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
         <div className="grid gap-8 lg:grid-cols-2">
-          <Card className="rounded-[1.75rem] p-7">
+          <Card className="rounded-[1.75rem] p-5 sm:p-7">
             <SectionIntro
               eyebrow="Why Choose BANCO"
               title="The page should make supplier selection feel organized, not vague."
@@ -77,7 +77,7 @@ export default function AboutPage() {
               ))}
             </div>
           </Card>
-          <Card className="rounded-[1.75rem] p-7">
+          <Card className="rounded-[1.75rem] p-5 sm:p-7">
             <SectionIntro
               eyebrow="Industries Served"
               title="Sector breadth helps support trust, even before project references are added."
@@ -93,7 +93,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-12 lg:px-8 lg:py-16">
+      <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
         <SectionIntro
           eyebrow="Quality and Support"
           title="Reserved space for verified technical credibility, supply detail, and support statements."
@@ -101,7 +101,7 @@ export default function AboutPage() {
         />
         <div className="mt-8 grid gap-5 md:grid-cols-2">
           {qualityItems.map((item) => (
-            <Card key={item} className="rounded-[1.75rem] p-6 text-sm leading-7 text-slate-600">
+            <Card key={item} className="rounded-[1.75rem] p-5 text-sm leading-7 text-slate-600 sm:p-6">
               {item}
             </Card>
           ))}

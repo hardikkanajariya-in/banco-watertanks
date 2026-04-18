@@ -25,7 +25,7 @@ export default function ApplicationsPage() {
         secondaryCta={{ label: "View Product Page", href: "/frp-panel-type-water-tank" }}
       />
 
-      <section className="mx-auto max-w-7xl px-6 py-12 lg:px-8 lg:py-16">
+      <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
         <SectionIntro
           eyebrow="Application Overview"
           title="The purpose here is relevance: visitors should find their context quickly."
@@ -37,8 +37,8 @@ export default function ApplicationsPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-12 lg:px-8 lg:py-16">
-        <div className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm">
+      <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+        <div className="rounded-[2rem] border border-slate-200 bg-white p-5 shadow-sm sm:p-8">
           <SectionIntro
             eyebrow="Why FRP Fits"
             title="The product’s modular, durable, and project-ready nature makes it broadly usable."

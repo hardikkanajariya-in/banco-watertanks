@@ -22,7 +22,7 @@ const buttonClasses = {
 };
 
 const sharedClassName =
-  "inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-semibold transition duration-200";
+  "inline-flex min-h-11 items-center justify-center gap-2 rounded-full px-5 py-3 text-center text-sm leading-5 font-semibold whitespace-normal transition duration-200";
 
 export function Button({ children, href, type = "button", variant = "primary", className }: ButtonProps) {
   const resolvedClassName = cn(sharedClassName, buttonClasses[variant], className);

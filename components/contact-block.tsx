@@ -25,13 +25,13 @@ export function ContactBlock() {
 
   return (
     <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
-      <Card className="rounded-[1.75rem] p-7">
+      <Card className="rounded-[1.75rem] p-5 sm:p-7">
         <Badge>Contact Details</Badge>
         <h3 className="text-2xl font-semibold text-slate-900">Direct Contact</h3>
         <div className="mt-6 space-y-5 text-sm leading-7 text-slate-600">
           <div className="flex items-start gap-4 rounded-[1.25rem] border border-slate-200 bg-slate-50 p-4">
             <Phone className="mt-0.5 size-5 shrink-0 text-teal-700" strokeWidth={1.8} aria-hidden="true" />
-            <p>
+            <p className="min-w-0 break-words">
               <span className="block font-semibold text-slate-900">Phone</span>
               <a href={phoneHref} className="transition hover:text-teal-700">
                 {contactDetails.phone}
@@ -40,7 +40,7 @@ export function ContactBlock() {
           </div>
           <div className="flex items-start gap-4 rounded-[1.25rem] border border-slate-200 bg-slate-50 p-4">
             <Mail01 className="mt-0.5 size-5 shrink-0 text-teal-700" strokeWidth={1.8} aria-hidden="true" />
-            <p>
+            <p className="min-w-0 break-all">
               <span className="block font-semibold text-slate-900">Email</span>
               <a href={emailHref} className="transition hover:text-teal-700">
                 {contactDetails.email}
@@ -49,14 +49,14 @@ export function ContactBlock() {
           </div>
           <div className="flex items-start gap-4 rounded-[1.25rem] border border-slate-200 bg-slate-50 p-4">
             <MarkerPin01 className="mt-0.5 size-5 shrink-0 text-teal-700" strokeWidth={1.8} aria-hidden="true" />
-            <p>
+            <p className="min-w-0 break-words">
               <span className="block font-semibold text-slate-900">Address</span>
               {contactDetails.address}
             </p>
           </div>
           <div className="flex items-start gap-4 rounded-[1.25rem] border border-slate-200 bg-slate-50 p-4">
             <Building05 className="mt-0.5 size-5 shrink-0 text-teal-700" strokeWidth={1.8} aria-hidden="true" />
-            <p>
+            <p className="min-w-0 break-words">
               <span className="block font-semibold text-slate-900">Business Hours</span>
               {contactDetails.hours}
             </p>
@@ -68,7 +68,7 @@ export function ContactBlock() {
         action={`mailto:${contactDetails.email}`}
         method="post"
         encType="text/plain"
-        className="rounded-[1.75rem] border border-slate-200 bg-white p-7 shadow-sm"
+        className="rounded-[1.75rem] border border-slate-200 bg-white p-5 shadow-sm sm:p-7"
       >
         <Badge>Inquiry Form</Badge>
         <h3 className="text-2xl font-semibold text-slate-900">Send Inquiry</h3>
@@ -104,7 +104,7 @@ export function ContactBlock() {
         </div>
         <AriaButton
           type="submit"
-          className="mt-6 inline-flex items-center gap-2 rounded-full bg-teal-700 px-6 py-3 text-sm font-semibold text-white transition hover:bg-teal-800"
+          className="mt-6 inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-full bg-teal-700 px-6 py-3 text-sm font-semibold text-white transition hover:bg-teal-800 sm:w-auto"
         >
           <MessageChatCircle className="size-4" strokeWidth={1.8} aria-hidden="true" />
           Send Inquiry by Email
