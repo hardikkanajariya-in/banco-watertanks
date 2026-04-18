@@ -12,8 +12,8 @@ export function TechnicalHighlights({ items }: TechnicalHighlightsProps) {
       {items.map((item) => (
         <Card key={item} className="rounded-[1.5rem] px-5 py-4">
           <div className="flex items-start gap-3">
-            <CheckCircleBroken className="mt-0.5 size-5 shrink-0 text-[var(--brand)]" strokeWidth={1.8} aria-hidden="true" />
-            <p className="text-sm leading-7 text-[var(--foreground)]">{item}</p>
+            <CheckCircleBroken className="mt-0.5 size-5 shrink-0 text-teal-700" strokeWidth={1.8} aria-hidden="true" />
+            <p className="text-sm leading-7 text-slate-900">{item}</p>
           </div>
         </Card>
       ))}

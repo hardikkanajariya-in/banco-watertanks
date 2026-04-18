@@ -28,11 +28,11 @@ export function BenefitsGrid({ items }: BenefitsGridProps) {
 
         return (
           <Card key={item.title} className="rounded-[1.75rem] p-6">
-            <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[var(--color-brand-50)] text-[var(--brand)]">
+            <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-teal-50 text-teal-700">
               <Icon className="size-6" strokeWidth={1.8} aria-hidden="true" />
             </div>
-            <h3 className="mt-5 text-xl font-semibold text-[var(--foreground)]">{item.title}</h3>
-            <p className="mt-3 text-sm leading-7 text-[var(--muted)]">{item.description}</p>
+            <h3 className="mt-5 text-xl font-semibold text-slate-900">{item.title}</h3>
+            <p className="mt-3 text-sm leading-7 text-slate-600">{item.description}</p>
           </Card>
         );
       })}

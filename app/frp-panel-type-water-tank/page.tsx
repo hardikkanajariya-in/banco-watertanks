@@ -29,9 +29,9 @@ export default function ProductPage() {
         secondaryCta={{ label: "View Technical Specifications", href: "/technical-specifications" }}
       />
 
-      <section id="overview" className="container-shell section-shell">
+      <section id="overview" className="mx-auto max-w-7xl px-6 py-12 lg:px-8 lg:py-16">
         <SplitSection
-          imageSrc="/images/product-overview.svg"
+          imageSrc="/images/product-storage-tank.jpg"
           imageAlt="FRP panel type water tank illustration"
           eyebrow="What It Is"
           title="The product is presented as a modular FRP water storage system for project-based installations."
@@ -40,7 +40,7 @@ export default function ProductPage() {
         />
       </section>
 
-      <section id="benefits" className="container-shell section-shell">
+      <section id="benefits" className="mx-auto max-w-7xl px-6 py-12 lg:px-8 lg:py-16">
         <SectionIntro
           eyebrow="Key Benefits"
           title="Benefits stay concise here so the visitor can scan before diving into specifications."
@@ -51,11 +51,11 @@ export default function ProductPage() {
         </div>
       </section>
 
-      <section id="design" className="container-shell section-shell">
+      <section id="design" className="mx-auto max-w-7xl px-6 py-12 lg:px-8 lg:py-16">
         <DesignVisual />
       </section>
 
-      <section id="features" className="container-shell section-shell">
+      <section id="features" className="mx-auto max-w-7xl px-6 py-12 lg:px-8 lg:py-16">
         <SectionIntro
           eyebrow="Technical Highlights"
           title="Product detail should feel structured and trustworthy rather than over-designed."
@@ -66,14 +66,14 @@ export default function ProductPage() {
         </div>
       </section>
 
-      <section className="container-shell section-shell">
+      <section className="mx-auto max-w-7xl px-6 py-12 lg:px-8 lg:py-16">
         <SectionIntro
           eyebrow="Use-Case Fit"
           title="A short section that helps buyers self-identify whether the tank matches their project."
         />
         <div className="mt-8 grid gap-5 md:grid-cols-3">
           {useCaseFit.map((item) => (
-            <Card key={item} className="rounded-[1.75rem] p-6 text-sm leading-7 text-[var(--muted)]">
+            <Card key={item} className="rounded-[1.75rem] p-6 text-sm leading-7 text-slate-600">
               {item}
             </Card>
           ))}

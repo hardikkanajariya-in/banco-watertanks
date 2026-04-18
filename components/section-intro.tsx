@@ -13,8 +13,8 @@ export function SectionIntro({ eyebrow, title, description, align = "left" }: Se
   return (
     <div className={`max-w-3xl space-y-4 ${alignment}`}>
       {eyebrow ? <Badge>{eyebrow}</Badge> : null}
-      <h2 className="text-3xl font-semibold leading-tight text-[var(--foreground)] md:text-5xl">{title}</h2>
-      {description ? <p className="text-lg leading-8 text-[var(--muted)]">{description}</p> : null}
+      <h2 className="text-3xl font-semibold leading-tight text-slate-900 md:text-5xl">{title}</h2>
+      {description ? <p className="text-lg leading-8 text-slate-600">{description}</p> : null}
     </div>
   );
 }

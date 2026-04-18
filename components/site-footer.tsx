@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { Building05, Mail01, Phone } from "@untitledui/icons";
 
@@ -10,15 +9,14 @@ export function SiteFooter() {
   const emailHref = `mailto:${contactDetails.email}`;
 
   return (
-    <footer className="border-t border-[var(--color-border-secondary)] bg-[#0f1d26] text-white">
-      <div className="container-shell grid gap-10 py-14 lg:grid-cols-[1.4fr_1fr_1fr]">
+    <footer className="border-t border-slate-200 bg-[#0f1d26] text-white">
+      <div className="mx-auto grid max-w-7xl gap-10 px-6 py-14 lg:grid-cols-[1.4fr_1fr_1fr] lg:px-8">
         <div className="space-y-5">
           <div className="flex items-center gap-3">
-            <Image src="/brand/banco-mark.svg" alt={`${companyName} logo`} width={44} height={44} className="h-11 w-11 rounded-full bg-white/10 p-1" />
-            <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#8fc4d0]">BANCO</p>
-              <p className="text-sm text-white/70">FRP panel type water tank website</p>
-            </div>
+            <span className="inline-flex h-11 items-center rounded-full border border-white/15 bg-white/8 px-4 text-sm font-semibold tracking-[0.24em] text-[#8fc4d0]">
+              BANCO
+            </span>
+            <p className="text-sm text-white/70">FRP panel type water tank website</p>
           </div>
           <Badge className="bg-white/8 text-[#d8edf2] ring-0">Static Next.js marketing site</Badge>
           <p className="max-w-xl text-sm leading-7 text-white/70">

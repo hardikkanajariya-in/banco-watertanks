@@ -37,9 +37,9 @@ export default function AboutPage() {
 
       <StatsStrip items={trustItems} />
 
-      <section className="container-shell section-shell">
+      <section className="mx-auto max-w-7xl px-6 py-12 lg:px-8 lg:py-16">
         <SplitSection
-          imageSrc="/images/company-overview.svg"
+          imageSrc="/images/company-aerial.jpg"
           imageAlt="BANCO company overview"
           eyebrow="Company Overview"
           title="BANCO is framed as a dependable partner for product-led water storage inquiries."
@@ -47,7 +47,7 @@ export default function AboutPage() {
         />
       </section>
 
-      <section className="container-shell section-shell">
+      <section className="mx-auto max-w-7xl px-6 py-12 lg:px-8 lg:py-16">
         <SectionIntro
           eyebrow="Operating Principles"
           title="Short, credible messages work better here than oversized corporate claims."
@@ -55,14 +55,14 @@ export default function AboutPage() {
         />
         <div className="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
           {companyPrinciples.map((item) => (
-            <Card key={item} className="rounded-[1.75rem] p-6 text-sm leading-7 text-[var(--foreground)]">
+            <Card key={item} className="rounded-[1.75rem] p-6 text-sm leading-7 text-slate-900">
               {item}
             </Card>
           ))}
         </div>
       </section>
 
-      <section className="container-shell section-shell">
+      <section className="mx-auto max-w-7xl px-6 py-12 lg:px-8 lg:py-16">
         <div className="grid gap-8 lg:grid-cols-2">
           <Card className="rounded-[1.75rem] p-7">
             <SectionIntro
@@ -71,7 +71,7 @@ export default function AboutPage() {
             />
             <div className="mt-6 space-y-3">
               {whyChooseItems.map((item) => (
-                <div key={item} className="rounded-[1.25rem] border border-[var(--surface-alt)] px-4 py-3 text-sm leading-7 text-[var(--muted)]">
+                <div key={item} className="rounded-[1.25rem] border border-slate-200 px-4 py-3 text-sm leading-7 text-slate-600">
                   {item}
                 </div>
               ))}
@@ -84,7 +84,7 @@ export default function AboutPage() {
             />
             <div className="mt-6 flex flex-wrap gap-3">
               {industries.map((item) => (
-                <span key={item} className="rounded-full border border-[var(--border)] bg-[var(--surface-alt)] px-4 py-2 text-sm text-[var(--foreground)]">
+                <span key={item} className="rounded-full border border-slate-300 bg-slate-100 px-4 py-2 text-sm text-slate-900">
                   {item}
                 </span>
               ))}
@@ -93,7 +93,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="container-shell section-shell">
+      <section className="mx-auto max-w-7xl px-6 py-12 lg:px-8 lg:py-16">
         <SectionIntro
           eyebrow="Quality and Support"
           title="Reserved space for verified technical credibility, supply detail, and support statements."
@@ -101,7 +101,7 @@ export default function AboutPage() {
         />
         <div className="mt-8 grid gap-5 md:grid-cols-2">
           {qualityItems.map((item) => (
-            <Card key={item} className="rounded-[1.75rem] p-6 text-sm leading-7 text-[var(--muted)]">
+            <Card key={item} className="rounded-[1.75rem] p-6 text-sm leading-7 text-slate-600">
               {item}
             </Card>
           ))}

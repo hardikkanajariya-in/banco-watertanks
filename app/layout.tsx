@@ -14,14 +14,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: pageMetadata.home.title,
     description: pageMetadata.home.description,
-    images: ["/images/og-image.svg"]
+    images: ["/images/hero-industrial.jpg"]
   }
 };
 
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
   return (
-    <html lang="en">
-      <body className="bg-[var(--background)] text-[var(--foreground)] antialiased">
+    <html lang="en" data-scroll-behavior="smooth">
+      <body className="bg-slate-50 text-slate-900 antialiased">
         <SiteHeader />
         <main>{children}</main>
         <SiteFooter />

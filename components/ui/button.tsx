@@ -14,11 +14,11 @@ type ButtonProps = {
 
 const buttonClasses = {
   primary:
-    "bg-[var(--color-bg-brand-primary)] text-white shadow-[var(--shadow-xs)] hover:bg-[var(--color-bg-brand-primary_hover)]",
+    "bg-teal-700 text-white shadow-sm hover:bg-teal-800",
   secondary:
-    "border border-[var(--color-border-primary)] bg-white text-[var(--foreground)] hover:border-[var(--color-border-brand)] hover:text-[var(--brand)]",
+    "border border-slate-300 bg-white text-slate-900 hover:border-teal-300 hover:text-teal-700",
   tertiary:
-    "bg-[var(--color-bg-brand-secondary)] text-[var(--brand)] hover:bg-[var(--color-bg-brand-secondary_hover)]"
+    "bg-teal-50 text-teal-700 hover:bg-teal-100"
 };
 
 const sharedClassName =

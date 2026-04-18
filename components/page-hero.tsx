@@ -17,12 +17,12 @@ type PageHeroProps = {
 
 export function PageHero({ eyebrow, title, description, primaryCta, secondaryCta }: PageHeroProps) {
   return (
-    <section className="border-b border-[var(--border)] bg-[linear-gradient(180deg,rgba(237,246,248,0.75),rgba(246,249,251,0.2))]">
-      <div className="container-shell py-20 lg:py-24">
+    <section className="border-b border-slate-200 bg-gradient-to-b from-teal-50/80 to-slate-50">
+      <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-24">
         <div className="max-w-4xl space-y-6">
           <Badge>{eyebrow}</Badge>
-          <h1 className="max-w-4xl text-4xl font-semibold leading-tight text-[var(--foreground)] md:text-6xl">{title}</h1>
-          <p className="max-w-3xl text-lg leading-8 text-[var(--muted)]">{description}</p>
+          <h1 className="max-w-4xl text-4xl font-semibold leading-tight text-slate-900 md:text-6xl">{title}</h1>
+          <p className="max-w-3xl text-lg leading-8 text-slate-600">{description}</p>
           {(primaryCta || secondaryCta) && (
             <div className="flex flex-wrap gap-4 pt-2">
               {primaryCta ? <Button href={primaryCta.href}>{primaryCta.label}</Button> : null}

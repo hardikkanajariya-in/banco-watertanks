@@ -1,31 +1,13 @@
 @import "tailwindcss";
-@import "./theme.css";
-
-@custom-variant dark (&:where(.dark-mode, .dark-mode *));
-
-:root {
-  --background: var(--color-bg-primary);
-  --surface: var(--color-bg-secondary);
-  --surface-alt: var(--color-bg-tertiary);
-  --foreground: var(--color-fg-primary);
-  --muted: var(--color-fg-tertiary);
-  --border: var(--color-border-primary);
-  --brand: var(--color-brand-600);
-  --brand-strong: var(--color-brand-700);
-  --brand-soft: var(--color-brand-50);
-  --accent: #d96d31;
-}
 
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background:
-    radial-gradient(circle at top left, rgba(25, 90, 109, 0.09), transparent 30%),
-    linear-gradient(180deg, #fcfeff 0%, var(--background) 100%);
-  color: var(--foreground);
-  font-family: var(--font-body);
+  background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+  color: #0f172a;
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
   margin: 0;
   min-height: 100vh;
 }
@@ -45,7 +27,7 @@ img {
 }
 
 ::selection {
-  background: rgba(25, 90, 109, 0.18);
+  background: rgba(13, 148, 136, 0.18);
 }
 
 @layer base {
@@ -53,7 +35,6 @@ img {
   h2,
   h3,
   h4 {
-    font-family: var(--font-display);
     letter-spacing: -0.02em;
   }
 
@@ -61,60 +42,5 @@ img {
   textarea,
   button {
     font: inherit;
-  }
-}
-
-@layer components {
-  .container-shell {
-    margin-inline: auto;
-    max-width: 80rem;
-    padding-inline: 1.5rem;
-  }
-
-  .section-shell {
-    padding-block: 3rem;
-  }
-
-  .surface-card {
-    border: 1px solid var(--border);
-    background: var(--surface);
-    border-radius: 1.5rem;
-    box-shadow: var(--shadow-xs);
-  }
-
-  .surface-panel {
-    border: 1px solid var(--color-border-secondary);
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(248, 250, 251, 0.92));
-    border-radius: 2rem;
-    box-shadow: var(--shadow-sm);
-  }
-
-  .eyebrow {
-    color: var(--brand);
-    font-size: 0.75rem;
-    font-weight: 600;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-  }
-
-  .text-muted {
-    color: var(--muted);
-  }
-
-  .soft-grid {
-    background-image:
-      linear-gradient(to right, rgba(16, 75, 93, 0.04) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(16, 75, 93, 0.04) 1px, transparent 1px);
-    background-size: 24px 24px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .container-shell {
-    padding-inline: 2rem;
-  }
-
-  .section-shell {
-    padding-block: 4.5rem;
   }
 }

@@ -27,7 +27,7 @@ export default function TechnicalSpecificationsPage() {
         secondaryCta={{ label: "View Product Page", href: "/frp-panel-type-water-tank" }}
       />
 
-      <section id="spec-summary" className="container-shell section-shell">
+      <section id="spec-summary" className="mx-auto max-w-7xl px-6 py-12 lg:px-8 lg:py-16">
         <SectionIntro
           eyebrow="Specification Summary"
           title="Technical credibility comes from clarity, structure, and restraint."
@@ -38,7 +38,7 @@ export default function TechnicalSpecificationsPage() {
         </div>
       </section>
 
-      <section className="container-shell section-shell">
+      <section className="mx-auto max-w-7xl px-6 py-12 lg:px-8 lg:py-16">
         <div className="grid gap-6">
           {specificationSections.map((section) => (
             <SpecTable key={section.title} title={section.title} rows={section.rows} />
@@ -46,12 +46,12 @@ export default function TechnicalSpecificationsPage() {
         </div>
       </section>
 
-      <section id="panel-details" className="container-shell section-shell">
+      <section id="panel-details" className="mx-auto max-w-7xl px-6 py-12 lg:px-8 lg:py-16">
         <DesignVisual />
       </section>
 
-      <section id="capacity-or-size-table" className="container-shell section-shell">
-        <div className="surface-panel border-dashed p-8">
+      <section id="capacity-or-size-table" className="mx-auto max-w-7xl px-6 py-12 lg:px-8 lg:py-16">
+        <div className="rounded-[2rem] border border-dashed border-slate-300 bg-white p-8 shadow-sm">
           <SectionIntro
             eyebrow="Capacity or Size Matrix"
             title="Reserved space for verified tank capacities, dimensions, panel details, and accessory combinations."
@@ -60,8 +60,8 @@ export default function TechnicalSpecificationsPage() {
         </div>
       </section>
 
-      <section id="installation-or-support" className="container-shell section-shell">
-        <div className="surface-panel p-8">
+      <section id="installation-or-support" className="mx-auto max-w-7xl px-6 py-12 lg:px-8 lg:py-16">
+        <div className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm">
           <SectionIntro
             eyebrow="Installation and Support"
             title="Installation scope, support structure notes, and supply boundaries should be confirmed on a project basis."

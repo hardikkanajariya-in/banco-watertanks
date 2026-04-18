@@ -27,37 +27,37 @@ export function ContactBlock() {
     <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
       <Card className="rounded-[1.75rem] p-7">
         <Badge>Contact Details</Badge>
-        <h3 className="text-2xl font-semibold text-[var(--foreground)]">Direct Contact</h3>
-        <div className="mt-6 space-y-5 text-sm leading-7 text-[var(--muted)]">
-          <div className="flex items-start gap-4 rounded-[1.25rem] border border-[var(--color-border-secondary)] bg-[var(--surface-alt)] p-4">
-            <Phone className="mt-0.5 size-5 shrink-0 text-[var(--brand)]" strokeWidth={1.8} aria-hidden="true" />
+        <h3 className="text-2xl font-semibold text-slate-900">Direct Contact</h3>
+        <div className="mt-6 space-y-5 text-sm leading-7 text-slate-600">
+          <div className="flex items-start gap-4 rounded-[1.25rem] border border-slate-200 bg-slate-50 p-4">
+            <Phone className="mt-0.5 size-5 shrink-0 text-teal-700" strokeWidth={1.8} aria-hidden="true" />
             <p>
-              <span className="block font-semibold text-[var(--foreground)]">Phone</span>
-              <a href={phoneHref} className="transition hover:text-[var(--brand)]">
+              <span className="block font-semibold text-slate-900">Phone</span>
+              <a href={phoneHref} className="transition hover:text-teal-700">
                 {contactDetails.phone}
               </a>
             </p>
           </div>
-          <div className="flex items-start gap-4 rounded-[1.25rem] border border-[var(--color-border-secondary)] bg-[var(--surface-alt)] p-4">
-            <Mail01 className="mt-0.5 size-5 shrink-0 text-[var(--brand)]" strokeWidth={1.8} aria-hidden="true" />
+          <div className="flex items-start gap-4 rounded-[1.25rem] border border-slate-200 bg-slate-50 p-4">
+            <Mail01 className="mt-0.5 size-5 shrink-0 text-teal-700" strokeWidth={1.8} aria-hidden="true" />
             <p>
-              <span className="block font-semibold text-[var(--foreground)]">Email</span>
-              <a href={emailHref} className="transition hover:text-[var(--brand)]">
+              <span className="block font-semibold text-slate-900">Email</span>
+              <a href={emailHref} className="transition hover:text-teal-700">
                 {contactDetails.email}
               </a>
             </p>
           </div>
-          <div className="flex items-start gap-4 rounded-[1.25rem] border border-[var(--color-border-secondary)] bg-[var(--surface-alt)] p-4">
-            <MarkerPin01 className="mt-0.5 size-5 shrink-0 text-[var(--brand)]" strokeWidth={1.8} aria-hidden="true" />
+          <div className="flex items-start gap-4 rounded-[1.25rem] border border-slate-200 bg-slate-50 p-4">
+            <MarkerPin01 className="mt-0.5 size-5 shrink-0 text-teal-700" strokeWidth={1.8} aria-hidden="true" />
             <p>
-              <span className="block font-semibold text-[var(--foreground)]">Address</span>
+              <span className="block font-semibold text-slate-900">Address</span>
               {contactDetails.address}
             </p>
           </div>
-          <div className="flex items-start gap-4 rounded-[1.25rem] border border-[var(--color-border-secondary)] bg-[var(--surface-alt)] p-4">
-            <Building05 className="mt-0.5 size-5 shrink-0 text-[var(--brand)]" strokeWidth={1.8} aria-hidden="true" />
+          <div className="flex items-start gap-4 rounded-[1.25rem] border border-slate-200 bg-slate-50 p-4">
+            <Building05 className="mt-0.5 size-5 shrink-0 text-teal-700" strokeWidth={1.8} aria-hidden="true" />
             <p>
-              <span className="block font-semibold text-[var(--foreground)]">Business Hours</span>
+              <span className="block font-semibold text-slate-900">Business Hours</span>
               {contactDetails.hours}
             </p>
           </div>
@@ -68,43 +68,43 @@ export function ContactBlock() {
         action={`mailto:${contactDetails.email}`}
         method="post"
         encType="text/plain"
-        className="surface-card rounded-[1.75rem] p-7"
+        className="rounded-[1.75rem] border border-slate-200 bg-white p-7 shadow-sm"
       >
         <Badge>Inquiry Form</Badge>
-        <h3 className="text-2xl font-semibold text-[var(--foreground)]">Send Inquiry</h3>
-        <p className="mt-3 text-sm leading-7 text-[var(--muted)]">
+        <h3 className="text-2xl font-semibold text-slate-900">Send Inquiry</h3>
+        <p className="mt-3 text-sm leading-7 text-slate-600">
           This static form is wired to open the default email client. Replace the destination later if a dedicated form
           workflow is finalized.
         </p>
         <div className="mt-6 grid gap-4 md:grid-cols-2">
           <TextField name="name" className="space-y-2">
-            <Label className="text-sm font-medium text-[var(--foreground)]">Name</Label>
-            <Input className="h-12 w-full rounded-xl border border-[var(--color-border-primary)] bg-white px-4 outline-none transition focus:border-[var(--brand)]" />
+            <Label className="text-sm font-medium text-slate-900">Name</Label>
+            <Input className="h-12 w-full rounded-xl border border-slate-300 bg-white px-4 outline-none transition focus:border-teal-700" />
           </TextField>
           <TextField name="company" className="space-y-2">
-            <Label className="text-sm font-medium text-[var(--foreground)]">Company</Label>
-            <Input className="h-12 w-full rounded-xl border border-[var(--color-border-primary)] bg-white px-4 outline-none transition focus:border-[var(--brand)]" />
+            <Label className="text-sm font-medium text-slate-900">Company</Label>
+            <Input className="h-12 w-full rounded-xl border border-slate-300 bg-white px-4 outline-none transition focus:border-teal-700" />
           </TextField>
           <TextField name="phone" className="space-y-2">
-            <Label className="text-sm font-medium text-[var(--foreground)]">Phone</Label>
-            <Input className="h-12 w-full rounded-xl border border-[var(--color-border-primary)] bg-white px-4 outline-none transition focus:border-[var(--brand)]" />
+            <Label className="text-sm font-medium text-slate-900">Phone</Label>
+            <Input className="h-12 w-full rounded-xl border border-slate-300 bg-white px-4 outline-none transition focus:border-teal-700" />
           </TextField>
           <TextField name="email" type="email" className="space-y-2">
-            <Label className="text-sm font-medium text-[var(--foreground)]">Email</Label>
-            <Input className="h-12 w-full rounded-xl border border-[var(--color-border-primary)] bg-white px-4 outline-none transition focus:border-[var(--brand)]" />
+            <Label className="text-sm font-medium text-slate-900">Email</Label>
+            <Input className="h-12 w-full rounded-xl border border-slate-300 bg-white px-4 outline-none transition focus:border-teal-700" />
           </TextField>
           <TextField name="location" className="space-y-2 md:col-span-2">
-            <Label className="text-sm font-medium text-[var(--foreground)]">Project Location</Label>
-            <Input className="h-12 w-full rounded-xl border border-[var(--color-border-primary)] bg-white px-4 outline-none transition focus:border-[var(--brand)]" />
+            <Label className="text-sm font-medium text-slate-900">Project Location</Label>
+            <Input className="h-12 w-full rounded-xl border border-slate-300 bg-white px-4 outline-none transition focus:border-teal-700" />
           </TextField>
           <TextField name="requirement" className="space-y-2 md:col-span-2">
-            <Label className="text-sm font-medium text-[var(--foreground)]">Requirement</Label>
-            <TextArea className="min-h-36 w-full rounded-xl border border-[var(--color-border-primary)] bg-white px-4 py-3 outline-none transition focus:border-[var(--brand)]" />
+            <Label className="text-sm font-medium text-slate-900">Requirement</Label>
+            <TextArea className="min-h-36 w-full rounded-xl border border-slate-300 bg-white px-4 py-3 outline-none transition focus:border-teal-700" />
           </TextField>
         </div>
         <AriaButton
           type="submit"
-          className="mt-6 inline-flex items-center gap-2 rounded-full bg-[var(--brand)] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[var(--brand-strong)]"
+          className="mt-6 inline-flex items-center gap-2 rounded-full bg-teal-700 px-6 py-3 text-sm font-semibold text-white transition hover:bg-teal-800"
         >
           <MessageChatCircle className="size-4" strokeWidth={1.8} aria-hidden="true" />
           Send Inquiry by Email

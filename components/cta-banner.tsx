@@ -18,8 +18,8 @@ type CtaBannerProps = {
 
 export function CtaBanner({ title, text, primary, secondary }: CtaBannerProps) {
   return (
-    <section className="container-shell py-8 lg:py-10">
-      <div className="overflow-hidden rounded-[2rem] border border-[var(--color-border-brand)] bg-[linear-gradient(135deg,#102129_0%,#143848_100%)] px-8 py-10 text-white lg:px-12">
+    <section className="mx-auto max-w-7xl px-6 py-8 lg:px-8 lg:py-10">
+      <div className="overflow-hidden rounded-[2rem] border border-teal-200 bg-[linear-gradient(135deg,#0f172a_0%,#134e4a_100%)] px-8 py-10 text-white lg:px-12">
         <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
           <div className="max-w-2xl space-y-4">
             <Badge className="bg-white/10 text-[#d8edf2] ring-0">Get in Touch</Badge>

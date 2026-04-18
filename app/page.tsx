@@ -37,14 +37,14 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <>
-      <section className="border-b border-[var(--border)]">
-        <div className="container-shell grid gap-12 py-16 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:py-24">
+      <section className="border-b border-slate-200">
+        <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:px-8 lg:py-24">
           <div className="space-y-6">
             <Badge>{homeHero.eyebrow}</Badge>
-            <h1 className="max-w-3xl text-4xl font-semibold leading-tight text-[var(--foreground)] md:text-6xl">
+            <h1 className="max-w-3xl text-4xl font-semibold leading-tight text-slate-900 md:text-6xl">
               {homeHero.title}
             </h1>
-            <p className="max-w-2xl text-lg leading-8 text-[var(--muted)]">{homeHero.description}</p>
+            <p className="max-w-2xl text-lg leading-8 text-slate-600">{homeHero.description}</p>
             <div className="flex flex-wrap gap-4 pt-2">
               <Button href={homeHero.primaryCta.href}>
                 {homeHero.primaryCta.label}
@@ -57,16 +57,16 @@ export default function HomePage() {
             <div className="grid gap-3 pt-2 sm:grid-cols-2">
               <Card className="rounded-[1.25rem] p-4">
                 <div className="flex items-start gap-3">
-                  <Building05 className="mt-0.5 size-5 shrink-0 text-[var(--brand)]" strokeWidth={1.8} aria-hidden="true" />
-                  <p className="text-sm leading-7 text-[var(--muted)]">
+                  <Building05 className="mt-0.5 size-5 shrink-0 text-teal-700" strokeWidth={1.8} aria-hidden="true" />
+                  <p className="text-sm leading-7 text-slate-600">
                     Built to feel clear and credible for commercial, industrial, and institutional buyers.
                   </p>
                 </div>
               </Card>
               <Card className="rounded-[1.25rem] p-4">
                 <div className="flex items-start gap-3">
-                  <LayersThree01 className="mt-0.5 size-5 shrink-0 text-[var(--brand)]" strokeWidth={1.8} aria-hidden="true" />
-                  <p className="text-sm leading-7 text-[var(--muted)]">
+                  <LayersThree01 className="mt-0.5 size-5 shrink-0 text-teal-700" strokeWidth={1.8} aria-hidden="true" />
+                  <p className="text-sm leading-7 text-slate-600">
                     Structured for future brochure downloads, certifications, and additional product sections.
                   </p>
                 </div>
@@ -74,9 +74,9 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="surface-panel overflow-hidden p-4">
+          <div className="overflow-hidden rounded-[2rem] border border-slate-200 bg-white p-4 shadow-sm">
             <Image
-              src="/images/hero-tank.svg"
+              src="/images/hero-industrial.jpg"
               alt="BANCO FRP panel type water tank hero illustration"
               width={960}
               height={780}
@@ -89,9 +89,9 @@ export default function HomePage() {
 
       <StatsStrip items={trustItems} />
 
-      <section id="about" className="container-shell section-shell">
+      <section id="about" className="mx-auto max-w-7xl px-6 py-12 lg:px-8 lg:py-16">
         <SplitSection
-          imageSrc="/images/company-overview.svg"
+          imageSrc="/images/company-aerial.jpg"
           imageAlt="Company overview illustration"
           eyebrow="About BANCO"
           title={aboutSnapshot.title}
@@ -101,9 +101,9 @@ export default function HomePage() {
         />
       </section>
 
-      <section id="product-overview" className="container-shell section-shell">
+      <section id="product-overview" className="mx-auto max-w-7xl px-6 py-12 lg:px-8 lg:py-16">
         <SplitSection
-          imageSrc="/images/product-overview.svg"
+          imageSrc="/images/product-storage-tank.jpg"
           imageAlt="FRP panel type water tank overview illustration"
           eyebrow="Product Overview"
           title={productOverview.title}
@@ -113,7 +113,7 @@ export default function HomePage() {
         />
       </section>
 
-      <section id="benefits" className="container-shell section-shell">
+      <section id="benefits" className="mx-auto max-w-7xl px-6 py-12 lg:px-8 lg:py-16">
         <SectionIntro
           eyebrow="Benefits"
           title="Key advantages presented in a clean, scan-friendly grid."
@@ -124,11 +124,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="container-shell section-shell">
+      <section className="mx-auto max-w-7xl px-6 py-12 lg:px-8 lg:py-16">
         <DesignVisual />
       </section>
 
-      <section className="container-shell section-shell">
+      <section className="mx-auto max-w-7xl px-6 py-12 lg:px-8 lg:py-16">
         <SectionIntro
           eyebrow="Technical Highlights"
           title="Structured feature communication for trust-focused product evaluation."
@@ -139,7 +139,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="applications" className="container-shell section-shell">
+      <section id="applications" className="mx-auto max-w-7xl px-6 py-12 lg:px-8 lg:py-16">
         <SectionIntro
           eyebrow="Applications"
           title="Relevant across building, utility, institutional, and industrial contexts."
@@ -152,7 +152,7 @@ export default function HomePage() {
 
       <CtaBanner {...ctaContent} />
 
-      <section id="contact" className="container-shell section-shell">
+      <section id="contact" className="mx-auto max-w-7xl px-6 py-12 lg:px-8 lg:py-16">
         <SectionIntro
           eyebrow="Contact"
           title="Make the inquiry step clear and low-friction."

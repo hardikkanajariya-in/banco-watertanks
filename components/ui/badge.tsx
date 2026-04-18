@@ -9,8 +9,8 @@ type BadgeProps = {
 };
 
 const toneClasses = {
-  brand: "bg-[var(--color-brand-50)] text-[var(--brand)] ring-1 ring-inset ring-[var(--color-border-brand)]",
-  gray: "bg-[var(--surface-alt)] text-[var(--color-fg-secondary)] ring-1 ring-inset ring-[var(--color-border-secondary)]",
+  brand: "bg-teal-50 text-teal-700 ring-1 ring-inset ring-teal-200",
+  gray: "bg-slate-100 text-slate-700 ring-1 ring-inset ring-slate-200",
   accent: "bg-[#fff4ed] text-[#b54708] ring-1 ring-inset ring-[#f7d8c0]"
 };
 
