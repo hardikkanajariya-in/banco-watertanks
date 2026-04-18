@@ -1,0 +1,55 @@
+@theme {
+  --font-body: "Aptos", "Inter", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Aptos Display", "Inter", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+
+  --color-brand-25: #f7fbfc;
+  --color-brand-50: #edf6f8;
+  --color-brand-100: #dcecf0;
+  --color-brand-200: #bfd9e0;
+  --color-brand-300: #93bcc8;
+  --color-brand-400: #5b94a4;
+  --color-brand-500: #2f7284;
+  --color-brand-600: #195a6d;
+  --color-brand-700: #104b5d;
+  --color-brand-800: #0f3e4c;
+  --color-brand-900: #102f3a;
+
+  --color-gray-25: #fcfcfd;
+  --color-gray-50: #f8fafb;
+  --color-gray-100: #eef2f4;
+  --color-gray-200: #dde4e8;
+  --color-gray-300: #c8d2d8;
+  --color-gray-400: #9daab4;
+  --color-gray-500: #6f7f8b;
+  --color-gray-600: #55636f;
+  --color-gray-700: #3c4954;
+  --color-gray-800: #1f2a33;
+  --color-gray-900: #101a22;
+
+  --color-fg-primary: var(--color-gray-900);
+  --color-fg-secondary: var(--color-gray-700);
+  --color-fg-tertiary: var(--color-gray-600);
+  --color-fg-quaternary: var(--color-gray-500);
+  --color-fg-brand-primary: var(--color-brand-700);
+  --color-fg-brand-secondary: var(--color-brand-600);
+
+  --color-bg-primary: #f6f9fb;
+  --color-bg-secondary: #ffffff;
+  --color-bg-tertiary: #f8fafb;
+  --color-bg-brand-primary: var(--color-brand-600);
+  --color-bg-brand-primary_hover: var(--color-brand-700);
+  --color-bg-brand-secondary: var(--color-brand-50);
+  --color-bg-brand-secondary_hover: var(--color-brand-100);
+  --color-bg-accent: #fff4ed;
+
+  --color-border-primary: #d9e1e7;
+  --color-border-secondary: #e9eef2;
+  --color-border-brand: var(--color-brand-200);
+  --color-border-strong: #c1ccd4;
+
+  --shadow-xs: 0 1px 2px rgba(16, 24, 40, 0.05);
+  --shadow-sm: 0 4px 12px rgba(16, 24, 40, 0.06);
+  --shadow-md: 0 20px 40px rgba(16, 24, 40, 0.08);
+  --shadow-lg: 0 32px 72px rgba(16, 24, 40, 0.12);
+}

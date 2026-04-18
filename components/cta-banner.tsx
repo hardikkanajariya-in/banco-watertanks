@@ -1,4 +1,7 @@
-import Link from "next/link";
+import { ArrowRight } from "@untitledui/icons";
+
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 
 type CtaBannerProps = {
   title: string;
@@ -15,23 +18,20 @@ type CtaBannerProps = {
 
 export function CtaBanner({ title, text, primary, secondary }: CtaBannerProps) {
   return (
-    <section className="mx-auto max-w-7xl px-6 py-8 lg:px-8 lg:py-10">
-      <div className="rounded-[2rem] border border-[var(--border)] bg-[#102129] px-8 py-10 text-white lg:px-12">
+    <section className="container-shell py-8 lg:py-10">
+      <div className="overflow-hidden rounded-[2rem] border border-[var(--color-border-brand)] bg-[linear-gradient(135deg,#102129_0%,#143848_100%)] px-8 py-10 text-white lg:px-12">
         <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
           <div className="max-w-2xl space-y-4">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#8fc4d0]">Get in Touch</p>
+            <Badge className="bg-white/10 text-[#d8edf2] ring-0">Get in Touch</Badge>
             <h2 className="text-3xl font-semibold leading-tight">{title}</h2>
             <p className="text-base leading-8 text-white/75">{text}</p>
           </div>
           <div className="flex flex-wrap gap-4">
-            <Link href={primary.href} className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-[#102129] transition hover:bg-[#dce8eb]">
+            <Button href={primary.href} className="bg-white text-[#102129] hover:bg-[#dce8eb]">
               {primary.label}
-            </Link>
-            {secondary ? (
-              <Link href={secondary.href} className="rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white transition hover:border-white/50">
-                {secondary.label}
-              </Link>
-            ) : null}
+              <ArrowRight className="size-4" strokeWidth={2} aria-hidden="true" />
+            </Button>
+            {secondary ? <Button href={secondary.href} variant="secondary" className="border-white/20 bg-white/8 text-white hover:border-white/45 hover:bg-white/12 hover:text-white">{secondary.label}</Button> : null}
           </div>
         </div>
       </div>

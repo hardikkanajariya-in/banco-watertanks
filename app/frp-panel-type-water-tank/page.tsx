@@ -7,6 +7,7 @@ import { PageHero } from "@/components/page-hero";
 import { SectionIntro } from "@/components/section-intro";
 import { SplitSection } from "@/components/split-section";
 import { TechnicalHighlights } from "@/components/technical-highlights";
+import { Card } from "@/components/ui/card";
 import { benefits, ctaContent, pageMetadata, productFeatures, technicalHighlights, useCaseFit } from "@/data/site";
 
 export const metadata: Metadata = {
@@ -28,7 +29,7 @@ export default function ProductPage() {
         secondaryCta={{ label: "View Technical Specifications", href: "/technical-specifications" }}
       />
 
-      <section id="overview" className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-14">
+      <section id="overview" className="container-shell section-shell">
         <SplitSection
           imageSrc="/images/product-overview.svg"
           imageAlt="FRP panel type water tank illustration"
@@ -39,7 +40,7 @@ export default function ProductPage() {
         />
       </section>
 
-      <section id="benefits" className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-14">
+      <section id="benefits" className="container-shell section-shell">
         <SectionIntro
           eyebrow="Key Benefits"
           title="Benefits stay concise here so the visitor can scan before diving into specifications."
@@ -50,11 +51,11 @@ export default function ProductPage() {
         </div>
       </section>
 
-      <section id="design" className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-14">
+      <section id="design" className="container-shell section-shell">
         <DesignVisual />
       </section>
 
-      <section id="features" className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-14">
+      <section id="features" className="container-shell section-shell">
         <SectionIntro
           eyebrow="Technical Highlights"
           title="Product detail should feel structured and trustworthy rather than over-designed."
@@ -65,16 +66,16 @@ export default function ProductPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-14">
+      <section className="container-shell section-shell">
         <SectionIntro
           eyebrow="Use-Case Fit"
           title="A short section that helps buyers self-identify whether the tank matches their project."
         />
         <div className="mt-8 grid gap-5 md:grid-cols-3">
           {useCaseFit.map((item) => (
-            <div key={item} className="rounded-[1.75rem] border border-[var(--border)] bg-white p-6 text-sm leading-7 text-[var(--muted)]">
+            <Card key={item} className="rounded-[1.75rem] p-6 text-sm leading-7 text-[var(--muted)]">
               {item}
-            </div>
+            </Card>
           ))}
         </div>
       </section>

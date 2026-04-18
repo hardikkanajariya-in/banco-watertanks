@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
+import { ArrowRight, Building05, LayersThree01 } from "@untitledui/icons";
 
 import { ApplicationGrid } from "@/components/application-grid";
 import { BenefitsGrid } from "@/components/benefits-grid";
@@ -11,6 +11,9 @@ import { SectionIntro } from "@/components/section-intro";
 import { SplitSection } from "@/components/split-section";
 import { StatsStrip } from "@/components/stats-strip";
 import { TechnicalHighlights } from "@/components/technical-highlights";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
 import {
   aboutSnapshot,
   applications,
@@ -35,34 +38,43 @@ export default function HomePage() {
   return (
     <>
       <section className="border-b border-[var(--border)]">
-        <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:px-8 lg:py-24">
+        <div className="container-shell grid gap-12 py-16 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:py-24">
           <div className="space-y-6">
-            <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[var(--brand)]">{homeHero.eyebrow}</p>
+            <Badge>{homeHero.eyebrow}</Badge>
             <h1 className="max-w-3xl text-4xl font-semibold leading-tight text-[var(--foreground)] md:text-6xl">
               {homeHero.title}
             </h1>
-            <p className="max-w-2xl text-base leading-8 text-[var(--muted)] md:text-lg">{homeHero.description}</p>
+            <p className="max-w-2xl text-lg leading-8 text-[var(--muted)]">{homeHero.description}</p>
             <div className="flex flex-wrap gap-4 pt-2">
-              <Link
-                href={homeHero.primaryCta.href}
-                className="rounded-full bg-[var(--brand)] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[var(--brand-strong)]"
-              >
+              <Button href={homeHero.primaryCta.href}>
                 {homeHero.primaryCta.label}
-              </Link>
-              <Link
-                href={homeHero.secondaryCta.href}
-                className="rounded-full border border-[var(--border)] bg-white px-6 py-3 text-sm font-semibold text-[var(--foreground)] transition hover:border-[var(--brand)] hover:text-[var(--brand)]"
-              >
+                <ArrowRight className="size-4" strokeWidth={2} aria-hidden="true" />
+              </Button>
+              <Button href={homeHero.secondaryCta.href} variant="secondary">
                 {homeHero.secondaryCta.label}
-              </Link>
+              </Button>
             </div>
-            <p className="text-sm leading-7 text-[var(--muted)]">
-              Built to feel clear, credible, and conversion-focused for commercial, industrial, institutional, and
-              project-led buyers.
-            </p>
+            <div className="grid gap-3 pt-2 sm:grid-cols-2">
+              <Card className="rounded-[1.25rem] p-4">
+                <div className="flex items-start gap-3">
+                  <Building05 className="mt-0.5 size-5 shrink-0 text-[var(--brand)]" strokeWidth={1.8} aria-hidden="true" />
+                  <p className="text-sm leading-7 text-[var(--muted)]">
+                    Built to feel clear and credible for commercial, industrial, and institutional buyers.
+                  </p>
+                </div>
+              </Card>
+              <Card className="rounded-[1.25rem] p-4">
+                <div className="flex items-start gap-3">
+                  <LayersThree01 className="mt-0.5 size-5 shrink-0 text-[var(--brand)]" strokeWidth={1.8} aria-hidden="true" />
+                  <p className="text-sm leading-7 text-[var(--muted)]">
+                    Structured for future brochure downloads, certifications, and additional product sections.
+                  </p>
+                </div>
+              </Card>
+            </div>
           </div>
 
-          <div className="overflow-hidden rounded-[2rem] border border-[var(--border)] bg-white p-4 shadow-[0_24px_80px_rgba(16,33,41,0.08)]">
+          <div className="surface-panel overflow-hidden p-4">
             <Image
               src="/images/hero-tank.svg"
               alt="BANCO FRP panel type water tank hero illustration"
@@ -77,7 +89,7 @@ export default function HomePage() {
 
       <StatsStrip items={trustItems} />
 
-      <section id="about" className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-14">
+      <section id="about" className="container-shell section-shell">
         <SplitSection
           imageSrc="/images/company-overview.svg"
           imageAlt="Company overview illustration"
@@ -89,7 +101,7 @@ export default function HomePage() {
         />
       </section>
 
-      <section id="product-overview" className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-14">
+      <section id="product-overview" className="container-shell section-shell">
         <SplitSection
           imageSrc="/images/product-overview.svg"
           imageAlt="FRP panel type water tank overview illustration"
@@ -101,7 +113,7 @@ export default function HomePage() {
         />
       </section>
 
-      <section id="benefits" className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-14">
+      <section id="benefits" className="container-shell section-shell">
         <SectionIntro
           eyebrow="Benefits"
           title="Key advantages presented in a clean, scan-friendly grid."
@@ -112,11 +124,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-14">
+      <section className="container-shell section-shell">
         <DesignVisual />
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-14">
+      <section className="container-shell section-shell">
         <SectionIntro
           eyebrow="Technical Highlights"
           title="Structured feature communication for trust-focused product evaluation."
@@ -127,7 +139,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="applications" className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-14">
+      <section id="applications" className="container-shell section-shell">
         <SectionIntro
           eyebrow="Applications"
           title="Relevant across building, utility, institutional, and industrial contexts."
@@ -140,7 +152,7 @@ export default function HomePage() {
 
       <CtaBanner {...ctaContent} />
 
-      <section id="contact" className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-14">
+      <section id="contact" className="container-shell section-shell">
         <SectionIntro
           eyebrow="Contact"
           title="Make the inquiry step clear and low-friction."

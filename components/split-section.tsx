@@ -1,5 +1,9 @@
 import Image from "next/image";
-import Link from "next/link";
+
+import { ArrowRight, CheckCircleBroken } from "@untitledui/icons";
+
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 
 type SplitSectionProps = {
   imageSrc: string;
@@ -18,29 +22,30 @@ type SplitSectionProps = {
 export function SplitSection({ imageSrc, imageAlt, eyebrow, title, text, points, cta, reverse = false }: SplitSectionProps) {
   return (
     <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
-      <div className={`overflow-hidden rounded-[2rem] border border-[var(--border)] bg-white p-4 ${reverse ? "lg:order-2" : ""}`}>
+      <div className={`surface-panel overflow-hidden p-4 ${reverse ? "lg:order-2" : ""}`}>
         <Image src={imageSrc} alt={imageAlt} width={920} height={700} className="h-full w-full rounded-[1.5rem] object-cover" />
       </div>
       <div className={`space-y-5 ${reverse ? "lg:order-1" : ""}`}>
-        {eyebrow ? <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[var(--brand)]">{eyebrow}</p> : null}
+        {eyebrow ? <Badge>{eyebrow}</Badge> : null}
         <h2 className="text-3xl font-semibold leading-tight text-[var(--foreground)] md:text-4xl">{title}</h2>
-        <p className="text-base leading-8 text-[var(--muted)]">{text}</p>
+        <p className="text-lg leading-8 text-[var(--muted)]">{text}</p>
         {points ? (
           <div className="grid gap-3">
             {points.map((item) => (
-              <div key={item} className="rounded-[1.25rem] border border-[var(--border)] bg-white px-4 py-3 text-sm leading-7 text-[var(--foreground)]">
-                {item}
+              <div key={item} className="rounded-[1.25rem] border border-[var(--color-border-secondary)] bg-white px-4 py-3 text-sm leading-7 text-[var(--foreground)]">
+                <div className="flex items-start gap-3">
+                  <CheckCircleBroken className="mt-0.5 size-5 shrink-0 text-[var(--brand)]" strokeWidth={1.8} aria-hidden="true" />
+                  <span>{item}</span>
+                </div>
               </div>
             ))}
           </div>
         ) : null}
         {cta ? (
-          <Link
-            href={cta.href}
-            className="inline-flex rounded-full border border-[var(--border)] bg-white px-6 py-3 text-sm font-semibold text-[var(--foreground)] transition hover:border-[var(--brand)] hover:text-[var(--brand)]"
-          >
+          <Button href={cta.href} variant="secondary">
             {cta.label}
-          </Link>
+            <ArrowRight className="size-4" strokeWidth={2} aria-hidden="true" />
+          </Button>
         ) : null}
       </div>
     </div>

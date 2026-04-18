@@ -5,6 +5,7 @@ import { PageHero } from "@/components/page-hero";
 import { SectionIntro } from "@/components/section-intro";
 import { SplitSection } from "@/components/split-section";
 import { StatsStrip } from "@/components/stats-strip";
+import { Card } from "@/components/ui/card";
 import {
   companyPrinciples,
   ctaContent,
@@ -36,7 +37,7 @@ export default function AboutPage() {
 
       <StatsStrip items={trustItems} />
 
-      <section className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-14">
+      <section className="container-shell section-shell">
         <SplitSection
           imageSrc="/images/company-overview.svg"
           imageAlt="BANCO company overview"
@@ -46,7 +47,7 @@ export default function AboutPage() {
         />
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-14">
+      <section className="container-shell section-shell">
         <SectionIntro
           eyebrow="Operating Principles"
           title="Short, credible messages work better here than oversized corporate claims."
@@ -54,16 +55,16 @@ export default function AboutPage() {
         />
         <div className="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
           {companyPrinciples.map((item) => (
-            <div key={item} className="rounded-[1.75rem] border border-[var(--border)] bg-white p-6 text-sm leading-7 text-[var(--foreground)]">
+            <Card key={item} className="rounded-[1.75rem] p-6 text-sm leading-7 text-[var(--foreground)]">
               {item}
-            </div>
+            </Card>
           ))}
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-14">
+      <section className="container-shell section-shell">
         <div className="grid gap-8 lg:grid-cols-2">
-          <div className="rounded-[1.75rem] border border-[var(--border)] bg-white p-7">
+          <Card className="rounded-[1.75rem] p-7">
             <SectionIntro
               eyebrow="Why Choose BANCO"
               title="The page should make supplier selection feel organized, not vague."
@@ -75,8 +76,8 @@ export default function AboutPage() {
                 </div>
               ))}
             </div>
-          </div>
-          <div className="rounded-[1.75rem] border border-[var(--border)] bg-white p-7">
+          </Card>
+          <Card className="rounded-[1.75rem] p-7">
             <SectionIntro
               eyebrow="Industries Served"
               title="Sector breadth helps support trust, even before project references are added."
@@ -88,11 +89,11 @@ export default function AboutPage() {
                 </span>
               ))}
             </div>
-          </div>
+          </Card>
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-14">
+      <section className="container-shell section-shell">
         <SectionIntro
           eyebrow="Quality and Support"
           title="Reserved space for verified technical credibility, supply detail, and support statements."
@@ -100,9 +101,9 @@ export default function AboutPage() {
         />
         <div className="mt-8 grid gap-5 md:grid-cols-2">
           {qualityItems.map((item) => (
-            <div key={item} className="rounded-[1.75rem] border border-[var(--border)] bg-white p-6 text-sm leading-7 text-[var(--muted)]">
+            <Card key={item} className="rounded-[1.75rem] p-6 text-sm leading-7 text-[var(--muted)]">
               {item}
-            </div>
+            </Card>
           ))}
         </div>
       </section>

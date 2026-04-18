@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Building05, Mail01, Phone } from "@untitledui/icons";
 
+import { Badge } from "@/components/ui/badge";
 import { companyName, contactDetails, footerLinks } from "@/data/site";
 
 export function SiteFooter() {
@@ -8,8 +10,8 @@ export function SiteFooter() {
   const emailHref = `mailto:${contactDetails.email}`;
 
   return (
-    <footer className="border-t border-[var(--border)] bg-[#102129] text-white">
-      <div className="mx-auto grid max-w-7xl gap-10 px-6 py-14 lg:grid-cols-[1.4fr_1fr_1fr] lg:px-8">
+    <footer className="border-t border-[var(--color-border-secondary)] bg-[#0f1d26] text-white">
+      <div className="container-shell grid gap-10 py-14 lg:grid-cols-[1.4fr_1fr_1fr]">
         <div className="space-y-5">
           <div className="flex items-center gap-3">
             <Image src="/brand/banco-mark.svg" alt={`${companyName} logo`} width={44} height={44} className="h-11 w-11 rounded-full bg-white/10 p-1" />
@@ -18,6 +20,7 @@ export function SiteFooter() {
               <p className="text-sm text-white/70">FRP panel type water tank website</p>
             </div>
           </div>
+          <Badge className="bg-white/8 text-[#d8edf2] ring-0">Static Next.js marketing site</Badge>
           <p className="max-w-xl text-sm leading-7 text-white/70">
             BANCO Water Tank is presented as a clean, trust-focused product website for modular FRP panel type
             water tank solutions with a clear path from discovery to inquiry.
@@ -41,16 +44,21 @@ export function SiteFooter() {
           <h2 className="text-sm font-semibold uppercase tracking-[0.18em] text-[#8fc4d0]">Contact</h2>
           <div className="mt-5 space-y-3 text-sm leading-7 text-white/80">
             <p>
-              <Link href={phoneHref} className="transition hover:text-white">
+              <a href={phoneHref} className="inline-flex items-center gap-2 transition hover:text-white">
+                <Phone className="size-4" strokeWidth={1.8} aria-hidden="true" />
                 {contactDetails.phone}
-              </Link>
+              </a>
             </p>
             <p>
-              <Link href={emailHref} className="transition hover:text-white">
+              <a href={emailHref} className="inline-flex items-center gap-2 transition hover:text-white">
+                <Mail01 className="size-4" strokeWidth={1.8} aria-hidden="true" />
                 {contactDetails.email}
-              </Link>
+              </a>
             </p>
-            <p>{contactDetails.address}</p>
+            <p className="inline-flex items-start gap-2">
+              <Building05 className="mt-1 size-4 shrink-0" strokeWidth={1.8} aria-hidden="true" />
+              <span>{contactDetails.address}</span>
+            </p>
           </div>
         </div>
       </div>

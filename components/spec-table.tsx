@@ -1,3 +1,5 @@
+import { Card } from "@/components/ui/card";
+
 type SpecTableProps = {
   title: string;
   rows: string[][];
@@ -5,8 +7,8 @@ type SpecTableProps = {
 
 export function SpecTable({ title, rows }: SpecTableProps) {
   return (
-    <article className="overflow-hidden rounded-[1.75rem] border border-[var(--border)] bg-white">
-      <div className="border-b border-[var(--border)] bg-[var(--brand-soft)] px-6 py-4">
+    <Card className="overflow-hidden rounded-[1.75rem]">
+      <div className="border-b border-[var(--color-border-secondary)] bg-[var(--color-brand-50)] px-6 py-4">
         <h3 className="text-xl font-semibold text-[var(--foreground)]">{title}</h3>
       </div>
       <div className="overflow-x-auto">
@@ -21,6 +23,6 @@ export function SpecTable({ title, rows }: SpecTableProps) {
           </tbody>
         </table>
       </div>
-    </article>
+    </Card>
   );
 }

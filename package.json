@@ -10,9 +10,12 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@untitledui/icons": "latest",
     "next": "^16.0.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-aria-components": "latest",
+    "react-dom": "^19.0.0",
+    "tailwind-merge": "latest"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.1",
@@ -23,6 +26,8 @@
     "eslint": "^9.20.0",
     "eslint-config-next": "^16.0.0",
     "tailwindcss": "^4.1.0",
+    "tailwindcss-animate": "latest",
+    "tailwindcss-react-aria-components": "latest",
     "typescript": "^5.8.0"
   }
 }
