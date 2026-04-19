@@ -66,7 +66,6 @@ export default function HomePage() {
           <div className="flex flex-col justify-center lg:col-span-5 lg:max-w-[46rem]">
             <div className="space-y-5">
               <div className="flex flex-wrap items-center gap-3">
-                <Badge className="bg-white/90 text-teal-800 ring-teal-200 backdrop-blur">Proudly Made in Tanzania</Badge>
                 <div className="inline-flex items-center gap-2 rounded-full border border-white/80 bg-white/70 px-3 py-1.5 text-xs font-medium text-slate-600 backdrop-blur">
                   <MarkerPin01 className="size-4 text-teal-700" strokeWidth={1.8} aria-hidden="true" />
                   {contactDetails.address}

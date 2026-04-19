@@ -16,7 +16,6 @@ export const navigation = [
   { label: "FRP Panel Type Water Tank", href: "/frp-panel-type-water-tank" },
   { label: "Applications", href: "/applications" },
   { label: "Technical Specifications", href: "/technical-specifications" },
-  { label: "Contact Us", href: "/contact" }
 ];
 
 export const footerLinks = [
