@@ -11,7 +11,7 @@ export function SiteHeader() {
   return (
     <>
       <div className="border-b border-slate-200 bg-teal-50/70">
-        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 px-4 py-3 text-[11px] text-slate-600 sm:px-6 sm:text-xs lg:px-8">
+        <div className="flex w-full flex-wrap items-center justify-between gap-3 px-4 py-3 text-[11px] text-slate-600 sm:px-6 sm:text-xs lg:px-10 2xl:px-14">
           <Badge className="hidden sm:inline-flex">Proudly made in Tanzania</Badge>
           <div className="flex items-center gap-4 sm:gap-5">
             <a href={phoneHref} className="inline-flex items-center gap-2 break-all hover:text-teal-700">
@@ -26,7 +26,7 @@ export function SiteHeader() {
         </div>
       </div>
       <header className="sticky top-0 z-40 border-b border-slate-200 bg-white/90 backdrop-blur-xl">
-        <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
+        <div className="flex w-full items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-10 2xl:px-14">
           <Link href="/" className="flex items-center gap-3">
             <div className="min-w-0">
               <p className="text-sm font-semibold uppercase tracking-[0.2em] text-teal-700">BANCO</p>

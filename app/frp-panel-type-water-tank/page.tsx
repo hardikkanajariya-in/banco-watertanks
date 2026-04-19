@@ -22,7 +22,7 @@ export default function ProductPage() {
     <>
       <PageHero eyebrow="FRP Panel Type Water Tank" />
 
-      <section id="overview" className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+      <section id="overview" className="w-full px-4 py-12 sm:px-6 lg:px-10 lg:py-16 2xl:px-14">
         <SplitSection
           imageSrc="/images/product-storage-tank.jpg"
           imageAlt="FRP panel type water tank illustration"
@@ -33,7 +33,7 @@ export default function ProductPage() {
         />
       </section>
 
-      <section id="benefits" className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+      <section id="benefits" className="w-full px-4 py-12 sm:px-6 lg:px-10 lg:py-16 2xl:px-14">
         <SectionIntro
           eyebrow="Key Benefits"
           title="Designed to deliver hygiene, strength, portability, and dependable performance."
@@ -44,11 +44,11 @@ export default function ProductPage() {
         </div>
       </section>
 
-      <section id="design" className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+      <section id="design" className="w-full px-4 py-12 sm:px-6 lg:px-10 lg:py-16 2xl:px-14">
         <DesignVisual />
       </section>
 
-      <section id="features" className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+      <section id="features" className="w-full px-4 py-12 sm:px-6 lg:px-10 lg:py-16 2xl:px-14">
         <SectionIntro
           eyebrow="Technical Highlights"
           title="Key technical highlights show how the tank supports clean and durable water storage."
@@ -59,7 +59,7 @@ export default function ProductPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+      <section className="w-full px-4 py-12 sm:px-6 lg:px-10 lg:py-16 2xl:px-14">
         <SectionIntro
           eyebrow="Use-Case Fit"
           title="Suitable for projects where hygiene, modularity, and configurable storage matter."

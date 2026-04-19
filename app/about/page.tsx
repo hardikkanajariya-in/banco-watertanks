@@ -30,7 +30,7 @@ export default function AboutPage() {
 
       <StatsStrip items={trustItems} />
 
-      <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+      <section className="w-full px-4 py-12 sm:px-6 lg:px-10 lg:py-16 2xl:px-14">
         <SplitSection
           imageSrc="/images/company-aerial.jpg"
           imageAlt="BANCO company overview"
@@ -40,7 +40,7 @@ export default function AboutPage() {
         />
       </section>
 
-      <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+      <section className="w-full px-4 py-12 sm:px-6 lg:px-10 lg:py-16 2xl:px-14">
         <SectionIntro
           eyebrow="Operating Principles"
           title="The product story is built around safety, durability, quality, and reliability."
@@ -55,7 +55,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+      <section className="w-full px-4 py-12 sm:px-6 lg:px-10 lg:py-16 2xl:px-14">
         <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
           <div className="border-t border-slate-200 pt-6">
             <SectionIntro
@@ -86,7 +86,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+      <section className="w-full px-4 py-12 sm:px-6 lg:px-10 lg:py-16 2xl:px-14">
         <SectionIntro
           eyebrow="Quality and Support"
           title="Quality is reinforced through the panel system, surface finish, light resistance, and drainage design."

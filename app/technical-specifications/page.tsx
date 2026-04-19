@@ -21,7 +21,7 @@ export default function TechnicalSpecificationsPage() {
     <>
       <PageHero eyebrow="Technical Specifications" />
 
-      <section id="spec-summary" className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+      <section id="spec-summary" className="w-full px-4 py-12 sm:px-6 lg:px-10 lg:py-16 2xl:px-14">
         <SectionIntro
           eyebrow="Specification Summary"
           title="Review the key product specifications for FRP panel type water tank solutions."
@@ -32,7 +32,7 @@ export default function TechnicalSpecificationsPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+      <section className="w-full px-4 py-12 sm:px-6 lg:px-10 lg:py-16 2xl:px-14">
         <div className="grid gap-6">
           {specificationSections.map((section) => (
             <SpecTable key={section.title} title={section.title} rows={section.rows} />
@@ -40,11 +40,11 @@ export default function TechnicalSpecificationsPage() {
         </div>
       </section>
 
-      <section id="panel-details" className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+      <section id="panel-details" className="w-full px-4 py-12 sm:px-6 lg:px-10 lg:py-16 2xl:px-14">
         <DesignVisual />
       </section>
 
-      <section id="capacity-or-size-table" className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+      <section id="capacity-or-size-table" className="w-full px-4 py-12 sm:px-6 lg:px-10 lg:py-16 2xl:px-14">
         <div className="rounded-[2rem] border border-slate-200 bg-white p-5 shadow-sm sm:p-8">
           <SectionIntro
             eyebrow="Capacity and Configuration"
@@ -54,7 +54,7 @@ export default function TechnicalSpecificationsPage() {
         </div>
       </section>
 
-      <section id="installation-or-support" className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+      <section id="installation-or-support" className="w-full px-4 py-12 sm:px-6 lg:px-10 lg:py-16 2xl:px-14">
         <div className="rounded-[2rem] border border-slate-200 bg-white p-5 shadow-sm sm:p-8">
           <SectionIntro
             eyebrow="Installation and Support"

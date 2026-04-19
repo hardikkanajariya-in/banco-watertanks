@@ -61,9 +61,9 @@ export default function HomePage() {
         <div className="pointer-events-none absolute inset-x-0 top-0 h-72 bg-[linear-gradient(90deg,rgba(15,23,42,0.03),transparent,rgba(15,23,42,0.02))]" />
         <div className="pointer-events-none absolute left-1/2 top-24 h-64 w-64 -translate-x-1/2 rounded-full bg-teal-300/20 blur-3xl" />
 
-        <div className="relative mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 sm:py-16 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:px-8 lg:py-24">
-          <div className="space-y-8">
-            <div className="space-y-5">
+        <div className="relative grid min-h-[calc(100svh-var(--site-header-offset))] w-full gap-8 px-4 py-8 sm:px-6 sm:py-10 lg:grid-cols-[minmax(0,1.05fr)_minmax(30rem,0.95fr)] lg:items-center lg:gap-10 lg:px-10 lg:py-6 2xl:px-14">
+          <div className="flex flex-col justify-center space-y-6 lg:max-w-[52rem]">
+            <div className="space-y-4">
               <div className="flex flex-wrap items-center gap-3">
                 <Badge className="bg-white/90 text-teal-800 ring-teal-200 backdrop-blur">Proudly Made in Tanzania</Badge>
                 <div className="inline-flex items-center gap-2 rounded-full border border-white/80 bg-white/70 px-3 py-1.5 text-xs font-medium text-slate-600 backdrop-blur">
@@ -72,12 +72,12 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <div className="space-y-4">
-                <p className="text-sm font-semibold uppercase tracking-[0.24em] text-teal-700">{homeHero.eyebrow}</p>
-                <h1 className="max-w-3xl text-4xl font-semibold leading-[1.05] text-slate-950 sm:text-5xl lg:text-6xl">
+              <div className="space-y-3">
+                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-teal-700 sm:text-sm">{homeHero.eyebrow}</p>
+                <h1 className="max-w-[12ch] text-[clamp(3rem,6vw,5.5rem)] font-semibold leading-[0.96] text-slate-950">
                   {homeHero.title}
                 </h1>
-                <p className="max-w-2xl text-base leading-8 text-slate-600 sm:text-lg">
+                <p className="max-w-[48rem] text-base leading-7 text-slate-600 sm:text-lg sm:leading-8 lg:max-w-[44rem]">
                   {homeHero.description}
                 </p>
               </div>
@@ -109,7 +109,7 @@ export default function HomePage() {
               ))}
             </div>
 
-            <div className="grid gap-4 rounded-[1.75rem] border border-slate-200/80 bg-white/75 p-5 shadow-[0_20px_45px_-30px_rgba(15,23,42,0.3)] backdrop-blur sm:grid-cols-2">
+            <div className="grid gap-4 rounded-[1.75rem] border border-slate-200/80 bg-white/75 p-4 shadow-[0_20px_45px_-30px_rgba(15,23,42,0.3)] backdrop-blur sm:grid-cols-2 lg:p-5">
               <div className="flex items-start gap-3">
                 <Building05 className="mt-0.5 size-5 shrink-0 text-teal-700" strokeWidth={1.8} aria-hidden="true" />
                 <p className="text-sm leading-7 text-slate-600">
@@ -125,7 +125,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="relative lg:pl-6">
+          <div className="relative flex items-center lg:min-h-0 lg:pl-2">
             <div className="absolute inset-x-6 top-6 -bottom-6 rounded-[2rem] bg-slate-950/8 blur-2xl" />
 
             <div className="relative overflow-hidden rounded-[2rem] border border-slate-200/80 bg-white p-3 shadow-[0_28px_80px_-40px_rgba(15,23,42,0.45)] sm:p-4">
@@ -135,7 +135,7 @@ export default function HomePage() {
                   alt="BANCO FRP panel type water tank hero illustration"
                   width={960}
                   height={780}
-                  className="aspect-[4/4.2] h-full w-full object-cover sm:aspect-[4/3.7] lg:aspect-[4/4.4]"
+                  className="aspect-[4/3.7] h-full w-full object-cover lg:max-h-[calc(100svh-var(--site-header-offset)-5rem)]"
                   priority
                 />
                 <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(15,23,42,0.04)_0%,rgba(15,23,42,0.12)_100%)]" />
@@ -152,8 +152,8 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <div className="relative -mt-10 px-2 pb-2 sm:px-4 sm:pb-4">
-                <div className="grid gap-4 rounded-[1.75rem] border border-slate-200 bg-white/95 p-5 shadow-[0_20px_45px_-30px_rgba(15,23,42,0.35)] backdrop-blur">
+              <div className="relative -mt-8 px-2 pb-2 sm:px-4 sm:pb-4 lg:-mt-6">
+                <div className="grid gap-3 rounded-[1.75rem] border border-slate-200 bg-white/95 p-4 shadow-[0_20px_45px_-30px_rgba(15,23,42,0.35)] backdrop-blur lg:p-5">
                   <div className="flex flex-wrap items-center gap-3">
                     <Badge tone="gray">Why teams choose BANCO</Badge>
                     <div className="inline-flex items-center gap-2 text-sm font-medium text-teal-700">
@@ -162,7 +162,7 @@ export default function HomePage() {
                     </div>
                   </div>
 
-                  <div className="grid gap-3">
+                  <div className="grid gap-2.5">
                     {heroHighlights.map((item) => (
                       <div key={item} className="flex items-start gap-3">
                         <div className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-teal-50 text-teal-700">
@@ -181,7 +181,7 @@ export default function HomePage() {
 
       <StatsStrip items={trustItems} />
 
-      <section id="about" className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+      <section id="about" className="w-full px-4 py-12 sm:px-6 lg:px-10 lg:py-16 2xl:px-14">
         <SplitSection
           imageSrc="/images/company-aerial.jpg"
           imageAlt="Company overview illustration"
@@ -193,7 +193,7 @@ export default function HomePage() {
         />
       </section>
 
-      <section id="product-overview" className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+      <section id="product-overview" className="w-full px-4 py-12 sm:px-6 lg:px-10 lg:py-16 2xl:px-14">
         <SplitSection
           imageSrc="/images/product-storage-tank.jpg"
           imageAlt="FRP panel type water tank overview illustration"
@@ -205,7 +205,7 @@ export default function HomePage() {
         />
       </section>
 
-      <section id="benefits" className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+      <section id="benefits" className="w-full px-4 py-12 sm:px-6 lg:px-10 lg:py-16 2xl:px-14">
         <SectionIntro
           eyebrow="Benefits"
           title="Key benefits of BANCO FRP panel type water tanks."
@@ -216,11 +216,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+      <section className="w-full px-4 py-12 sm:px-6 lg:px-10 lg:py-16 2xl:px-14">
         <DesignVisual />
       </section>
 
-      <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+      <section className="w-full px-4 py-12 sm:px-6 lg:px-10 lg:py-16 2xl:px-14">
         <SectionIntro
           eyebrow="Technical Highlights"
           title="Important technical highlights for product evaluation."
@@ -231,7 +231,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="applications" className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+      <section id="applications" className="w-full px-4 py-12 sm:px-6 lg:px-10 lg:py-16 2xl:px-14">
         <SectionIntro
           eyebrow="Applications"
           title="Used across industrial, institutional, hospitality, infrastructure, and housing applications."
@@ -244,7 +244,7 @@ export default function HomePage() {
 
       <CtaBanner {...ctaContent} />
 
-      <section id="contact" className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+      <section id="contact" className="w-full px-4 py-12 sm:px-6 lg:px-10 lg:py-16 2xl:px-14">
         <SectionIntro
           eyebrow="Contact"
           title="Contact Neomech (T) Ltd. for BANCO FRP panel type water tank inquiries."

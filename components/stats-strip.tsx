@@ -20,7 +20,7 @@ export function StatsStrip({ items }: StatsStripProps) {
   const icons = [LayersThree01, CheckCircleBroken, Certificate01, Building05];
 
   return (
-    <section className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+    <section className="w-full px-4 py-8 sm:px-6 lg:px-10 2xl:px-14">
       <div className="overflow-hidden rounded-[2rem] border border-slate-200 bg-white">
         {items.map((item, index) => {
           const Icon = icons[index % icons.length];

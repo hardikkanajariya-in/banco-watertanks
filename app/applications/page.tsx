@@ -19,7 +19,7 @@ export default function ApplicationsPage() {
     <>
       <PageHero eyebrow="Applications" />
 
-      <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+      <section className="w-full px-4 py-12 sm:px-6 lg:px-10 lg:py-16 2xl:px-14">
         <SectionIntro
           eyebrow="Application Overview"
           title="BANCO FRP panel type water tanks serve a wide range of storage requirements."
@@ -31,7 +31,7 @@ export default function ApplicationsPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+      <section className="w-full px-4 py-12 sm:px-6 lg:px-10 lg:py-16 2xl:px-14">
         <div className="rounded-[2rem] border border-slate-200 bg-white p-5 shadow-sm sm:p-8">
           <SectionIntro
             eyebrow="Why FRP Fits"

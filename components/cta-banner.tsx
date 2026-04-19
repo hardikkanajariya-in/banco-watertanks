@@ -18,7 +18,7 @@ type CtaBannerProps = {
 
 export function CtaBanner({ title, text, primary, secondary }: CtaBannerProps) {
   return (
-    <section className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 lg:py-10">
+    <section className="w-full px-4 py-8 sm:px-6 lg:px-10 lg:py-10 2xl:px-14">
       <div className="overflow-hidden rounded-[2rem] border border-teal-200 bg-[linear-gradient(135deg,#0f172a_0%,#134e4a_100%)] px-5 py-8 text-white sm:px-8 lg:px-12 lg:py-10">
         <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
           <div className="max-w-2xl space-y-4">
