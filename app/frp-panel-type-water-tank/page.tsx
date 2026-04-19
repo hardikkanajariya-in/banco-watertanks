@@ -27,8 +27,8 @@ export default function ProductPage() {
           imageSrc="/images/product-storage-tank.jpg"
           imageAlt="FRP panel type water tank illustration"
           eyebrow="What It Is"
-          title="The FRP panel type water tank is a modular water storage solution designed for reliable performance."
-          text="It is suitable for projects that require durable construction, hygienic water storage, and flexible capacity planning with a practical panel-based installation approach."
+          title="The FRP panel type water tank is designed for safe, efficient, and flexible long-term water storage."
+          text="The system is intended to meet growing water demand with uncompromising quality and reliability, from individual residences to major building, municipal, irrigation, and industrial applications."
           points={productFeatures}
         />
       </section>
@@ -36,8 +36,8 @@ export default function ProductPage() {
       <section id="benefits" className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
         <SectionIntro
           eyebrow="Key Benefits"
-          title="Designed to deliver durability, hygiene, and practical installation flexibility."
-          description="The product benefits below highlight why FRP panel tanks are widely used across different types of projects."
+          title="Designed to deliver hygiene, strength, portability, and dependable performance."
+          description="The product benefits below follow the final approved content for the BANCO FRP tank system."
         />
         <div className="mt-8">
           <BenefitsGrid items={benefits} />
@@ -51,8 +51,8 @@ export default function ProductPage() {
       <section id="features" className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
         <SectionIntro
           eyebrow="Technical Highlights"
-          title="Key technical highlights support confident product selection."
-          description="These points provide a quick overview of the product’s construction, suitability, and practical use."
+          title="Key technical highlights show how the tank supports clean and durable water storage."
+          description="These points summarize the assembly system, panel finish, bracing options, light resistance, and drainage performance."
         />
         <div className="mt-8">
           <TechnicalHighlights items={technicalHighlights} />
@@ -62,7 +62,7 @@ export default function ProductPage() {
       <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
         <SectionIntro
           eyebrow="Use-Case Fit"
-          title="Suitable for projects where reliability, modularity, and efficient planning matter."
+          title="Suitable for projects where hygiene, modularity, and configurable storage matter."
         />
         <div className="mt-8 grid gap-x-8 gap-y-6 md:grid-cols-3">
           {useCaseFit.map((item) => (

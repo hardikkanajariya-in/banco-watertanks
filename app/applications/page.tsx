@@ -22,8 +22,8 @@ export default function ApplicationsPage() {
       <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
         <SectionIntro
           eyebrow="Application Overview"
-          title="BANCO FRP panel type water tanks are suitable for a wide range of water storage needs."
-          description="Whether the requirement is residential, commercial, industrial, or institutional, the modular tank design supports practical and reliable storage planning."
+          title="BANCO FRP panel type water tanks serve a wide range of storage requirements."
+          description="The approved applications include industrial sectors, utilities, housing, hospitals, schools, transport hubs, hospitality sites, remote terrains, and public infrastructure."
           align="center"
         />
         <div className="mt-8">
@@ -35,8 +35,8 @@ export default function ApplicationsPage() {
         <div className="rounded-[2rem] border border-slate-200 bg-white p-5 shadow-sm sm:p-8">
           <SectionIntro
             eyebrow="Why FRP Fits"
-            title="FRP panel construction offers durability, hygiene, and flexibility across many types of projects."
-            description="It is a practical choice where clean water storage, modular installation, and long-term performance are important."
+            title="FRP panel construction combines hygiene, modularity, portability, and durability across varied project types."
+            description="This makes the system suitable for both permanent and temporary installations, including relocatable tank requirements."
           />
         </div>
       </section>

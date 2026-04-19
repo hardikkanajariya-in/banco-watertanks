@@ -18,7 +18,9 @@ export function DesignVisual() {
       </div>
       <div className="space-y-4">
         <Badge>Standard Panel Design</Badge>
-        <h3 className="text-xl font-semibold text-slate-900 sm:text-2xl">Modular panel construction supports practical water storage planning.</h3>
+        <h3 className="text-xl font-semibold text-slate-900 sm:text-2xl">
+          Modular FRP panels support clean water storage, easy assembly, and flexible configuration.
+        </h3>
         <div className="space-y-4 border-l-2 border-teal-100 pl-5">
           {designCallouts.map((item) => (
             <div key={item} className="text-sm leading-7 text-slate-600">

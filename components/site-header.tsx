@@ -12,7 +12,7 @@ export function SiteHeader() {
     <>
       <div className="border-b border-slate-200 bg-teal-50/70">
         <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 px-4 py-3 text-[11px] text-slate-600 sm:px-6 sm:text-xs lg:px-8">
-          <Badge className="hidden sm:inline-flex">Industrial water storage solutions</Badge>
+          <Badge className="hidden sm:inline-flex">Proudly made in Tanzania</Badge>
           <div className="flex items-center gap-4 sm:gap-5">
             <a href={phoneHref} className="inline-flex items-center gap-2 break-all hover:text-teal-700">
               <Phone className="size-4" strokeWidth={1.8} aria-hidden="true" />
@@ -50,7 +50,7 @@ export function SiteHeader() {
           </nav>
 
           <div className="hidden lg:block">
-            <Button href="/contact">Request a Quote</Button>
+            <Button href="/contact">Contact Us</Button>
           </div>
 
           <details className="group relative lg:hidden">
@@ -71,7 +71,7 @@ export function SiteHeader() {
               </nav>
               <div className="mt-3 border-t border-slate-200 pt-3">
                 <Button href="/contact" className="w-full">
-                  Request a Quote
+                  Contact Us
                 </Button>
               </div>
             </div>

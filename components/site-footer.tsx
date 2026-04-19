@@ -16,12 +16,12 @@ export function SiteFooter() {
             <span className="inline-flex h-11 items-center rounded-full border border-white/15 bg-white/8 px-4 text-sm font-semibold tracking-[0.24em] text-[#8fc4d0]">
               BANCO
             </span>
-            <p className="text-sm text-white/70">FRP panel type water tank solutions</p>
+            <p className="text-sm text-white/70">Designed for safety, built to last</p>
           </div>
-          <Badge className="bg-white/8 text-[#d8edf2] ring-0">Reliable water storage solutions</Badge>
+          <Badge className="bg-white/8 text-[#d8edf2] ring-0">Proudly made in Tanzania</Badge>
           <p className="max-w-xl text-sm leading-7 text-white/70">
-            BANCO Water Tank offers FRP panel type water tank solutions for commercial, industrial, institutional,
-            and residential water storage requirements.
+            BANCO Water Tank by Neomech (T) Ltd. supplies modular FRP panel type water tanks for safe, clean, and
+            durable water storage across residential, commercial, industrial, and public-use projects.
           </p>
         </div>
 

@@ -25,7 +25,7 @@ export default function TechnicalSpecificationsPage() {
         <SectionIntro
           eyebrow="Specification Summary"
           title="Review the key product specifications for FRP panel type water tank solutions."
-          description="A quick overview of important product details for evaluation and requirement planning."
+          description="This section now reflects the approved operating conditions, material properties, and assembly details from the final product text."
         />
         <div className="mt-8">
           <TechnicalHighlights items={specificationHighlights} />
@@ -48,8 +48,8 @@ export default function TechnicalSpecificationsPage() {
         <div className="rounded-[2rem] border border-slate-200 bg-white p-5 shadow-sm sm:p-8">
           <SectionIntro
             eyebrow="Capacity and Configuration"
-            title="Available in multiple capacities and configurations to suit project requirements."
-            description="Tank size, layout, and fitting details can be selected according to your storage requirement."
+            title="Tank size, shape, and accessories can be selected to match site requirements."
+            description="The final content highlights design flexibility, customizable partitions, and accessories suited to different applications."
           />
         </div>
       </section>
@@ -58,8 +58,8 @@ export default function TechnicalSpecificationsPage() {
         <div className="rounded-[2rem] border border-slate-200 bg-white p-5 shadow-sm sm:p-8">
           <SectionIntro
             eyebrow="Installation and Support"
-            title="Installation details and support scope can be discussed based on your project requirement."
-            description="Our team can help you understand the suitable tank configuration, installation considerations, and related product details."
+            title="Assembly is designed to be straightforward using standard tools and on-site panel installation."
+            description="The final content states that installation can be carried out by the user or contractor with basic tools and equipment."
           />
         </div>
       </section>
