@@ -1,11 +1,18 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
+import { Inter } from "next/font/google";
 
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { pageMetadata, siteUrl } from "@/data/site";
 
 import "./globals.css";
+
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  fallback: ["Segoe UI", "Arial", "sans-serif"]
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -20,7 +27,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
   return (
-    <html lang="en" data-scroll-behavior="smooth">
+    <html lang="en" data-scroll-behavior="smooth" className={inter.className}>
       <body className="bg-slate-50 text-slate-900 antialiased">
         <SiteHeader />
         <main>{children}</main>

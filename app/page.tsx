@@ -73,7 +73,7 @@ export default function HomePage() {
               </div>
               <div className="space-y-3">
                 <p className="text-xs font-semibold uppercase tracking-[0.32em] text-teal-700 sm:text-sm">{homeHero.eyebrow}</p>
-                <h1 className="max-w-[21ch] text-[clamp(1rem,6.8vw,3.25rem)] font-semibold leading-[0.9] text-slate-950">
+                <h1 className="max-w-[36rem] text-[clamp(1rem,6.8vw,3.25rem)] font-semibold leading-[0.9] text-slate-950">
                   {homeHero.title}
                 </h1>
                 <p className="max-w-[34rem] text-base leading-7 text-slate-600 sm:text-lg sm:leading-8">
