@@ -6,7 +6,7 @@ type ButtonProps = {
   children: ReactNode;
   href?: string;
   type?: "button" | "submit" | "reset";
-  variant?: "primary" | "secondary" | "tertiary";
+  variant?: "primary" | "secondary" | "tertiary" | "accent";
   className?: string;
 };
 
@@ -16,7 +16,9 @@ const buttonClasses = {
   secondary:
     "border border-slate-300 bg-white text-slate-900 hover:border-teal-300 hover:text-teal-700",
   tertiary:
-    "bg-teal-50 text-teal-700 hover:bg-teal-100"
+    "bg-teal-50 text-teal-700 hover:bg-teal-100",
+  accent:
+    "bg-brand-accent text-white shadow-[0_14px_36px_-20px_rgba(234,88,12,0.8)] hover:bg-[#c2410c]"
 };
 
 const sharedClassName =

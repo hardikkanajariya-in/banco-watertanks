@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 
-import { ApplicationGrid } from "@/components/application-grid";
 import { CtaBanner } from "@/components/cta-banner";
 import { PageHero } from "@/components/page-hero";
 import { SectionIntro } from "@/components/section-intro";
-import { applications, ctaContent, pageMetadata } from "@/data/site";
+import { Badge } from "@/components/ui/badge";
+import { applicationClusters, caseStudiesPlaceholder, ctaContent, pageMetadata } from "@/data/site";
 
 export const metadata: Metadata = {
   title: pageMetadata.applications.title,
@@ -17,27 +17,60 @@ export const metadata: Metadata = {
 export default function ApplicationsPage() {
   return (
     <>
-      <PageHero eyebrow="Applications" />
+      <PageHero
+        eyebrow="Applications"
+        title="One tank system — every water storage use-case."
+        description="From individual residences to major building complexes and industrial sites, BANCO FRP panel tanks adapt to the demands of each project."
+        primaryCta={{ label: "Discuss your project", href: "/contact" }}
+      />
 
       <section className="w-full px-4 py-12 sm:px-6 lg:px-10 lg:py-16 2xl:px-14">
         <SectionIntro
-          eyebrow="Application Overview"
-          title="BANCO FRP panel type water tanks serve a wide range of storage requirements."
-          description="The approved applications include industrial sectors, utilities, housing, hospitals, schools, transport hubs, hospitality sites, remote terrains, and public infrastructure."
-          align="center"
+          eyebrow="Use-Case Clusters"
+          title="Six application families. Countless projects."
+          description="Explore how BANCO FRP tanks serve residential, commercial, industrial, infrastructure, irrigation, and emergency needs."
         />
-        <div className="mt-8">
-          <ApplicationGrid items={applications} />
+        <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          {applicationClusters.map((c) => (
+            <article
+              key={c.title}
+              className="rounded-[1.5rem] border border-slate-200 bg-white p-6 shadow-sm"
+            >
+              <Badge>{c.title}</Badge>
+              <p className="mt-4 text-sm leading-7 text-slate-600">{c.description}</p>
+              <ul className="mt-5 space-y-2">
+                {c.items.map((item) => (
+                  <li key={item} className="flex items-start gap-2 text-sm leading-6 text-slate-700">
+                    <span
+                      className="mt-2 inline-flex h-1.5 w-1.5 shrink-0 rounded-full bg-brand-aqua"
+                      aria-hidden="true"
+                    />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </article>
+          ))}
         </div>
       </section>
 
       <section className="w-full px-4 py-12 sm:px-6 lg:px-10 lg:py-16 2xl:px-14">
-        <div className="rounded-[2rem] border border-slate-200 bg-white p-5 shadow-sm sm:p-8">
-          <SectionIntro
-            eyebrow="Why FRP Fits"
-            title="FRP panel construction combines hygiene, modularity, portability, and durability across varied project types."
-            description="This makes the system suitable for both permanent and temporary installations, including relocatable tank requirements."
-          />
+        <SectionIntro
+          eyebrow="Case Studies"
+          title="Projects delivered across Tanzania."
+          description="Featured project case studies — pending client confirmation and approval."
+        />
+        <div className="mt-8 grid gap-6 md:grid-cols-3">
+          {caseStudiesPlaceholder.map((cs, i) => (
+            <article
+              key={i}
+              className="rounded-[1.25rem] border border-dashed border-slate-300 bg-white p-6 shadow-sm"
+            >
+              <Badge tone="accent">Pending confirmation</Badge>
+              <h3 className="mt-4 font-heading text-lg font-semibold text-[#0b3954]">{cs.title}</h3>
+              <p className="mt-2 text-sm leading-6 text-slate-600">{cs.description}</p>
+            </article>
+          ))}
         </div>
       </section>
 

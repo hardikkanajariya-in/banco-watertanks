@@ -10,15 +10,15 @@ export function SiteHeader() {
 
   return (
     <>
-      <div className="border-b border-slate-200 bg-teal-50/70">
-        <div className="flex w-full flex-wrap items-center justify-between gap-3 px-4 py-3 text-[11px] text-slate-600 sm:px-6 sm:text-xs lg:px-10 2xl:px-14">
-          <Badge className="hidden sm:inline-flex">Proudly made in Tanzania</Badge>
+      <div className="bg-[#071f30] text-white">
+        <div className="flex w-full flex-wrap items-center justify-between gap-3 px-4 py-2.5 text-[11px] text-white/80 sm:px-6 sm:text-xs lg:px-10 2xl:px-14">
+          <Badge className="hidden bg-white/10 text-[#d8edf2] ring-0 sm:inline-flex">Proudly made in Tanzania</Badge>
           <div className="flex items-center gap-4 sm:gap-5">
-            <a href={phoneHref} className="inline-flex items-center gap-2 break-all hover:text-teal-700">
+            <a href={phoneHref} className="inline-flex items-center gap-2 break-all hover:text-white">
               <Phone className="size-4" strokeWidth={1.8} aria-hidden="true" />
               {contactDetails.phone}
             </a>
-            <a href={`mailto:${contactDetails.email}`} className="hidden items-center gap-2 hover:text-teal-700 sm:inline-flex">
+            <a href={`mailto:${contactDetails.email}`} className="hidden items-center gap-2 hover:text-white sm:inline-flex">
               <MessageChatCircle className="size-4" strokeWidth={1.8} aria-hidden="true" />
               {contactDetails.email}
             </a>
@@ -28,15 +28,18 @@ export function SiteHeader() {
       <header className="sticky top-0 z-40 border-b border-slate-200 bg-white/90 backdrop-blur-xl">
         <div className="flex w-full items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-10 2xl:px-14">
           <Link href="/" className="flex items-center gap-3">
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#0b3954] text-white shadow-sm">
+              <span className="font-heading text-xs font-bold tracking-[0.12em]">BN</span>
+            </div>
             <div className="min-w-0">
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-teal-700">BANCO</p>
-              <p className="truncate text-sm text-slate-600">{companyName}</p>
+              <p className="font-heading text-sm font-semibold uppercase tracking-[0.22em] text-[#0b3954]">BANCO</p>
+              <p className="truncate text-xs text-slate-600">{companyName}</p>
             </div>
           </Link>
 
           <nav
             aria-label="Primary"
-            className="hidden flex-wrap items-center justify-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-2 text-sm font-medium text-slate-600 shadow-sm lg:flex"
+            className="hidden flex-wrap items-center justify-center gap-1 rounded-full border border-slate-200 bg-white px-2 py-1.5 text-sm font-medium text-slate-600 shadow-sm lg:flex"
           >
             {navigation.map((item) => (
               <Link
@@ -50,7 +53,7 @@ export function SiteHeader() {
           </nav>
 
           <div className="hidden lg:block">
-            <Button href="/contact">Contact Us</Button>
+            <Button href="/contact" variant="accent">Request a Quote</Button>
           </div>
 
           <details className="group relative lg:hidden">
@@ -70,8 +73,8 @@ export function SiteHeader() {
                 ))}
               </nav>
               <div className="mt-3 border-t border-slate-200 pt-3">
-                <Button href="/contact" className="w-full">
-                  Contact Us
+                <Button href="/contact" variant="accent" className="w-full">
+                  Request a Quote
                 </Button>
               </div>
             </div>
