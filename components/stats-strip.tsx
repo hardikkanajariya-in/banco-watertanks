@@ -41,10 +41,10 @@ export function StatsStrip({ items }: StatsStripProps) {
               )}
             >
               <div className="flex items-center gap-4">
-                <div className="flex h-11 w-11 items-center justify-center rounded-full bg-teal-50 text-teal-700">
+                <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#eef5ff] text-[#104a84]">
                   <Icon className="size-5" strokeWidth={1.8} aria-hidden="true" />
                 </div>
-                <p className="text-lg font-semibold text-teal-700">{item.value}</p>
+                <p className="text-lg font-semibold text-[#104a84]">{item.value}</p>
               </div>
               <p className="text-sm leading-7 text-slate-600">{item.label}</p>
             </article>

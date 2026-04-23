@@ -7,8 +7,6 @@ import {
   User01
 } from "@untitledui/icons";
 
-import { Badge } from "@/components/ui/badge";
-
 type Application = {
   title: string;
   description: string;
@@ -29,15 +27,19 @@ export function ApplicationGrid({ items, compact = false }: ApplicationGridProps
         const Icon = icons[index % icons.length];
 
         return (
-          <article key={item.title} className="border-b border-slate-200 pb-6">
+          <article key={item.title} className="border-t border-[#bad9ee] pt-5">
             <div className="flex items-start gap-4">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-teal-50 text-teal-700">
-                <Icon className="size-6" strokeWidth={1.8} aria-hidden="true" />
+              <div className="flex items-center gap-3">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#eaf5fc] text-[#0f60b2]">
+                  <Icon className="size-5" strokeWidth={1.8} aria-hidden="true" />
+                </div>
+                <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#0f60b2]">
+                  {String(index + 1).padStart(2, "0")}
+                </p>
               </div>
               <div className="min-w-0">
-                <Badge tone="gray">Application</Badge>
-                <h3 className="mt-4 text-xl font-semibold text-slate-900">{item.title}</h3>
-                <p className="mt-3 text-sm leading-7 text-slate-600">{item.description}</p>
+                <h3 className="text-xl font-semibold text-[#0c3d86]">{item.title}</h3>
+                <p className="mt-2 text-sm leading-7 text-slate-600">{item.description}</p>
               </div>
             </div>
           </article>

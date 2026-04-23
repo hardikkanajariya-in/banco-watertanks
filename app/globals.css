@@ -1,17 +1,18 @@
 @import "tailwindcss";
 
 :root {
-  --site-header-offset: 7.75rem;
-
-  /* BANCO brand palette */
-  --brand-navy: #0b3954;        /* deep blue — trust, water */
-  --brand-navy-900: #071f30;
-  --brand-aqua: #0d9488;        /* fresh aqua/teal — purity (teal-700) */
-  --brand-aqua-soft: #ccfbf1;   /* teal-50 */
-  --brand-accent: #ea580c;      /* safety orange — CTA accent */
-  --brand-accent-soft: #fff7ed; /* orange-50 */
-  --brand-ink: #0f172a;
-  --brand-surface: #f8fafc;
+  --site-header-offset: 5.5rem;
+  --brand-navy: #0c3d86;
+  --brand-navy-900: #08285b;
+  --brand-blue: #0f60b2;
+  --brand-blue-strong: #0a56a4;
+  --brand-cyan: #29b9ec;
+  --brand-sky: #a7d8f5;
+  --brand-sky-soft: #eaf5fc;
+  --brand-line: #bad9ee;
+  --brand-ink: #15324d;
+  --brand-surface: #f5fafc;
+  --brand-surface-strong: #deeffa;
 }
 
 html {
@@ -19,7 +20,9 @@ html {
 }
 
 body {
-  background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+  background:
+    radial-gradient(circle at top left, rgba(41, 185, 236, 0.09), transparent 22%),
+    linear-gradient(180deg, #fdfefe 0%, #f6fbfe 44%, #eef7fc 100%);
   color: var(--brand-ink);
   margin: 0;
   min-height: 100vh;
@@ -28,12 +31,12 @@ body {
 
 @media (min-width: 1024px) {
   :root {
-    --site-header-offset: 9.25rem;
+    --site-header-offset: 5.5rem;
   }
 }
 
 ::selection {
-  background: rgba(13, 148, 136, 0.22);
+  background: rgba(41, 185, 236, 0.24);
 }
 
 @layer base {
@@ -72,29 +75,85 @@ body {
   .text-brand-navy { color: var(--brand-navy); }
   .bg-brand-navy { background-color: var(--brand-navy); }
   .bg-brand-navy-900 { background-color: var(--brand-navy-900); }
-  .text-brand-aqua { color: var(--brand-aqua); }
-  .bg-brand-aqua { background-color: var(--brand-aqua); }
-  .text-brand-accent { color: var(--brand-accent); }
-  .bg-brand-accent { background-color: var(--brand-accent); }
-  .bg-brand-accent-soft { background-color: var(--brand-accent-soft); }
-  .ring-brand-accent { --tw-ring-color: var(--brand-accent); }
-  .border-brand-accent { border-color: var(--brand-accent); }
-  .hover\:bg-brand-accent:hover { background-color: var(--brand-accent); }
+  .text-brand-blue { color: var(--brand-blue); }
+  .bg-brand-blue { background-color: var(--brand-blue); }
+  .text-brand-blue-strong { color: var(--brand-blue-strong); }
+  .bg-brand-blue-strong { background-color: var(--brand-blue-strong); }
+  .text-brand-cyan { color: var(--brand-cyan); }
+  .bg-brand-cyan { background-color: var(--brand-cyan); }
+  .bg-brand-sky { background-color: var(--brand-sky); }
+  .bg-brand-sky-soft { background-color: var(--brand-sky-soft); }
+  .border-brand-line { border-color: var(--brand-line); }
   .font-heading { font-family: var(--font-heading), var(--font-body), sans-serif; }
 }
 
 .banco-gradient-hero {
   background:
-    radial-gradient(circle at 15% 20%, rgba(13, 148, 136, 0.18), transparent 45%),
-    radial-gradient(circle at 85% 0%, rgba(11, 57, 84, 0.12), transparent 50%),
-    linear-gradient(180deg, #f8fafc 0%, #eef6f5 55%, #f8fafc 100%);
+    radial-gradient(circle at 10% 10%, rgba(41, 185, 236, 0.18), transparent 24%),
+    radial-gradient(circle at 90% 0%, rgba(12, 61, 134, 0.12), transparent 28%),
+    linear-gradient(180deg, #ffffff 0%, #eef7fc 58%, #fbfdff 100%);
 }
 
 .banco-cta-gradient {
-  background: linear-gradient(135deg, #071f30 0%, #0b3954 55%, #0d9488 120%);
+  background: linear-gradient(135deg, #083c83 0%, #0f60b2 62%, #29b9ec 125%);
 }
 
 .banco-section-divider {
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(15, 23, 42, 0.12), transparent);
+  background: linear-gradient(90deg, transparent, rgba(12, 86, 164, 0.22), transparent);
+}
+
+.banco-marquee {
+  overflow: hidden;
+  position: relative;
+}
+
+.banco-marquee::before,
+.banco-marquee::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 5rem;
+  z-index: 1;
+}
+
+.banco-marquee::before {
+  left: 0;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
+.banco-marquee::after {
+  right: 0;
+  background: linear-gradient(270deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
+.banco-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: banco-marquee 26s linear infinite;
+}
+
+.banco-marquee:hover .banco-marquee-track {
+  animation-play-state: paused;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes banco-marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
 }

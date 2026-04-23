@@ -2,7 +2,13 @@ import Image from "next/image";
 import { LayersThree01 } from "@untitledui/icons";
 
 import { Badge } from "@/components/ui/badge";
-import { designCallouts } from "@/data/site";
+
+const designCallouts = [
+  "1000 x 1000 mm modular panel system",
+  "Bolted assembly with sealing gaskets",
+  "Interior bracing in galvanized steel or SS304/316",
+  "Integrated ladder, overflow, and drain accessories"
+];
 
 export function DesignVisual() {
   return (
@@ -18,14 +24,14 @@ export function DesignVisual() {
       </div>
       <div className="space-y-4">
         <Badge>Standard Panel Design</Badge>
-        <h3 className="text-xl font-semibold text-slate-900 sm:text-2xl">
+        <h3 className="text-xl font-semibold text-[#0c2d52] sm:text-2xl">
           Modular FRP panels support clean water storage, easy assembly, and flexible configuration.
         </h3>
-        <div className="space-y-4 border-l-2 border-teal-100 pl-5">
+        <div className="space-y-4 border-l-2 border-[#d7e4f2] pl-5">
           {designCallouts.map((item) => (
             <div key={item} className="text-sm leading-7 text-slate-600">
               <div className="flex items-start gap-3">
-                <LayersThree01 className="mt-0.5 size-5 shrink-0 text-teal-700" strokeWidth={1.8} aria-hidden="true" />
+                <LayersThree01 className="mt-0.5 size-5 shrink-0 text-[#104a84]" strokeWidth={1.8} aria-hidden="true" />
                 <span>{item}</span>
               </div>
             </div>

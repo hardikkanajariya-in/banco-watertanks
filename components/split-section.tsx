@@ -27,14 +27,14 @@ export function SplitSection({ imageSrc, imageAlt, eyebrow, title, text, points,
       </div>
       <div className={`space-y-5 ${reverse ? "lg:order-1" : ""}`}>
         {eyebrow ? <Badge>{eyebrow}</Badge> : null}
-        <h2 className="text-2xl font-semibold leading-tight text-slate-900 sm:text-3xl md:text-4xl">{title}</h2>
+        <h2 className="text-2xl font-semibold leading-tight text-[#0c2d52] sm:text-3xl md:text-4xl">{title}</h2>
         <p className="text-base leading-7 text-slate-600 sm:text-lg sm:leading-8">{text}</p>
         {points ? (
           <div className="divide-y divide-slate-200 border-y border-slate-200">
             {points.map((item) => (
               <div key={item} className="py-3 text-sm leading-7 text-slate-900">
                 <div className="flex items-start gap-3">
-                  <CheckCircleBroken className="mt-0.5 size-5 shrink-0 text-teal-700" strokeWidth={1.8} aria-hidden="true" />
+                  <CheckCircleBroken className="mt-0.5 size-5 shrink-0 text-[#104a84]" strokeWidth={1.8} aria-hidden="true" />
                   <span>{item}</span>
                 </div>
               </div>

@@ -12,13 +12,13 @@ type ButtonProps = {
 
 const buttonClasses = {
   primary:
-    "bg-teal-700 text-white shadow-sm hover:bg-teal-800",
+    "bg-[#104a84] text-white shadow-[0_18px_38px_-26px_rgba(16,74,132,0.8)] hover:bg-[#0c3c6c]",
   secondary:
-    "border border-slate-300 bg-white text-slate-900 hover:border-teal-300 hover:text-teal-700",
+    "border border-[#c3d7ef] bg-white text-[#102033] hover:border-[#1f5f9d] hover:text-[#104a84]",
   tertiary:
-    "bg-teal-50 text-teal-700 hover:bg-teal-100",
+    "bg-[#eef5ff] text-[#104a84] hover:bg-[#dcecff]",
   accent:
-    "bg-brand-accent text-white shadow-[0_14px_36px_-20px_rgba(234,88,12,0.8)] hover:bg-[#c2410c]"
+    "bg-[#08213c] text-white shadow-[0_18px_40px_-26px_rgba(8,33,60,0.88)] hover:bg-[#06172b]"
 };
 
 const sharedClassName =

@@ -26,10 +26,10 @@ export function BenefitsGrid({ items }: BenefitsGridProps) {
 
         return (
           <article key={item.title} className="border-t border-slate-200 pt-6">
-            <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-teal-50 text-teal-700">
+            <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#eef5ff] text-[#104a84]">
               <Icon className="size-6" strokeWidth={1.8} aria-hidden="true" />
             </div>
-            <h3 className="mt-5 text-xl font-semibold text-slate-900">{item.title}</h3>
+            <h3 className="mt-5 text-xl font-semibold text-[#0c2d52]">{item.title}</h3>
             <p className="mt-3 text-sm leading-7 text-slate-600">{item.description}</p>
           </article>
         );

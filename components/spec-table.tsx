@@ -8,8 +8,8 @@ type SpecTableProps = {
 export function SpecTable({ title, rows }: SpecTableProps) {
   return (
     <Card className="overflow-hidden rounded-[1.75rem]">
-      <div className="border-b border-slate-200 bg-teal-50 px-6 py-4">
-        <h3 className="text-xl font-semibold text-slate-900">{title}</h3>
+      <div className="border-b border-slate-200 bg-[#eef5ff] px-6 py-4">
+        <h3 className="text-xl font-semibold text-[#0c2d52]">{title}</h3>
       </div>
       <div className="divide-y divide-slate-100 md:hidden">
         {rows.map(([label, value]) => (
