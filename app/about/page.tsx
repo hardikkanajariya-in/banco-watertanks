@@ -24,7 +24,14 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <section id="group-overview" className="w-full px-4 py-8 sm:px-6 lg:px-10 2xl:px-14 bg-white relative overflow-hidden">
+      <PageHero
+        eyebrow="About Us"
+        title={aboutContent.title}
+        description={aboutContent.intro}
+        primaryCta={{ label: "Contact Us", href: "/contact" }}
+      />
+
+      <section id="group-overview" className="w-full px-4 py-16 sm:px-6 lg:px-10 lg:py-24 2xl:px-14 bg-white relative overflow-hidden">
         <div className="absolute right-0 top-0 h-[600px] w-[600px] -translate-y-1/4 translate-x-1/3 rounded-full bg-[radial-gradient(circle,rgba(41,185,236,0.06)_0%,transparent_70%)] pointer-events-none" />
 
         <div className="grid gap-12 lg:grid-cols-[1fr_0.9fr] lg:gap-20 items-center max-w-[1440px] mx-auto">
@@ -57,10 +64,10 @@ export default function AboutPage() {
           <div className="relative lg:px-8">
             <div className="absolute inset-0 bg-[#f4f9fd] rounded-[3rem] -z-10 translate-x-5 translate-y-5 -rotate-2"></div>
             <BlobMask variant={2} className="w-full h-auto aspect-square md:aspect-[4/3] lg:aspect-square shadow-xl">
-              <Image
-                src="/images/company-aerial.jpg"
-                alt="BANCO Manufacturing Facility"
-                fill
+              <Image 
+                src="/images/company-aerial.jpg" 
+                alt="BANCO Manufacturing Facility" 
+                fill 
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
               />
@@ -89,7 +96,7 @@ export default function AboutPage() {
           {aboutContent.footprint.map((item, i) => (
             <article key={item.title} className="group relative overflow-hidden rounded-[2rem] border border-[#d7e4f2] bg-white p-8 sm:p-10 shadow-sm transition-all hover:shadow-[0_24px_60px_-15px_rgba(12,61,134,0.15)] hover:-translate-y-2">
               <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-[#0c3d86] to-[#29b9ec] opacity-0 transition-opacity group-hover:opacity-100"></div>
-
+              
               <div className="mb-8 inline-flex h-14 w-14 items-center justify-center rounded-[1rem] bg-[#f2f8fc] text-xl font-bold text-[#0f60b2] transition-colors group-hover:bg-[#0f60b2] group-hover:text-white">
                 0{i + 1}
               </div>

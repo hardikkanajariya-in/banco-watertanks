@@ -124,45 +124,72 @@ export default function HomePage() {
         />
       </section>
 
-      <section className="w-full px-4 py-12 sm:px-6 lg:px-10 lg:py-14 2xl:px-14">
-        <div className="grid gap-8 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
-          <div>
+      <section className="w-full px-4 py-14 sm:px-6 lg:px-10 lg:py-16 2xl:px-14">
+        <div className="grid gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:items-center lg:gap-14">
+          <div className="max-w-2xl">
             <SectionIntro
               eyebrow="FRP Water Tank"
-              title="A clearer product story without the card clutter."
-              description="The brochure content is now presented with one dominant image, shorter copy blocks, and a tighter hierarchy."
+              title="A clearer product story with stronger visual hierarchy."
+              description="The product story is presented with a more premium content structure, cleaner scanning, and a stronger balance between technical clarity and visual presentation."
             />
-            <div className="mt-6 space-y-4">
-              {homeValueCards.slice(0, 3).map((item) => (
-                <div key={item.title} className="border-b border-[#d8e8f4] pb-4">
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#0f60b2]">{item.title}</p>
-                  <p className="mt-2 text-sm leading-7 text-slate-600">{item.description}</p>
-                </div>
+
+            <div className="mt-8 grid gap-4">
+              {homeValueCards.slice(0, 3).map((item, index) => (
+                <article
+                  key={item.title}
+                  className="group rounded-[1.35rem] border border-[#d8e8f4] bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_18px_40px_-24px_rgba(12,61,134,0.20)]"
+                >
+                  <div className="flex items-start gap-4">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#eaf4fb] text-[12px] font-bold text-[#0f60b2]">
+                      {String(index + 1).padStart(2, "0")}
+                    </div>
+
+                    <div>
+                      <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#0f60b2]">
+                        {item.title}
+                      </p>
+                      <p className="mt-2 text-sm leading-7 text-slate-600">
+                        {item.description}
+                      </p>
+                    </div>
+                  </div>
+                </article>
               ))}
             </div>
-            <div className="mt-7">
-              <Button href="/frp-water-tank" variant="secondary">
+
+            <div className="mt-8">
+              <Button href="/frp-water-tank" variant="secondary" className="w-full sm:w-auto">
                 View FRP Water Tank Details
                 <ArrowRight className="size-4" strokeWidth={2} aria-hidden="true" />
               </Button>
             </div>
           </div>
 
-          <div className="relative overflow-hidden rounded-[2rem] border border-[#d0e3f2] bg-white p-3 shadow-[0_24px_70px_-46px_rgba(12,61,134,0.45)]">
-            <Image
-              src="/images/product-storage-tank.jpg"
-              alt="BANCO FRP tank visual"
-              width={960}
-              height={720}
-              className="aspect-[4/3.05] w-full rounded-[1.45rem] object-cover"
-            />
-            <div className="absolute inset-x-7 bottom-7 rounded-[1.4rem] bg-white/94 p-5 shadow-lg backdrop-blur">
-              <div className="grid gap-3 md:grid-cols-2">
-                {homeReasons.slice(0, 4).map((item) => (
-                  <p key={item} className="text-sm leading-6 text-slate-700">
-                    {item}
-                  </p>
-                ))}
+          <div className="relative">
+            <div className="absolute -left-6 top-10 h-28 w-28 rounded-full bg-[#29b9ec]/10 blur-2xl" />
+            <div className="absolute -right-6 bottom-8 h-32 w-32 rounded-full bg-[#0c3d86]/8 blur-2xl" />
+
+            <div className="relative overflow-hidden rounded-[2rem] border border-[#d0e3f2] bg-white p-3 shadow-[0_24px_70px_-40px_rgba(12,61,134,0.28)]">
+              <div className="relative overflow-hidden rounded-[1.5rem]">
+                <Image
+                  src="/images/product-storage-tank.jpg"
+                  alt="BANCO FRP tank visual"
+                  width={960}
+                  height={720}
+                  className="aspect-[4/3.05] w-full object-cover"
+                />
+                <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(12,61,134,0.28),rgba(12,61,134,0.02),transparent)]" />
+              </div>
+
+              <div className="absolute inset-x-6 bottom-6 rounded-[1.35rem] border border-white/70 bg-white/92 p-5 shadow-xl backdrop-blur-xl">
+                <div className="grid gap-3 md:grid-cols-2">
+                  {homeReasons.slice(0, 4).map((item) => (
+                    <div key={item} className="flex items-start gap-3">
+                      <div className="mt-1 h-2.5 w-2.5 shrink-0 rounded-full bg-[#29b9ec]" />
+                      <p className="text-sm leading-6 text-slate-700">{item}</p>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -205,96 +232,184 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="w-full px-4 py-12 sm:px-6 lg:px-10 lg:py-14 2xl:px-14">
-        <div className="grid gap-8 lg:grid-cols-[0.78fr_1.22fr] lg:items-start">
-          <div>
+      <section className="w-full px-4 py-14 sm:px-6 lg:px-10 lg:py-16 2xl:px-14">
+        <div className="grid gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:items-start">
+          <div className="max-w-xl">
             <SectionIntro
               eyebrow="Comparison"
-              title="A simpler preview of Banco water tank vs others."
-              description="The preview now reads like a table excerpt instead of stacked cards, with the full page following the flyer wording."
+              title="A clearer way to compare Banco water tanks."
+              description="A sharper preview of the full comparison, designed for quick scanning on mobile and desktop."
             />
-            <div className="mt-6 space-y-4">
+
+            <div className="mt-8 space-y-4">
               {comparisonContent.callouts.map((item) => (
-                <p key={item} className="border-b border-[#d8e8f4] pb-4 text-sm leading-7 text-slate-600">
+                <div
+                  key={item}
+                  className="border-l-2 border-[#0c3d86]/18 pl-4 text-sm leading-7 text-slate-600"
+                >
                   {item}
-                </p>
+                </div>
               ))}
             </div>
-            <div className="mt-7">
+
+            <div className="mt-8 flex flex-wrap items-center gap-3">
               <Button href="/comparison" variant="accent">
                 Open Full Comparison
               </Button>
+              <span className="text-sm text-slate-500">
+                Detailed parameters, full wording, and expanded review
+              </span>
             </div>
           </div>
 
-          <div className="overflow-hidden rounded-[1.6rem] border border-[#d0e3f2] bg-white shadow-sm">
-            <div className="grid grid-cols-[8.5rem_1fr_1fr] border-b border-[#d0e3f2] bg-[#f2f8fc] text-sm font-semibold uppercase tracking-[0.08em] text-[#0c3d86]">
-              <div className="px-4 py-4">Parameter</div>
-              <div className="border-l border-[#d0e3f2] px-4 py-4">Banco</div>
-              <div className="border-l border-[#d0e3f2] px-4 py-4">Others</div>
-            </div>
-            {homeComparisonPreview.map((item) => (
-              <div
-                key={item.parameter}
-                className="grid grid-cols-[8.5rem_1fr_1fr] border-b border-[#d8e8f4] last:border-b-0"
-              >
-                <div className="bg-[#f7fbfe] px-4 py-4 text-sm font-semibold text-[#0c3d86]">{item.parameter}</div>
-                <div className="border-l border-[#d8e8f4] px-4 py-4 text-sm leading-7 text-slate-700">{item.banco}</div>
-                <div className="border-l border-[#d8e8f4] px-4 py-4 text-sm leading-7 text-slate-700">{item.others}</div>
+          <div className="overflow-hidden rounded-[1.75rem] border border-slate-200 bg-white shadow-[0_18px_50px_-24px_rgba(15,23,42,0.22)]">
+            <div className="border-b border-slate-200 bg-slate-50/90 px-5 py-4 sm:px-6">
+              <div className="flex items-center justify-between gap-4">
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">
+                    Quick Preview
+                  </p>
+                  <h3 className="mt-1 text-lg font-semibold tracking-tight text-slate-900">
+                    Banco vs other tanks
+                  </h3>
+                </div>
+                <div className="hidden rounded-full bg-[#0c3d86] px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-white sm:inline-flex">
+                  Banco Highlighted
+                </div>
               </div>
-            ))}
+            </div>
+
+            <div className="hidden md:block">
+              <div className="grid grid-cols-[minmax(10rem,0.9fr)_minmax(0,1fr)_minmax(0,1fr)] border-b border-slate-200 bg-slate-50 text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">
+                <div className="px-5 py-4 sm:px-6">Parameter</div>
+                <div className="border-l border-slate-200 bg-[#0c3d86] px-5 py-4 text-white sm:px-6">
+                  Banco
+                </div>
+                <div className="border-l border-slate-200 px-5 py-4 sm:px-6">Others</div>
+              </div>
+
+              {homeComparisonPreview.map((item, index) => (
+                <div
+                  key={item.parameter}
+                  className="grid grid-cols-[minmax(10rem,0.9fr)_minmax(0,1fr)_minmax(0,1fr)] border-b border-slate-200 last:border-b-0"
+                >
+                  <div
+                    className={[
+                      "px-5 py-5 text-sm font-semibold text-slate-900 sm:px-6",
+                      index % 2 === 0 ? "bg-slate-50/70" : "bg-white",
+                    ].join(" ")}
+                  >
+                    {item.parameter}
+                  </div>
+
+                  <div className="border-l border-slate-200 bg-[#0c3d86]/[0.04] px-5 py-5 text-sm leading-7 text-slate-700 sm:px-6">
+                    {item.banco}
+                  </div>
+
+                  <div className="border-l border-slate-200 px-5 py-5 text-sm leading-7 text-slate-600 sm:px-6">
+                    {item.others}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="divide-y divide-slate-200 md:hidden">
+              {homeComparisonPreview.map((item) => (
+                <article key={item.parameter} className="px-5 py-5">
+                  <h3 className="text-sm font-semibold uppercase tracking-[0.08em] text-slate-900">
+                    {item.parameter}
+                  </h3>
+
+                  <div className="mt-4 grid gap-3">
+                    <div className="rounded-2xl border border-[#0c3d86]/12 bg-[#0c3d86]/[0.04] p-4">
+                      <div className="mb-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#0c3d86]">
+                        Banco
+                      </div>
+                      <p className="text-sm leading-7 text-slate-700">{item.banco}</p>
+                    </div>
+
+                    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
+                      <div className="mb-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-slate-500">
+                        Others
+                      </div>
+                      <p className="text-sm leading-7 text-slate-600">{item.others}</p>
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="w-full px-4 py-12 sm:px-6 lg:px-10 lg:py-14 2xl:px-14">
-        <div className="relative isolate overflow-hidden rounded-[2rem] border border-[#1e6ab7] bg-[#0c5cad] text-white">
+      <section className="w-full px-4 py-10 sm:px-6 lg:px-10 lg:py-12 2xl:px-14">
+        <div className="relative isolate overflow-hidden rounded-[2rem] border border-[#0c3d86]/18 bg-[#0c5cad] text-white shadow-[0_24px_70px_-30px_rgba(12,61,134,0.55)]">
           <Image
             src="/images/contact-water-tower.jpg"
             alt="BANCO contact section background"
             fill
             sizes="100vw"
-            className="object-cover opacity-18 mix-blend-screen"
+            className="object-cover object-center opacity-20"
           />
-          <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(8,40,91,0.92)_0%,rgba(13,92,174,0.84)_100%)]" />
-          <div className="relative grid gap-8 px-6 py-8 sm:px-8 lg:grid-cols-[0.92fr_1.08fr] lg:px-10 lg:py-10">
-            <div>
-              <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#c7f4ff]">Contact</p>
-              <h2 className="mt-3 max-w-[14ch] text-3xl font-semibold leading-tight sm:text-[2.5rem]">
+
+          <div className="absolute inset-0 bg-[linear-gradient(115deg,rgba(6,28,68,0.94)_0%,rgba(12,61,134,0.88)_48%,rgba(11,97,179,0.78)_100%)]" />
+          <div className="absolute inset-y-0 left-[46%] hidden w-px bg-white/12 lg:block" />
+
+          <div className="relative grid gap-8 px-6 py-8 sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:px-10 lg:py-10">
+            <div className="max-w-xl">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#c7f4ff]">
+                Contact
+              </p>
+
+              <h2 className="mt-2 max-w-[35ch] text-2xl font-semibold leading-tight tracking-tight sm:text-3xl">
                 {contactContent.title}
               </h2>
-              <p className="mt-4 max-w-xl text-sm leading-7 text-white/80 sm:text-base">
+
+              <p className="mt-3 max-w-lg text-[15px] leading-relaxed text-white/78">
                 {contactContent.description}
               </p>
-              <div className="mt-7">
-                <Button href="/contact" className="bg-white text-[#0c3d86] hover:bg-[#e6f6fd]">
+
+              <div className="mt-6 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
+                <Button href="/contact" className="bg-white text-[#0c3d86] hover:bg-[#eaf6ff]">
                   Contact Us
                   <ArrowRight className="size-4" strokeWidth={2} aria-hidden="true" />
                 </Button>
+
+                <p className="text-xs leading-relaxed text-white/68 max-w-[200px]">
+                  Fast support for product queries, orders, and dealership requirements
+                </p>
               </div>
             </div>
 
-            <div className="grid gap-4 sm:grid-cols-3">
-              <div className="border-t border-white/20 pt-4">
-                <div className="flex items-center gap-2 text-[#c7f4ff]">
-                  <Phone className="size-4" strokeWidth={1.8} aria-hidden="true" />
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.2em]">Phone</p>
+            <div className="flex flex-col justify-center gap-8 lg:pl-12">
+              <div className="group flex items-start gap-5">
+                <div className="mt-0.5 flex h-12 w-12 shrink-0 items-center justify-center rounded-[1rem] bg-white/10 ring-1 ring-white/20 transition-all group-hover:bg-[#29b9ec]">
+                  <Phone className="size-6 text-white" strokeWidth={1.5} aria-hidden="true" />
                 </div>
-                <p className="mt-3 text-sm leading-7 text-white/84">{contactDetails.phone}</p>
+                <div>
+                  <span className="block text-[11px] font-semibold uppercase tracking-widest text-[#9fe9ff]">Phone</span>
+                  <span className="mt-1 block text-[15px] font-medium text-white">{contactDetails.phone}</span>
+                </div>
               </div>
-              <div className="border-t border-white/20 pt-4">
-                <div className="flex items-center gap-2 text-[#c7f4ff]">
-                  <Mail01 className="size-4" strokeWidth={1.8} aria-hidden="true" />
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.2em]">Email</p>
+
+              <div className="group flex items-start gap-5">
+                <div className="mt-0.5 flex h-12 w-12 shrink-0 items-center justify-center rounded-[1rem] bg-white/10 ring-1 ring-white/20 transition-all group-hover:bg-[#29b9ec]">
+                  <Mail01 className="size-6 text-white" strokeWidth={1.5} aria-hidden="true" />
                 </div>
-                <p className="mt-3 text-sm leading-7 text-white/84">{contactDetails.email}</p>
+                <div>
+                  <span className="block text-[11px] font-semibold uppercase tracking-widest text-[#9fe9ff]">Email</span>
+                  <span className="mt-1 block text-[15px] font-medium text-white break-all">{contactDetails.email}</span>
+                </div>
               </div>
-              <div className="border-t border-white/20 pt-4 sm:col-span-3">
-                <div className="flex items-center gap-2 text-[#c7f4ff]">
-                  <MarkerPin01 className="size-4" strokeWidth={1.8} aria-hidden="true" />
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.2em]">Address</p>
+
+              <div className="group flex items-start gap-5">
+                <div className="mt-0.5 flex h-12 w-12 shrink-0 items-center justify-center rounded-[1rem] bg-white/10 ring-1 ring-white/20 transition-all group-hover:bg-[#29b9ec]">
+                  <MarkerPin01 className="size-6 text-white" strokeWidth={1.5} aria-hidden="true" />
                 </div>
-                <p className="mt-3 max-w-xl text-sm leading-7 text-white/84">{contactDetails.address}</p>
+                <div>
+                  <span className="block text-[11px] font-semibold uppercase tracking-widest text-[#9fe9ff]">Address</span>
+                  <span className="mt-1 block max-w-[280px] text-[15px] font-medium text-white leading-relaxed">{contactDetails.address}</span>
+                </div>
               </div>
             </div>
           </div>
