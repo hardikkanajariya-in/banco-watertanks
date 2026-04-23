@@ -24,14 +24,21 @@ export default function ApplicationsPage() {
         primaryCta={{ label: "Discuss Your Project", href: "/contact" }}
       />
 
-      <section className="w-full px-4 py-14 sm:px-6 lg:px-10 lg:py-18 2xl:px-14">
-        <SectionIntro
-          eyebrow="Application Coverage"
-          title="From factories and housing to hospitals and public infrastructure."
-          description="The same modular FRP system adapts to many different water storage environments."
-        />
-        <div className="mt-8">
-          <ApplicationGrid items={applicationsContent.items} />
+      <section className="relative w-full px-4 py-16 sm:px-6 lg:px-10 lg:py-24 2xl:px-14 bg-[#f8fbff] overflow-hidden">
+        <div className="absolute left-0 top-0 h-[600px] w-[600px] -translate-x-1/3 translate-y-1/4 rounded-full bg-[radial-gradient(circle,rgba(41,185,236,0.06)_0%,transparent_70%)] pointer-events-none" />
+
+        <div className="relative mx-auto max-w-[1440px]">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <SectionIntro
+              eyebrow="Application Coverage"
+              title="From factories and housing to hospitals and public infrastructure."
+              description="The same modular FRP system adapts to many different water storage environments."
+            />
+          </div>
+
+          <div className="mt-8 mx-auto max-w-7xl">
+            <ApplicationGrid items={applicationsContent.items} />
+          </div>
         </div>
       </section>
 

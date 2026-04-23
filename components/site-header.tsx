@@ -35,7 +35,7 @@ export function SiteHeader() {
           aria-label="Primary"
           className="hidden flex-wrap items-center justify-center gap-1 rounded-full border border-[#d7e4f2] bg-[#f8fbff] px-2 py-1.5 text-sm font-medium text-slate-600 shadow-sm lg:flex"
         >
-          {navigation.map((item) => (
+          {navigation.filter(item => item.label !== "Contact Us").map((item) => (
             <Link
               key={item.href}
               href={item.href}
@@ -59,7 +59,7 @@ export function SiteHeader() {
           </summary>
           <div className="absolute right-0 top-[calc(100%+0.75rem)] z-40 w-[min(22rem,calc(100vw-2rem))] rounded-3xl border border-[#d7e4f2] bg-white p-3 shadow-xl">
             <nav aria-label="Mobile primary" className="grid gap-1">
-              {navigation.map((item) => (
+              {navigation.filter(item => item.label !== "Contact Us").map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}

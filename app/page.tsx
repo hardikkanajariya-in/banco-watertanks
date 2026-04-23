@@ -18,6 +18,7 @@ import {
   homeValueCards,
   pageMetadata
 } from "@/data/site";
+import { BlobMask } from "@/components/ui/blob-mask";
 
 export const metadata: Metadata = {
   title: pageMetadata.home.title,
@@ -40,7 +41,7 @@ export default function HomePage() {
           fill
           priority
           sizes="100vw"
-          className="object-cover object-center opacity-30 mix-blend-screen"
+          className="object-cover object-center mix-blend-screen"
         />
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(8,40,91,0.95)_0%,rgba(8,40,91,0.84)_44%,rgba(13,92,174,0.52)_100%)]" />
         <div className="pointer-events-none absolute left-0 top-0 h-44 w-44 bg-[radial-gradient(circle_at_top_left,#ffffff_0%,#ffffff_26%,transparent_27%)] opacity-95" />
@@ -50,34 +51,49 @@ export default function HomePage() {
 
         <div className="relative px-4 sm:px-6 lg:px-10 2xl:px-14">
           <div className="flex min-h-[calc(100svh-var(--site-header-offset))] items-center py-10 lg:py-12">
-            <div className="max-w-[38rem]">
-              <p className="font-heading text-[0.78rem] font-semibold uppercase tracking-[0.24em] text-white/94">
-                BANCO WATER TANK
-              </p>
-              <p className="mt-4 inline-flex rounded-full bg-white/16 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-[#dff7ff] backdrop-blur">
-                {homeHero.eyebrow}
-              </p>
-              <p className="mt-7 text-xs font-semibold uppercase tracking-[0.28em] text-[#9fe9ff]">
-                {homeHero.productLine}
-              </p>
-              <h1 className="mt-3 max-w-[11ch] text-[clamp(2.35rem,4.8vw,4.25rem)] font-semibold leading-[0.93] text-white">
-                {homeHero.subLine}
-              </h1>
-              <p className="mt-5 max-w-xl text-[15px] leading-7 text-white/82 sm:text-base sm:leading-8">
-                {homeHero.description}
-              </p>
+            <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-12 w-full items-center">
+              <div className="max-w-[38rem]">
+                <p className="font-heading text-[0.78rem] font-semibold uppercase tracking-[0.24em] text-white/94">
+                  BANCO WATER TANK
+                </p>
+                <p className="mt-4 inline-flex rounded-full bg-white/16 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-[#dff7ff] backdrop-blur">
+                  {homeHero.eyebrow}
+                </p>
+                <p className="mt-7 text-xs font-semibold uppercase tracking-[0.28em] text-[#9fe9ff]">
+                  {homeHero.productLine}
+                </p>
+                <h1 className="mt-3 max-w-[11ch] text-[clamp(2.35rem,4.8vw,4.25rem)] font-semibold leading-[0.93] text-white">
+                  {homeHero.subLine}
+                </h1>
+                <p className="mt-5 max-w-xl text-[15px] leading-7 text-white/82 sm:text-base sm:leading-8">
+                  {homeHero.description}
+                </p>
 
-              <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-                <Button href={homeHero.primaryCta.href} className="w-full bg-white text-[#0c3d86] hover:bg-[#e3f3fb] sm:w-auto">
-                  {homeHero.primaryCta.label}
-                  <ArrowRight className="size-4" strokeWidth={2} aria-hidden="true" />
-                </Button>
-                <Button href={homeHero.secondaryCta.href} variant="secondary" className="w-full border-white/30 bg-white/10 text-white hover:border-white/60 hover:bg-white/14 hover:text-white sm:w-auto">
-                  {homeHero.secondaryCta.label}
-                </Button>
+                <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+                  <Button href={homeHero.primaryCta.href} className="w-full bg-white text-[#0c3d86] hover:bg-[#e3f3fb] sm:w-auto">
+                    {homeHero.primaryCta.label}
+                    <ArrowRight className="size-4" strokeWidth={2} aria-hidden="true" />
+                  </Button>
+                  <Button href={homeHero.secondaryCta.href} variant="secondary" className="w-full border-white/30 bg-white/10 text-white hover:border-white/60 hover:bg-white/14 hover:text-white sm:w-auto">
+                    {homeHero.secondaryCta.label}
+                  </Button>
+                </div>
+
+                <p className="mt-7 text-sm leading-7 text-white/72">A quality product by Neomech (T) Ltd.</p>
               </div>
 
-              <p className="mt-7 text-sm leading-7 text-white/72">A quality product by Neomech (T) Ltd.</p>
+              <div className="relative hidden lg:flex items-center justify-center">
+                <BlobMask variant={3} className="w-100 h-100">
+                  <Image
+                    src="/images/product-storage-tank.jpg"
+                    alt="BANCO FRP Water Tank Product"
+                    width={500}
+                    height={600}
+                    className="max-w-full h-full drop-shadow-2xl"
+                    priority
+                  />
+                </BlobMask>
+              </div>
             </div>
           </div>
         </div>
@@ -168,15 +184,20 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="overflow-x-auto no-scrollbar pb-2">
-            <div className="flex min-w-max gap-8 border-y border-[#d8e8f4] py-6">
+          <div className="overflow-x-auto no-scrollbar pb-6 -mx-4 px-4 sm:-mx-6 sm:px-6 lg:mx-0 lg:px-0">
+            <div className="flex w-max gap-5 py-4 snap-x snap-mandatory">
               {compactApplications.map((item, index) => (
-                <article key={item.title} className="w-[15.5rem] shrink-0 border-r border-[#d8e8f4] pr-6 last:border-r-0">
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#0f60b2]">
-                    {String(index + 1).padStart(2, "0")}
-                  </p>
-                  <h3 className="mt-3 text-xl font-semibold leading-tight text-[#0c3d86]">{item.title}</h3>
-                  <p className="mt-3 text-sm leading-7 text-slate-600">{item.description}</p>
+                <article
+                  key={item.title}
+                  className="w-[17rem] shrink-0 snap-start flex flex-col justify-between rounded-[1.3rem] border border-[#d0e3f2] bg-white p-6 shadow-sm transition-all hover:shadow-[0_8px_30px_rgb(12,61,134,0.08)] hover:-translate-y-1"
+                >
+                  <div>
+                    <div className="mb-5 inline-flex h-9 w-9 items-center justify-center rounded-full bg-[#e8f3fb] text-[12px] font-bold text-[#0f60b2]">
+                      {String(index + 1).padStart(2, "0")}
+                    </div>
+                    <h3 className="text-lg font-semibold leading-tight text-[#0c3d86] mb-3">{item.title}</h3>
+                    <p className="text-sm leading-relaxed text-slate-600">{item.description}</p>
+                  </div>
                 </article>
               ))}
             </div>
