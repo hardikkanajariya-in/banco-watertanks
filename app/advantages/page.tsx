@@ -25,33 +25,55 @@ export default function AdvantagesPage() {
         primaryCta={{ label: "See Full Comparison", href: "/comparison" }}
       />
 
-      <section className="w-full px-4 py-14 sm:px-6 lg:px-10 lg:py-18 2xl:px-14">
-        <SectionIntro
-          eyebrow="FRP Tank Advantages"
-          title="Pure, clean water always."
-          description="These are the core design-led advantages highlighted in the brochure."
-        />
-        <div className="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-          {advantagesContent.tankAdvantages.map((item) => (
-            <article key={item.title} className="rounded-[1.5rem] border border-[#d7e4f2] bg-white p-6 shadow-sm">
-              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#1f5f9d]">{item.title}</p>
-              <p className="mt-4 text-sm leading-7 text-slate-600">{item.description}</p>
-            </article>
-          ))}
+      <section className="w-full px-4 py-16 sm:px-6 lg:px-10 lg:py-20 2xl:px-14">
+        <div className="grid gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:items-start">
+          <SectionIntro
+            eyebrow="FRP Tank Advantages"
+            title="Pure, clean water always."
+            description="Core product advantages, translated into a clearer and more credible web layout."
+          />
+
+          <div className="border-t border-[#d9e5f1]">
+            {advantagesContent.tankAdvantages.map((item, index) => (
+              <article
+                key={item.title}
+                className="grid gap-4 border-b border-[#d9e5f1] py-6 sm:grid-cols-[4rem_1fr] sm:gap-6 sm:py-7"
+              >
+                <div className="text-sm font-semibold uppercase tracking-[0.14em] text-[#1f5f9d]">
+                  {String(index + 1).padStart(2, "0")}
+                </div>
+
+                <div>
+                  <h3 className="text-xl font-semibold tracking-tight text-[#0c2d52]">
+                    {item.title}
+                  </h3>
+                  <p className="mt-3 max-w-2xl text-[15px] leading-7 text-slate-600">
+                    {item.description}
+                  </p>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
-      <section className="w-full px-4 py-14 sm:px-6 lg:px-10 lg:py-18 2xl:px-14">
-        <SectionIntro
-          eyebrow="Benefits of FRP Water Tanks"
-          title="Twelve brochure-backed reasons to choose the system."
-          description="The benefits list has been preserved and cleaned up in a more usable website format."
-        />
-        <div className="mt-8">
-          <BenefitsGrid items={advantagesContent.benefits} />
-        </div>
-        <div className="mt-8">
-          <Button href="/comparison" variant="accent">Open Banco vs Others Comparison</Button>
+      <section className="w-full border-y border-[#e7eef5] bg-[#f8fbfe] px-4 py-16 sm:px-6 lg:px-10 lg:py-20 2xl:px-14">
+        <div className="grid gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:items-start">
+          <SectionIntro
+            eyebrow="Benefits of FRP Water Tanks"
+            title="Twelve strong reasons to choose the system."
+            description="A more readable, web-first presentation of the brochure-backed benefits."
+          />
+
+          <div>
+            <BenefitsGrid items={advantagesContent.benefits} />
+
+            <div className="mt-10 border-t border-[#d9e5f1] pt-6">
+              <Button href="/comparison" variant="accent">
+                Open Banco vs Others Comparison
+              </Button>
+            </div>
+          </div>
         </div>
       </section>
 
