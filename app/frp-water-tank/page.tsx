@@ -110,6 +110,7 @@ export default function ProductPage() {
               eyebrow="Technical Specifications"
               title="Technical data taken directly from the brochure."
               description="Operating conditions and mechanical properties remain visible in a clean engineering-friendly layout."
+              align="center"
             />
           </div>
           <div className="grid gap-8 lg:grid-cols-2 max-w-7xl mx-auto">

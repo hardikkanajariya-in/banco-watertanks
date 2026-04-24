@@ -15,7 +15,7 @@ export function SiteFooter() {
   const emailHref = `mailto:${contactDetails.email}`;
 
   return (
-    <footer className="border-t border-[#d7e4f2] bg-[#08213c] text-white">
+    <footer className="border-t border-[#133b6c] bg-[#08213c] text-white">
       <div className="grid w-full gap-10 px-4 py-14 sm:px-6 lg:grid-cols-[1.25fr_0.8fr_0.8fr_0.8fr_1fr] lg:px-10 2xl:px-14">
         <div className="space-y-5">
           <SiteLogo theme="dark" />

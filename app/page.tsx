@@ -112,248 +112,107 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="w-full px-4 py-12 sm:px-6 lg:px-10 lg:py-14 2xl:px-14">
-        <SplitSection
-          imageSrc="/images/company-aerial.jpg"
-          imageAlt="BANCO group overview"
-          eyebrow="About Us"
-          title={aboutContent.title}
-          text={aboutContent.intro}
-          points={aboutContent.bullets}
-          cta={{ label: "Explore the Group Overview", href: "/about" }}
-        />
-      </section>
+      <section className="relative overflow-hidden bg-[#f7fbff]">
+        <div className="absolute -left-28 top-10 h-72 w-72 rounded-full bg-sky-100/70 blur-3xl" />
+        <div className="absolute -right-20 bottom-0 h-72 w-72 rounded-full bg-blue-100/80 blur-3xl" />
+        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#0c3d86]/10 to-transparent" />
 
-      <section className="w-full px-4 py-14 sm:px-6 lg:px-10 lg:py-16 2xl:px-14">
-        <div className="grid gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:items-center lg:gap-14">
-          <div className="max-w-2xl">
-            <SectionIntro
-              eyebrow="FRP Water Tank"
-              title="A clearer product story with stronger visual hierarchy."
-              description="The product story is presented with a more premium content structure, cleaner scanning, and a stronger balance between technical clarity and visual presentation."
-            />
+        <div className="relative mx-auto max-w-[1500px] px-4 py-14 sm:px-6 lg:px-10 lg:py-20 2xl:px-14">
+          <div className="mb-10 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+            <div className="max-w-2xl">
+              <span className="inline-flex items-center rounded-full border border-[#0c3d86]/10 bg-white px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.24em] text-[#0c3d86] shadow-sm">
+                Applications
+              </span>
 
-            <div className="mt-8 grid gap-4">
-              {homeValueCards.slice(0, 3).map((item, index) => (
-                <article
-                  key={item.title}
-                  className="group rounded-[1.35rem] border border-[#d8e8f4] bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_18px_40px_-24px_rgba(12,61,134,0.20)]"
-                >
-                  <div className="flex items-start gap-4">
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#eaf4fb] text-[12px] font-bold text-[#0f60b2]">
-                      {String(index + 1).padStart(2, "0")}
-                    </div>
+              <h2 className="mt-5 text-3xl font-semibold leading-tight text-[#0c3d86] sm:text-4xl">
+                Built for varied water storage environments.
+              </h2>
 
-                    <div>
-                      <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#0f60b2]">
-                        {item.title}
-                      </p>
-                      <p className="mt-2 text-sm leading-7 text-slate-600">
-                        {item.description}
-                      </p>
-                    </div>
-                  </div>
-                </article>
-              ))}
+              <p className="mt-4 text-[15px] leading-8 text-slate-600">
+                {applicationsContent.intro}
+              </p>
             </div>
 
-            <div className="mt-8">
-              <Button href="/frp-water-tank" variant="secondary" className="w-full sm:w-auto">
-                View FRP Water Tank Details
-                <ArrowRight className="size-4" strokeWidth={2} aria-hidden="true" />
-              </Button>
-            </div>
+            <Button
+              href="/applications"
+              variant="secondary"
+              className="w-fit rounded-full border border-[#0c3d86]/10 bg-white px-6 py-3 text-[#0c3d86] shadow-sm transition hover:-translate-y-0.5 hover:bg-[#0c3d86] hover:text-white hover:shadow-lg"
+            >
+              View All Applications
+            </Button>
           </div>
 
-          <div className="relative">
-            <div className="absolute -left-6 top-10 h-28 w-28 rounded-full bg-[#29b9ec]/10 blur-2xl" />
-            <div className="absolute -right-6 bottom-8 h-32 w-32 rounded-full bg-[#0c3d86]/8 blur-2xl" />
+          <div className="flex gap-5 overflow-x-auto pb-2 snap-x snap-mandatory md:grid md:grid-cols-2 xl:grid-cols-4 md:overflow-visible">
+            {compactApplications.slice(0, 8).map((item, index) => (
+              <article
+                key={item.title}
+                className="group relative min-w-[18.5rem] snap-start overflow-hidden rounded-[1.6rem] border border-white bg-white p-6 shadow-[0_16px_50px_rgba(12,61,134,0.08)] transition duration-300 hover:-translate-y-1.5 hover:shadow-[0_24px_60px_rgba(12,61,134,0.14)] md:min-w-0"
+              >
+                <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#0c3d86] via-sky-400 to-cyan-300" />
+                <div className="absolute -right-8 -top-8 h-24 w-24 rounded-full bg-sky-50 transition duration-300 group-hover:scale-125" />
 
-            <div className="relative overflow-hidden rounded-[2rem] border border-[#d0e3f2] bg-white p-3 shadow-[0_24px_70px_-40px_rgba(12,61,134,0.28)]">
-              <div className="relative overflow-hidden rounded-[1.5rem]">
-                <Image
-                  src="/images/product-storage-tank.jpg"
-                  alt="BANCO FRP tank visual"
-                  width={960}
-                  height={720}
-                  className="aspect-[4/3.05] w-full object-cover"
-                />
-                <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(12,61,134,0.28),rgba(12,61,134,0.02),transparent)]" />
-              </div>
+                <div className="relative">
+                  <div className="mb-7 flex items-center justify-between">
+                    <span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-[#0c3d86] text-sm font-bold text-white shadow-md">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
 
-              <div className="absolute inset-x-6 bottom-6 rounded-[1.35rem] border border-white/70 bg-white/92 p-5 shadow-xl backdrop-blur-xl">
-                <div className="grid gap-3 md:grid-cols-2">
-                  {homeReasons.slice(0, 4).map((item) => (
-                    <div key={item} className="flex items-start gap-3">
-                      <div className="mt-1 h-2.5 w-2.5 shrink-0 rounded-full bg-[#29b9ec]" />
-                      <p className="text-sm leading-6 text-slate-700">{item}</p>
-                    </div>
-                  ))}
+                    <span className="h-px w-16 bg-gradient-to-r from-[#0c3d86]/30 to-transparent" />
+                  </div>
+
+                  <h3 className="text-xl font-semibold leading-tight text-[#0c3d86]">
+                    {item.title}
+                  </h3>
+
+                  <p className="mt-3 text-sm leading-7 text-slate-600">
+                    {item.description}
+                  </p>
+
+                  <div className="mt-6 flex items-center gap-2 text-sm font-medium text-[#0c3d86]">
+                    <span className="h-2.5 w-2.5 rounded-full bg-sky-400" />
+                    Water storage solution
+                  </div>
                 </div>
-              </div>
-            </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>
 
-      <section className="w-full px-4 py-12 sm:px-6 lg:px-10 lg:py-14 2xl:px-14">
-        <div className="grid gap-8 lg:grid-cols-[0.74fr_1.26fr] lg:items-start">
-          <div>
-            <SectionIntro
-              eyebrow="Applications"
-              title="Applications shown as a working range, not a wall of cards."
-              description={applicationsContent.intro}
-            />
-            <div className="mt-7">
-              <Button href="/applications" variant="secondary">
-                View All Applications
-              </Button>
-            </div>
-          </div>
-
-          <div className="overflow-x-auto no-scrollbar pb-6 -mx-4 px-4 sm:-mx-6 sm:px-6 lg:mx-0 lg:px-0">
-            <div className="flex w-max gap-5 py-4 snap-x snap-mandatory">
-              {compactApplications.map((item, index) => (
-                <article
-                  key={item.title}
-                  className="w-[17rem] shrink-0 snap-start flex flex-col justify-between rounded-[1.3rem] border border-[#d0e3f2] bg-white p-6 shadow-sm transition-all hover:shadow-[0_8px_30px_rgb(12,61,134,0.08)] hover:-translate-y-1"
-                >
-                  <div>
-                    <div className="mb-5 inline-flex h-9 w-9 items-center justify-center rounded-full bg-[#e8f3fb] text-[12px] font-bold text-[#0f60b2]">
-                      {String(index + 1).padStart(2, "0")}
-                    </div>
-                    <h3 className="text-lg font-semibold leading-tight text-[#0c3d86] mb-3">{item.title}</h3>
-                    <p className="text-sm leading-relaxed text-slate-600">{item.description}</p>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="w-full px-4 py-14 sm:px-6 lg:px-10 lg:py-16 2xl:px-14">
-        <div className="grid gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:items-start">
+      <section id="our-clients" className="w-full border-y border-[#dbe7f0] bg-[#f4f8fb] px-4 py-14 sm:px-6 lg:px-10 lg:py-16 2xl:px-14">
+        <div className="mx-auto grid max-w-[1320px] gap-8 lg:grid-cols-[0.72fr_1.28fr] lg:items-start">
           <div className="max-w-xl">
             <SectionIntro
-              eyebrow="Comparison"
-              title="A clearer way to compare Banco water tanks."
-              description="A sharper preview of the full comparison, designed for quick scanning on mobile and desktop."
+              eyebrow="Our Clients"
+              title="Trusted by industry and infrastructure stakeholders."
+              description="We partner with organizations across Tanzania to deliver reliable water storage solutions. This section features placeholders for client logos to be added later."
             />
-
-            <div className="mt-8 space-y-4">
-              {comparisonContent.callouts.map((item) => (
-                <div
-                  key={item}
-                  className="border-l-2 border-[#0c3d86]/18 pl-4 text-sm leading-7 text-slate-600"
-                >
-                  {item}
-                </div>
-              ))}
-            </div>
-
-            <div className="mt-8 flex flex-wrap items-center gap-3">
-              <Button href="/comparison" variant="accent">
-                Open Full Comparison
-              </Button>
-              <span className="text-sm text-slate-500">
-                Detailed parameters, full wording, and expanded review
-              </span>
-            </div>
           </div>
 
-          <div className="overflow-hidden rounded-[1.75rem] border border-slate-200 bg-white shadow-[0_18px_50px_-24px_rgba(15,23,42,0.22)]">
-            <div className="border-b border-slate-200 bg-slate-50/90 px-5 py-4 sm:px-6">
-              <div className="flex items-center justify-between gap-4">
-                <div>
-                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">
-                    Quick Preview
-                  </p>
-                  <h3 className="mt-1 text-lg font-semibold tracking-tight text-slate-900">
-                    Banco vs other tanks
-                  </h3>
-                </div>
-                <div className="hidden rounded-full bg-[#0c3d86] px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-white sm:inline-flex">
-                  Banco Highlighted
-                </div>
+          <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
+            {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
+              <div
+                key={i}
+                className="flex min-h-32 items-center justify-center border border-[#d3dee7] bg-white px-4 text-center"
+              >
+                <span className="text-sm font-semibold uppercase tracking-[0.22em] text-slate-400">
+                  Logo {i}
+                </span>
               </div>
-            </div>
-
-            <div className="hidden md:block">
-              <div className="grid grid-cols-[minmax(10rem,0.9fr)_minmax(0,1fr)_minmax(0,1fr)] border-b border-slate-200 bg-slate-50 text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">
-                <div className="px-5 py-4 sm:px-6">Parameter</div>
-                <div className="border-l border-slate-200 bg-[#0c3d86] px-5 py-4 text-white sm:px-6">
-                  Banco
-                </div>
-                <div className="border-l border-slate-200 px-5 py-4 sm:px-6">Others</div>
-              </div>
-
-              {homeComparisonPreview.map((item, index) => (
-                <div
-                  key={item.parameter}
-                  className="grid grid-cols-[minmax(10rem,0.9fr)_minmax(0,1fr)_minmax(0,1fr)] border-b border-slate-200 last:border-b-0"
-                >
-                  <div
-                    className={[
-                      "px-5 py-5 text-sm font-semibold text-slate-900 sm:px-6",
-                      index % 2 === 0 ? "bg-slate-50/70" : "bg-white",
-                    ].join(" ")}
-                  >
-                    {item.parameter}
-                  </div>
-
-                  <div className="border-l border-slate-200 bg-[#0c3d86]/[0.04] px-5 py-5 text-sm leading-7 text-slate-700 sm:px-6">
-                    {item.banco}
-                  </div>
-
-                  <div className="border-l border-slate-200 px-5 py-5 text-sm leading-7 text-slate-600 sm:px-6">
-                    {item.others}
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div className="divide-y divide-slate-200 md:hidden">
-              {homeComparisonPreview.map((item) => (
-                <article key={item.parameter} className="px-5 py-5">
-                  <h3 className="text-sm font-semibold uppercase tracking-[0.08em] text-slate-900">
-                    {item.parameter}
-                  </h3>
-
-                  <div className="mt-4 grid gap-3">
-                    <div className="rounded-2xl border border-[#0c3d86]/12 bg-[#0c3d86]/[0.04] p-4">
-                      <div className="mb-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#0c3d86]">
-                        Banco
-                      </div>
-                      <p className="text-sm leading-7 text-slate-700">{item.banco}</p>
-                    </div>
-
-                    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
-                      <div className="mb-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-slate-500">
-                        Others
-                      </div>
-                      <p className="text-sm leading-7 text-slate-600">{item.others}</p>
-                    </div>
-                  </div>
-                </article>
-              ))}
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
       <section className="w-full px-4 py-10 sm:px-6 lg:px-10 lg:py-12 2xl:px-14">
-        <div className="relative isolate overflow-hidden rounded-[2rem] border border-[#0c3d86]/18 bg-[#0c5cad] text-white shadow-[0_24px_70px_-30px_rgba(12,61,134,0.55)]">
+        <div className="relative isolate overflow-hidden border border-[#143b6b] bg-[#08285b] text-white shadow-[0_24px_70px_-42px_rgba(12,61,134,0.55)]">
           <Image
             src="/images/contact-water-tower.jpg"
             alt="BANCO contact section background"
             fill
             sizes="100vw"
-            className="object-cover object-center opacity-20"
+            className="object-cover object-center opacity-18"
           />
-
-          <div className="absolute inset-0 bg-[linear-gradient(115deg,rgba(6,28,68,0.94)_0%,rgba(12,61,134,0.88)_48%,rgba(11,97,179,0.78)_100%)]" />
-          <div className="absolute inset-y-0 left-[46%] hidden w-px bg-white/12 lg:block" />
 
           <div className="relative grid gap-8 px-6 py-8 sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:px-10 lg:py-10">
             <div className="max-w-xl">
@@ -365,7 +224,7 @@ export default function HomePage() {
                 {contactContent.title}
               </h2>
 
-              <p className="mt-3 max-w-lg text-[15px] leading-relaxed text-white/78">
+              <p className="mt-3 max-w-lg text-[15px] leading-7 text-white/78">
                 {contactContent.description}
               </p>
 
@@ -375,41 +234,29 @@ export default function HomePage() {
                   <ArrowRight className="size-4" strokeWidth={2} aria-hidden="true" />
                 </Button>
 
-                <p className="text-xs leading-relaxed text-white/68 max-w-[200px]">
+                <p className="max-w-[220px] text-xs leading-relaxed text-white/68">
                   Fast support for product queries, orders, and dealership requirements
                 </p>
               </div>
             </div>
 
-            <div className="flex flex-col justify-center gap-8 lg:pl-12">
-              <div className="group flex items-start gap-5">
-                <div className="mt-0.5 flex h-12 w-12 shrink-0 items-center justify-center rounded-[1rem] bg-white/10 ring-1 ring-white/20 transition-all group-hover:bg-[#29b9ec]">
-                  <Phone className="size-6 text-white" strokeWidth={1.5} aria-hidden="true" />
-                </div>
-                <div>
-                  <span className="block text-[11px] font-semibold uppercase tracking-widest text-[#9fe9ff]">Phone</span>
-                  <span className="mt-1 block text-[15px] font-medium text-white">{contactDetails.phone}</span>
-                </div>
+            <div className="grid gap-0 border border-white/10 bg-white/6 lg:grid-cols-3">
+              <div className="border-b border-white/10 px-5 py-5 lg:border-b-0 lg:border-r">
+                <Phone className="size-5 text-[#9fe9ff]" strokeWidth={1.7} aria-hidden="true" />
+                <span className="mt-4 block text-[11px] font-semibold uppercase tracking-widest text-[#9fe9ff]">Phone</span>
+                <span className="mt-2 block text-[15px] font-medium text-white">{contactDetails.phone}</span>
               </div>
 
-              <div className="group flex items-start gap-5">
-                <div className="mt-0.5 flex h-12 w-12 shrink-0 items-center justify-center rounded-[1rem] bg-white/10 ring-1 ring-white/20 transition-all group-hover:bg-[#29b9ec]">
-                  <Mail01 className="size-6 text-white" strokeWidth={1.5} aria-hidden="true" />
-                </div>
-                <div>
-                  <span className="block text-[11px] font-semibold uppercase tracking-widest text-[#9fe9ff]">Email</span>
-                  <span className="mt-1 block text-[15px] font-medium text-white break-all">{contactDetails.email}</span>
-                </div>
+              <div className="border-b border-white/10 px-5 py-5 lg:border-b-0 lg:border-r">
+                <Mail01 className="size-5 text-[#9fe9ff]" strokeWidth={1.7} aria-hidden="true" />
+                <span className="mt-4 block text-[11px] font-semibold uppercase tracking-widest text-[#9fe9ff]">Email</span>
+                <span className="mt-2 block break-all text-[15px] font-medium text-white">{contactDetails.email}</span>
               </div>
 
-              <div className="group flex items-start gap-5">
-                <div className="mt-0.5 flex h-12 w-12 shrink-0 items-center justify-center rounded-[1rem] bg-white/10 ring-1 ring-white/20 transition-all group-hover:bg-[#29b9ec]">
-                  <MarkerPin01 className="size-6 text-white" strokeWidth={1.5} aria-hidden="true" />
-                </div>
-                <div>
-                  <span className="block text-[11px] font-semibold uppercase tracking-widest text-[#9fe9ff]">Address</span>
-                  <span className="mt-1 block max-w-[280px] text-[15px] font-medium text-white leading-relaxed">{contactDetails.address}</span>
-                </div>
+              <div className="px-5 py-5">
+                <MarkerPin01 className="size-5 text-[#9fe9ff]" strokeWidth={1.7} aria-hidden="true" />
+                <span className="mt-4 block text-[11px] font-semibold uppercase tracking-widest text-[#9fe9ff]">Address</span>
+                <span className="mt-2 block text-[15px] font-medium leading-relaxed text-white">{contactDetails.address}</span>
               </div>
             </div>
           </div>
