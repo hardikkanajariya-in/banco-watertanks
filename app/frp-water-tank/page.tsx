@@ -28,128 +28,206 @@ export default function ProductPage() {
         secondaryCta={{ label: "View Comparison", href: "/comparison" }}
       />
 
-      {/* Safe Water Storage - Elegant Split Section */}
-      <section id="safe-water-storage" className="relative w-full px-4 py-16 sm:px-6 lg:px-10 lg:py-24 2xl:px-14 bg-white overflow-hidden">
-        <div className="absolute right-0 top-0 h-[600px] w-[600px] -translate-y-1/4 translate-x-1/4 rounded-full bg-[radial-gradient(circle,rgba(41,185,236,0.06)_0%,transparent_70%)] pointer-events-none" />
+      {/* Safe Water Storage System - Brochure Style */}
+      <section
+        id="safe-water-storage"
+        className="relative w-full overflow-hidden bg-white px-4 py-14 sm:px-6 lg:px-10 lg:py-20 2xl:px-14"
+      >
+        {/* Optional brochure corner accent */}
+        <div className="pointer-events-none absolute left-0 top-0 h-20 w-20 bg-[#0c5aa6] [clip-path:polygon(0_0,100%_0,0_100%)]" />
+        <div className="pointer-events-none absolute left-20 top-0 h-14 w-14 bg-[#29b9ec] [clip-path:polygon(0_0,100%_0,0_100%)]" />
 
-        <div className="relative mx-auto max-w-[1440px]">
-          <div className="grid gap-12 lg:grid-cols-[1fr_1fr] lg:gap-20 lg:items-center">
-            <div className="relative lg:pl-10 order-last lg:order-first">
-              <div className="absolute inset-0 bg-[#f4f9fd] rounded-[3rem] -z-10 -translate-x-5 translate-y-5 rotate-2"></div>
-              <BlobMask variant={4} className="w-full h-auto aspect-[4/3] md:aspect-[5/4] shadow-[0_24px_50px_-15px_rgba(12,61,134,0.2)]">
-                <Image
-                  src="/images/product-storage-tank.jpg"
-                  alt="BANCO FRP water tank product visual"
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover"
-                />
-              </BlobMask>
-              <div className="absolute -bottom-6 -right-4 sm:bottom-10 sm:-right-8 rounded-[1.5rem] bg-white p-6 shadow-xl border border-[#eef4f9] max-w-[220px]">
-                <div className="flex items-center gap-3 text-[#29b9ec] mb-2">
-                  <CheckCircleBroken className="size-6" strokeWidth={2} />
-                  <p className="text-xl font-bold text-[#0c3d86]">100%</p>
-                </div>
-                <p className="text-[11px] font-bold uppercase tracking-wider text-slate-500">Hygienic Storage</p>
-              </div>
-            </div>
+        {/* Optional logo */}
+        <div className="absolute right-8 top-6 hidden sm:block">
+          <Image
+            src="/images/banco-logo.png"
+            alt="BANCO Water Tank"
+            width={180}
+            height={60}
+            className="h-auto w-[180px] object-contain"
+          />
+        </div>
 
-            <div className="space-y-8">
-              <SectionIntro
-                eyebrow="Safe Water Storage System"
-                title="Designed and developed to meet demanding water storage requirements."
-                description={productContent.safeWaterStorage[0]}
-              />
-              <div className="space-y-6 text-lg leading-relaxed text-slate-600">
-                {productContent.safeWaterStorage.slice(1).map((item) => (
-                  <p key={item}>{item}</p>
-                ))}
-              </div>
-            </div>
+        {/* Soft water background */}
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-80 bg-gradient-to-t from-[#edf8ff] via-[#f8fcff] to-transparent opacity-95" />
+        <div className="pointer-events-none absolute -bottom-24 left-0 h-80 w-full rounded-[50%] bg-[#dff1fb] opacity-40 blur-3xl" />
+
+        <div className="relative mx-auto max-w-5xl pt-10 sm:pt-14">
+          <div className="mb-8">
+            <h2 className="text-3xl font-extrabold uppercase tracking-[0.12em] text-[#0c5aa6] sm:text-4xl">
+              Safe Water Storage System
+            </h2>
+
+            <div className="mt-2 h-[3px] w-full max-w-[820px] bg-gradient-to-r from-[#0c5aa6] via-[#78aed7] to-transparent" />
+          </div>
+
+          <p className="mb-10 text-right text-xl font-semibold italic leading-snug text-[#0c5aa6] sm:text-2xl">
+            “Managing the world&apos;s
+            water supply”
+          </p>
+
+          <div className="max-w-[900px] space-y-7 text-[15px] font-medium leading-8 text-[#4a4a4a] sm:text-base sm:leading-8">
+            {productContent.safeWaterStorage.map((item) => (
+              <p key={item} className="text-justify">
+                {item}
+              </p>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Standard Panel Design - Elevated Banners */}
-      <section id="standard-panel-design" className="relative w-full px-4 py-16 sm:px-6 lg:px-10 lg:py-24 2xl:px-14 bg-[#08285b] overflow-hidden">
-        <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(41,185,236,0.03)_50%,transparent_75%,transparent_100%)] bg-[length:250px_250px]" />
+      {/* Standard Panel Design - Brochure Style */}
+      <section
+        id="standard-panel-design"
+        className="relative w-full overflow-hidden bg-white px-4 py-14 sm:px-6 lg:px-10 lg:py-20 2xl:px-14"
+      >
+        {/* Soft water background */}
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-72 bg-gradient-to-t from-[#edf8ff] via-[#f8fcff] to-transparent opacity-90" />
+        <div className="pointer-events-none absolute -bottom-24 left-0 h-80 w-full rounded-[50%] bg-[#dff1fb] opacity-40 blur-3xl" />
 
-        <div className="relative mx-auto max-w-[1440px]">
-          <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16 lg:items-start text-white">
-            <div>
-              <p className="mb-4 inline-flex rounded-full bg-white/10 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.2em] text-[#9fe9ff] ring-1 ring-white/20">
-                Standard Panel Design
-              </p>
-              <h2 className="mb-6 text-[clamp(2rem,3vw,2.5rem)] font-bold leading-tight text-white tracking-tight">
-                {productContent.standardPanelDesign.title}
-              </h2>
-              <p className="text-[16px] leading-relaxed text-[#c7def0] max-w-lg font-medium">
-                {productContent.standardPanelDesign.description}
-              </p>
-            </div>
+        <div className="relative mx-auto max-w-6xl">
+          <div className="mb-10">
+            <h2 className="text-3xl font-extrabold uppercase tracking-[0.12em] text-[#0c5aa6] sm:text-4xl">
+              Standard Panel Design
+            </h2>
 
-            <div className="grid sm:grid-cols-2 gap-4">
-              {productContent.standardPanelDesign.callouts.map((item, i) => (
-                <article key={item} className="flex flex-col rounded-[1.5rem] bg-white/5 border border-white/10 p-6 backdrop-blur-md transition-all hover:bg-white/10 hover:border-white/20 hover:-translate-y-1">
-                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-[1rem] bg-[#29b9ec]/20 text-[#29b9ec]">
-                    <LayersThree01 className="size-6" strokeWidth={1.5} aria-hidden="true" />
-                  </div>
-                  <p className="text-[15px] leading-relaxed text-white/90">{item}</p>
-                </article>
-              ))}
-            </div>
+            <div className="mt-2 h-[3px] w-full max-w-[820px] bg-gradient-to-r from-[#0c5aa6] via-[#78aed7] to-transparent" />
+          </div>
+
+          <div className="mx-auto max-w-5xl">
+            <Image
+              src="/images/standard-panel-design.png"
+              alt="Standard panel design diagram"
+              width={1100}
+              height={820}
+              className="h-auto w-full object-contain"
+              priority={false}
+            />
+          </div>
+
+          {/* Optional callouts for mobile/content support */}
+          <div className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            {productContent.standardPanelDesign.callouts.map((item) => (
+              <div
+                key={item}
+                className="rounded-xl border border-[#dcecf7] bg-white/80 px-4 py-3 text-sm font-medium leading-6 text-slate-600 shadow-[0_8px_24px_rgba(12,90,166,0.05)] backdrop-blur"
+              >
+                {item}
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Technical Specifications */}
-      <section id="technical-specifications" className="w-full px-4 py-16 sm:px-6 lg:px-10 lg:py-24 2xl:px-14 bg-[#f8fbff] border-y border-[#eaf2f8]">
-        <div className="mx-auto max-w-[1440px]">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <SectionIntro
-              eyebrow="Technical Specifications"
-              title="Technical data taken directly from the brochure."
-              description="Operating conditions and mechanical properties remain visible in a clean engineering-friendly layout."
-              align="center"
-            />
+      <section
+        id="technical-specifications"
+        className="relative w-full overflow-hidden bg-white px-4 py-16 sm:px-6 lg:px-10 lg:py-24 2xl:px-14"
+      >
+        {/* Soft bottom water-style background */}
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-72 bg-gradient-to-t from-[#edf8ff] via-[#f8fcff] to-transparent opacity-90" />
+        <div className="pointer-events-none absolute -bottom-24 left-0 h-80 w-full rounded-[50%] bg-[#dff1fb] opacity-40 blur-3xl" />
+
+        <div className="relative mx-auto max-w-6xl">
+          {/* Brochure-style heading */}
+          <div className="mb-12">
+            <p className="mb-2 text-sm font-bold uppercase tracking-[0.22em] text-[#0c5aa6]">
+              Technical Specifications
+            </p>
+
+            <h2 className="text-3xl font-extrabold uppercase tracking-wide text-[#0c5aa6] sm:text-4xl">
+              Technical Data
+            </h2>
+
+            <div className="mt-3 h-[3px] w-full max-w-[780px] bg-gradient-to-r from-[#0c5aa6] via-[#78aed7] to-transparent" />
+
+            <p className="mt-5 max-w-2xl text-[15px] font-medium leading-7 text-slate-600">
+              Operating conditions and mechanical properties taken directly from the brochure,
+              presented in a clean engineering-friendly format.
+            </p>
           </div>
-          <div className="grid gap-8 lg:grid-cols-2 max-w-7xl mx-auto">
+
+          {/* Tables */}
+          <div className="grid gap-10 lg:grid-cols-2">
             {productContent.technicalSpecifications.map((section) => (
-              <SpecTable key={section.title} title={section.title} rows={section.rows} />
+              <SpecTable
+                key={section.title}
+                title={section.title}
+                rows={section.rows}
+              />
             ))}
           </div>
         </div>
       </section>
 
       {/* Features List */}
-      <section id="features" className="w-full px-4 py-16 sm:px-6 lg:px-10 lg:py-24 2xl:px-14 bg-white">
-        <div className="mx-auto max-w-[1440px]">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <SectionIntro
-              eyebrow="Features"
-              title="Assembly details and accessories organized for quick review."
-              description="The website now follows the brochure sequence, so engineers and clients can move from storage purpose to panel design, specifications, and features in order."
-            />
+      <section className="relative overflow-hidden bg-white px-4 py-14 sm:px-6 lg:px-10">
+        {/* Soft water-style bottom background */}
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-64 bg-gradient-to-t from-[#eef8ff] via-[#f8fcff] to-transparent opacity-80" />
+        <div className="pointer-events-none absolute -bottom-20 left-0 h-72 w-full rounded-[50%] bg-[#dff1fb] opacity-40 blur-3xl" />
+
+        <div className="relative mx-auto max-w-5xl">
+          {/* Main Heading */}
+          <div className="mb-12">
+            <h2 className="text-3xl font-extrabold uppercase tracking-wide text-[#0c5aa6] sm:text-4xl">
+              Features
+            </h2>
+            <div className="mt-2 h-[3px] w-full max-w-[760px] bg-gradient-to-r from-[#0c5aa6] via-[#78aed7] to-transparent" />
           </div>
-          <div className="grid gap-6 lg:grid-cols-2 max-w-5xl mx-auto">
-            {productContent.features.map((group) => (
-              <article key={group.title} className="rounded-[2rem] border border-[#eaf2f8] bg-white p-8 shadow-[0_8px_30px_rgba(12,61,134,0.04)]">
-                <h3 className="text-2xl font-bold text-[#0c3d86] mb-6 flex items-center justify-between">
-                  {group.title}
-                  <div className="h-2 w-12 rounded-full bg-[#e8f1f8]"></div>
-                </h3>
-                <ul className="space-y-4">
-                  {group.items.map((item, i) => (
-                    <li key={item} className="flex items-start gap-4 rounded-[1.2rem] bg-[#f8fbff] p-4 transition-colors hover:bg-[#eef5fb] text-[15px] leading-relaxed text-slate-700 font-medium">
-                      <div className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#0c3d86] text-white text-[10px] font-bold">
-                        {i + 1}
+
+          <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
+            {/* Left Content */}
+            <div>
+              {productContent.features.map((group, index) => {
+                const isAccessories = group.title.toLowerCase().includes("accessories");
+
+                return (
+                  <div key={group.title} className={index > 0 ? "mt-14" : ""}>
+                    <h3 className="mb-5 text-xl font-extrabold uppercase tracking-wide text-[#0c5aa6] sm:text-2xl">
+                      {group.title}
+                    </h3>
+
+                    {isAccessories ? (
+                      <ul className="space-y-3">
+                        {group.items.map((item) => (
+                          <li
+                            key={item}
+                            className="relative pl-5 text-[15px] font-medium leading-7 text-[#2b2b2b]"
+                          >
+                            <span className="absolute left-0 top-[11px] h-1.5 w-1.5 rounded-full bg-[#0c5aa6]" />
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    ) : (
+                      <div className="max-w-md space-y-6">
+                        {group.items.map((item) => (
+                          <p
+                            key={item}
+                            className="text-[15px] font-medium leading-7 text-[#4a4a4a]"
+                          >
+                            {item}
+                          </p>
+                        ))}
                       </div>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </article>
-            ))}
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* Right Product Image */}
+            <div className="flex justify-center lg:justify-end">
+              <div className="relative mt-2 w-full max-w-[380px]">
+                <div className="absolute -inset-6 rounded-full bg-[#eaf5fb] opacity-50 blur-3xl" />
+
+                <img
+                  src="/images/frp-water-tank.png"
+                  alt="FRP panel type water tank assembly"
+                  className="relative z-10 w-full object-contain drop-shadow-[0_20px_35px_rgba(15,74,130,0.18)]"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
