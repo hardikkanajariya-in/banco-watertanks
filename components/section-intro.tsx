@@ -18,46 +18,51 @@ export function SectionIntro({
       <div
         className={[
           "w-full",
-          isCenter ? "text-center" : "",
+          isCenter ? "mx-auto text-center" : "",
         ].join(" ")}
       >
         {/* EYEBROW */}
-        {eyebrow && (
-          <p className="text-[12px] font-semibold uppercase tracking-[0.22em] text-[#0f60b2]">
+        {eyebrow ? (
+          <p
+            className={[
+              "mb-2 text-[0.72rem] font-bold uppercase tracking-[0.28em] text-[#0c5aa6]",
+              isCenter ? "text-center" : "",
+            ].join(" ")}
+          >
             {eyebrow}
           </p>
-        )}
+        ) : null}
 
         {/* TITLE */}
         <h2
           className={[
-            "mt-4 font-semibold leading-[1.05] tracking-[-0.035em] text-[#0c3d86]",
-            "text-[clamp(2rem,3.5vw,3.4rem)]",
-            isCenter ? "mx-auto max-w-[28ch]" : "max-w-[40ch]",
+            "font-extrabold uppercase leading-[1.08] tracking-[0.12em] text-[#0c5aa6]",
+            "text-[clamp(1.8rem,4vw,2.65rem)]",
+            isCenter ? "mx-auto max-w-[24ch]" : "max-w-[52ch]",
           ].join(" ")}
         >
           {title}
         </h2>
 
-        {/* DIVIDER */}
+        {/* BROCHURE DIVIDER */}
         <div
           className={[
-            "mt-6 h-[2px] w-16 bg-[#29b9ec]",
-            isCenter ? "mx-auto" : "",
+            "mt-2 h-[3px] bg-gradient-to-r from-[#0c5aa6] via-[#78aed7] to-transparent",
+            isCenter ? "mx-auto w-full max-w-[760px]" : "w-full max-w-[820px]",
           ].join(" ")}
         />
 
         {/* DESCRIPTION */}
-        {description && (
+        {description ? (
           <p
             className={[
-              "mt-6 text-[15px] leading-7 text-slate-600 sm:text-base sm:leading-8",
-              isCenter ? "mx-auto max-w-[60ch]" : "max-w-[60ch]",
+              "mt-5 text-[15px] font-medium leading-8 text-[#4a4a4a] sm:text-base sm:leading-8",
+              isCenter ? "mx-auto max-w-[760px]" : "max-w-[760px]",
             ].join(" ")}
           >
             {description}
           </p>
-        )}
+        ) : null}
       </div>
     </div>
   );

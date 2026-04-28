@@ -34,117 +34,215 @@ export default function AboutPage() {
     <>
       <PageHero
         eyebrow="About Us"
-        title={aboutContent.title}
-        description={aboutContent.intro}
-        primaryCta={{ label: "Contact Us", href: "/contact" }}
       />
 
-      <section id="group-overview" className="w-full bg-white px-4 py-12 sm:px-6 lg:px-10 lg:py-16 2xl:px-14">
-        <div className="mx-auto grid max-w-[1440px] gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:items-start">
-          <div className="max-w-2xl">
-            <SectionIntro
-              eyebrow="Group Overview"
-              title="A manufacturing legacy presented with clearer corporate structure."
-            />
+      <section
+  id="group-overview"
+  className="relative w-full overflow-hidden bg-white px-4 py-14 sm:px-6 lg:px-10 lg:py-20 2xl:px-14"
+>
+  {/* Brochure-style soft water background */}
+  <div className="pointer-events-none absolute inset-x-0 bottom-0 h-80 bg-gradient-to-t from-[#edf8ff] via-[#f8fcff] to-transparent opacity-95" />
+  <div className="pointer-events-none absolute -bottom-24 left-0 h-80 w-full rounded-[50%] bg-[#dff1fb] opacity-40 blur-3xl" />
 
-            <div className="mt-8 space-y-5 text-[15px] leading-7 text-slate-600 sm:text-base sm:leading-8">
-              {aboutContent.paragraphs.map((paragraph) => (
-                <p key={paragraph}>{paragraph}</p>
-              ))}
-            </div>
+  <div className="relative mx-auto max-w-6xl">
+    {/* Section Heading */}
+    <div className="mb-10">
+      <p className="mb-2 text-[0.72rem] font-bold uppercase tracking-[0.28em] text-[#0c5aa6]">
+        Group Overview
+      </p>
 
-            <div className="mt-8 border-y border-[#d8e4ed]">
-              {aboutContent.bullets.map((item, index) => (
-                <div key={item} className="grid gap-3 border-b border-[#d8e4ed] py-4 last:border-b-0 sm:grid-cols-[4rem_1fr]">
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#0f60b2]">
-                    {String(index + 1).padStart(2, "0")}
-                  </p>
-                  <p className="text-sm leading-7 text-slate-700 sm:text-[15px]">{item}</p>
-                </div>
-              ))}
+      <h2 className="max-w-4xl text-[clamp(1.8rem,4vw,2.65rem)] font-extrabold uppercase leading-[1.08] tracking-[0.12em] text-[#0c5aa6]">
+        A Manufacturing Legacy With Strong Corporate Structure
+      </h2>
+
+      <div className="mt-3 h-[3px] w-full max-w-[900px] bg-gradient-to-r from-[#0c5aa6] via-[#78aed7] to-transparent" />
+    </div>
+
+    <div className="grid gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
+      {/* Left Text Content */}
+      <div>
+        <div className="space-y-7 text-[15px] font-medium leading-8 text-[#4a4a4a] sm:text-base">
+          {aboutContent.paragraphs.map((paragraph) => (
+            <p key={paragraph} className="text-justify">
+              {paragraph}
+            </p>
+          ))}
+        </div>
+
+        {/* Bullet Rows */}
+        <div className="mt-10 border-y border-[#d8e8f4]">
+          {aboutContent.bullets.map((item, index) => (
+            <div
+              key={item}
+              className="grid gap-3 border-b border-[#d8e8f4] py-5 last:border-b-0 sm:grid-cols-[4rem_1fr]"
+            >
+              <p className="text-[11px] font-extrabold uppercase tracking-[0.18em] text-[#0c5aa6]">
+                {String(index + 1).padStart(2, "0")}
+              </p>
+
+              <p className="text-[15px] font-medium leading-7 text-[#4a4a4a]">
+                {item}
+              </p>
             </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Right Visual + Facts */}
+      <div className="lg:pt-2">
+        <div className="border border-[#d8e8f4] bg-white shadow-[0_20px_45px_rgba(12,90,166,0.08)]">
+          <div className="flex items-center justify-between border-b border-[#d8e8f4] px-5 py-3">
+            <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-slate-500">
+              Facility View
+            </span>
+
+            <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#0c5aa6]">
+              BANCO
+            </span>
           </div>
 
-          <div className="grid gap-4">
-            <div className="overflow-hidden border border-[#d2dfe8] bg-white shadow-[0_24px_60px_-44px_rgba(12,61,134,0.34)]">
-              <div className="flex items-center justify-between border-b border-[#d2dfe8] px-4 py-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">
-                <span>Facility View</span>
-                <span className="text-[#0c3d86]">BANCO</span>
-              </div>
-              <div className="relative aspect-[5/4] overflow-hidden">
-                <Image
-                  src="/images/company-aerial.jpg"
-                  alt="BANCO manufacturing facility"
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 52rem"
-                  className="object-cover"
-                />
-              </div>
-            </div>
-
-            <div className="grid gap-0 border border-[#d2dfe8] bg-[#f4f8fb] sm:grid-cols-2">
-              {overviewFacts.map((item, index) => (
-                <div
-                  key={item.label}
-                  className={[
-                    "border-b border-[#d2dfe8] px-5 py-5 sm:border-r",
-                    index >= 2 ? "sm:border-b-0" : "",
-                    index % 2 === 1 ? "sm:border-r-0" : ""
-                  ].join(" ")}
-                >
-                  <p className="text-3xl font-semibold tracking-tight text-[#08285b]">{item.value}</p>
-                  <p className="mt-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">
-                    {item.label}
-                  </p>
-                </div>
-              ))}
-            </div>
+          <div className="relative aspect-[5/4] overflow-hidden">
+            <Image
+              src="/images/company-aerial.jpg"
+              alt="BANCO manufacturing facility"
+              fill
+              sizes="(max-width: 1024px) 100vw, 45vw"
+              className="object-cover"
+            />
           </div>
         </div>
-      </section>
+
+        {/* Facts Grid */}
+        <div className="mt-5 grid border border-[#d8e8f4] bg-[#f6fbff] sm:grid-cols-2">
+          {overviewFacts.map((item, index) => (
+            <div
+              key={item.label}
+              className={[
+                "border-b border-[#d8e8f4] px-5 py-5 sm:border-r",
+                index >= 2 ? "sm:border-b-0" : "",
+                index % 2 === 1 ? "sm:border-r-0" : "",
+              ].join(" ")}
+            >
+              <p className="text-3xl font-extrabold tracking-tight text-[#0c5aa6]">
+                {item.value}
+              </p>
+
+              <p className="mt-2 text-[11px] font-bold uppercase tracking-[0.18em] text-[#4a4a4a]">
+                {item.label}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        {/* Blue brochure note */}
+        <div className="mt-5 bg-[#0c5aa6] px-5 py-4 text-white">
+          <p className="text-[14px] font-medium leading-7">
+            BANCO combines manufacturing experience, engineering reliability,
+            and regional presence to deliver dependable water storage solutions.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
       <StatsStrip items={brandStats} />
 
-      <section id="manufacturing-footprint" className="w-full border-y border-[#dbe7f0] bg-[#f4f8fb] px-4 py-12 sm:px-6 lg:px-10 lg:py-16 2xl:px-14">
-        <div className="mx-auto grid max-w-[1320px] gap-8 lg:grid-cols-[0.78fr_1.22fr] lg:items-start">
-          <div className="max-w-xl">
-            <SectionIntro
-              eyebrow="Manufacturing Footprint"
-              title="Operations organized as a national manufacturing network."
-              description="Our operations are strategically placed across Tanzania to ensure rapid distribution and exceptional project coordination across the region."
-            />
-          </div>
+     <section
+  id="manufacturing-footprint"
+  className="relative w-full overflow-hidden bg-white px-4 py-14 sm:px-6 lg:px-10 lg:py-20 2xl:px-14"
+>
+  {/* Brochure-style soft water background */}
+  <div className="pointer-events-none absolute inset-x-0 bottom-0 h-80 bg-gradient-to-t from-[#edf8ff] via-[#f8fcff] to-transparent opacity-95" />
+  <div className="pointer-events-none absolute -bottom-24 left-0 h-80 w-full rounded-[50%] bg-[#dff1fb] opacity-40 blur-3xl" />
 
-          <div className="grid gap-4">
-            <article className="border border-[#d3dee7] bg-white p-6 shadow-[0_18px_44px_-40px_rgba(12,61,134,0.28)]">
-              <div className="grid gap-5 lg:grid-cols-[10rem_1fr] lg:items-start">
-                <div>
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#0f60b2]">Primary Hub</p>
-                  <h3 className="mt-3 text-2xl font-semibold text-[#08285b]">{primaryFootprint.title}</h3>
-                </div>
-                <p className="text-[15px] leading-7 text-slate-600">{primaryFootprint.description}</p>
+  <div className="relative mx-auto max-w-6xl">
+    {/* Heading */}
+    <div className="mb-10">
+      <p className="mb-2 text-[0.72rem] font-bold uppercase tracking-[0.28em] text-[#0c5aa6]">
+        Manufacturing Footprint
+      </p>
+
+      <h2 className="max-w-4xl text-[clamp(1.8rem,4vw,2.65rem)] font-extrabold uppercase leading-[1.08] tracking-[0.12em] text-[#0c5aa6]">
+        Operations Organized As A National Manufacturing Network
+      </h2>
+
+      <div className="mt-3 h-[3px] w-full max-w-[900px] bg-gradient-to-r from-[#0c5aa6] via-[#78aed7] to-transparent" />
+
+      <p className="mt-5 max-w-3xl text-[15px] font-medium leading-8 text-[#4a4a4a] sm:text-base">
+        Our operations are strategically placed across Tanzania to ensure rapid
+        distribution and exceptional project coordination across the region.
+      </p>
+    </div>
+
+    <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+      {/* Left blue information block */}
+      <div className="bg-[#0c5aa6] px-6 py-7 text-white sm:px-8 sm:py-8">
+        <p className="text-[11px] font-bold uppercase tracking-[0.24em] text-[#c7f4ff]">
+          Network Strength
+        </p>
+
+        <h3 className="mt-4 max-w-md text-2xl font-extrabold uppercase leading-tight tracking-[0.08em] text-white sm:text-3xl">
+          Reliable Production And Regional Reach
+        </h3>
+
+        <div className="mt-4 h-[3px] w-full max-w-[360px] bg-gradient-to-r from-white via-[#78d7ff] to-transparent" />
+
+        <p className="mt-5 text-[15px] font-medium leading-8 text-white/85">
+          BANCO’s manufacturing network supports consistent quality, faster
+          coordination, and dependable supply for water storage projects across
+          residential, commercial, industrial, and infrastructure requirements.
+        </p>
+      </div>
+
+      {/* Right footprint content */}
+      <div>
+        {primaryFootprint ? (
+          <article className="mb-5 border border-[#d8e8f4] bg-[#f6fbff] p-6">
+            <div className="grid gap-5 lg:grid-cols-[13rem_1fr] lg:items-start">
+              <div>
+                <p className="text-[11px] font-extrabold uppercase tracking-[0.18em] text-[#0c5aa6]">
+                  Primary Hub
+                </p>
+
+                <h3 className="mt-3 text-2xl font-extrabold uppercase leading-tight tracking-wide text-[#0c5aa6]">
+                  {primaryFootprint.title}
+                </h3>
+              </div>
+
+              <p className="text-[15px] font-medium leading-8 text-[#4a4a4a] sm:text-base">
+                {primaryFootprint.description}
+              </p>
+            </div>
+          </article>
+        ) : null}
+
+        <div className="border-y border-[#d8e8f4]">
+          {supportingFootprint.map((item, index) => (
+            <article
+              key={item.title}
+              className="grid gap-4 border-b border-[#d8e8f4] py-5 last:border-b-0 sm:grid-cols-[6rem_1fr]"
+            >
+              <p className="text-[11px] font-extrabold uppercase tracking-[0.18em] text-[#0c5aa6]">
+                Node {String(index + 2).padStart(2, "0")}
+              </p>
+
+              <div>
+                <h3 className="text-lg font-extrabold uppercase italic tracking-wide text-[#0c5aa6]">
+                  {item.title}
+                </h3>
+
+                <p className="mt-2 text-[15px] font-medium leading-7 text-[#4a4a4a]">
+                  {item.description}
+                </p>
               </div>
             </article>
-
-            <div className="border border-[#d3dee7] bg-white">
-              {supportingFootprint.map((item, index) => (
-                <article
-                  key={item.title}
-                  className="grid gap-3 border-b border-[#d3dee7] px-5 py-5 last:border-b-0 sm:grid-cols-[4rem_1fr]"
-                >
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#0f60b2]">
-                    Node {String(index + 2).padStart(2, "0")}
-                  </p>
-                  <div>
-                    <h3 className="text-lg font-semibold text-[#0c3d86]">{item.title}</h3>
-                    <p className="mt-2 text-[15px] leading-7 text-slate-600">{item.description}</p>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
+          ))}
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
 
       <section
   id="leadership"

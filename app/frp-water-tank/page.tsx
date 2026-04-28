@@ -3,11 +3,8 @@ import Image from "next/image";
 
 import { CtaBanner } from "@/components/cta-banner";
 import { PageHero } from "@/components/page-hero";
-import { SectionIntro } from "@/components/section-intro";
 import { SpecTable } from "@/components/spec-table";
-import { BlobMask } from "@/components/ui/blob-mask";
 import { ctaContent, pageMetadata, productContent } from "@/data/site";
-import { CheckCircleBroken, LayersThree01 } from "@untitledui/icons";
 
 export const metadata: Metadata = {
   title: pageMetadata.product.title,
@@ -22,10 +19,6 @@ export default function ProductPage() {
     <>
       <PageHero
         eyebrow="FRP Water Tank"
-        title="Safe water storage, standard panel design, technical specifications, and brochure-led features."
-        description={productContent.intro}
-        primaryCta={{ label: "Contact Us", href: "/contact" }}
-        secondaryCta={{ label: "View Comparison", href: "/comparison" }}
       />
 
       {/* Safe Water Storage System - Brochure Style */}
@@ -50,10 +43,8 @@ export default function ProductPage() {
 
           {/* Quote */}
           <div className="mb-12 flex justify-end">
-            <p className="max-w-sm text-right text-xl font-semibold italic leading-snug text-[#0c5aa6] sm:text-2xl">
-              “Managing the world&apos;s
-              <br />
-              water supply”
+            <p className="max-w-lg text-right text-xl font-semibold italic leading-snug text-[#0c5aa6] sm:text-2xl">
+              “Managing the world&apos;s water supply”
             </p>
           </div>
 

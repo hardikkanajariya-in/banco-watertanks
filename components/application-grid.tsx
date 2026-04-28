@@ -6,7 +6,7 @@ import {
   Tool01,
   User01,
   Globe01,
-  LifeBuoy01
+  LifeBuoy01,
 } from "@untitledui/icons";
 
 type Application = {
@@ -19,40 +19,57 @@ type ApplicationGridProps = {
   compact?: boolean;
 };
 
-export function ApplicationGrid({ items, compact = false }: ApplicationGridProps) {
+const icons = [
+  Building05,
+  Tool01,
+  Home01,
+  User01,
+  Bell01,
+  LayersThree01,
+  Globe01,
+  LifeBuoy01,
+  Building05,
+];
+
+export function ApplicationGrid({
+  items,
+  compact = false,
+}: ApplicationGridProps) {
   const visibleItems = compact ? items.slice(0, 6) : items;
-  // Expanded icons array to cover all potential applications
-  const icons = [Building05, Tool01, Home01, User01, Bell01, LayersThree01, Globe01, LifeBuoy01, Building05];
 
   return (
-    <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+    <div className="grid gap-x-14 gap-y-7 sm:grid-cols-2">
       {visibleItems.map((item, index) => {
         const Icon = icons[index % icons.length];
 
         return (
           <article
             key={item.title}
-            className="group relative flex flex-col overflow-hidden rounded-[2rem] border border-[#eaf2f8] bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-[#d0e3f2] hover:shadow-[0_20px_40px_-15px_rgba(12,61,134,0.12)]"
+            className="grid grid-cols-[58px_1fr] gap-5 border-b border-[#d8e8f4] pb-7"
           >
-            {/* Top accent line that expands on hover */}
-            <div className="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-[#0c3d86] to-[#29b9ec] opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-
-            <div className="mb-8 flex items-center justify-between">
-              <div className="flex h-16 w-16 items-center justify-center rounded-[1.2rem] bg-[#f4f9fd] text-[#0c3d86] ring-1 ring-[#eaf2f8] transition-colors duration-300 group-hover:bg-[#0c3d86] group-hover:text-white group-hover:ring-[#0c3d86]/20">
-                <Icon className="size-7" strokeWidth={1.5} aria-hidden="true" />
-              </div>
-              <span className="text-[14px] font-bold text-[#bad9ee] transition-colors duration-300 group-hover:text-[#29b9ec]">
-                {String(index + 1).padStart(2, "0")}
-              </span>
+            <div className="flex h-[58px] w-[58px] shrink-0 items-center justify-center rounded-full border-[3px] border-[#1aa7de] bg-[#1aa7de] shadow-[inset_0_0_0_4px_white,0_8px_18px_rgba(12,90,166,0.18)]">
+              <Icon
+                className="size-7 text-white"
+                strokeWidth={1.8}
+                aria-hidden="true"
+              />
             </div>
 
-            <h3 className="mb-4 text-2xl font-bold leading-tight text-[#0c3d86] transition-colors duration-300 group-hover:text-[#0f60b2]">
-              {item.title}
-            </h3>
+            <div>
+              <div className="mb-2 flex items-start justify-between gap-4">
+                <h3 className="text-[15px] font-extrabold uppercase italic tracking-wide text-[#0c5aa6]">
+                  {item.title}
+                </h3>
 
-            <p className="mt-auto text-[15px] leading-relaxed text-slate-600">
-              {item.description}
-            </p>
+                <span className="shrink-0 text-[12px] font-extrabold tracking-[0.16em] text-[#b7d8ef]">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+              </div>
+
+              <p className="text-[15px] font-extrabold leading-6 text-[#10a8e8]">
+                {item.description}
+              </p>
+            </div>
           </article>
         );
       })}
