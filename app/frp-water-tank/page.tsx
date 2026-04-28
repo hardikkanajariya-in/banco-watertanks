@@ -29,49 +29,65 @@ export default function ProductPage() {
       />
 
       {/* Safe Water Storage System - Brochure Style */}
+      {/* Safe Water Storage System - Brochure Style */}
       <section
         id="safe-water-storage"
         className="relative w-full overflow-hidden bg-white px-4 py-14 sm:px-6 lg:px-10 lg:py-20 2xl:px-14"
       >
-        {/* Optional brochure corner accent */}
-        <div className="pointer-events-none absolute left-0 top-0 h-20 w-20 bg-[#0c5aa6] [clip-path:polygon(0_0,100%_0,0_100%)]" />
-        <div className="pointer-events-none absolute left-20 top-0 h-14 w-14 bg-[#29b9ec] [clip-path:polygon(0_0,100%_0,0_100%)]" />
-
-        {/* Optional logo */}
-        <div className="absolute right-8 top-6 hidden sm:block">
-          <Image
-            src="/images/banco-logo.png"
-            alt="BANCO Water Tank"
-            width={180}
-            height={60}
-            className="h-auto w-[180px] object-contain"
-          />
-        </div>
-
-        {/* Soft water background */}
+        {/* Soft water-style background */}
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-80 bg-gradient-to-t from-[#edf8ff] via-[#f8fcff] to-transparent opacity-95" />
         <div className="pointer-events-none absolute -bottom-24 left-0 h-80 w-full rounded-[50%] bg-[#dff1fb] opacity-40 blur-3xl" />
 
-        <div className="relative mx-auto max-w-5xl pt-10 sm:pt-14">
-          <div className="mb-8">
-            <h2 className="text-3xl font-extrabold uppercase tracking-[0.12em] text-[#0c5aa6] sm:text-4xl">
+        <div className="relative mx-auto max-w-5xl">
+          {/* Heading */}
+          <div className="mb-7">
+            <h2 className="text-[clamp(1.8rem,4vw,2.6rem)] font-extrabold uppercase tracking-[0.12em] text-[#0c5aa6]">
               Safe Water Storage System
             </h2>
 
-            <div className="mt-2 h-[3px] w-full max-w-[820px] bg-gradient-to-r from-[#0c5aa6] via-[#78aed7] to-transparent" />
+            <div className="mt-2 h-[3px] w-full bg-gradient-to-r from-[#0c5aa6] via-[#78aed7] to-transparent" />
           </div>
 
-          <p className="mb-10 text-right text-xl font-semibold italic leading-snug text-[#0c5aa6] sm:text-2xl">
-            “Managing the world&apos;s
-            water supply”
-          </p>
+          {/* Quote */}
+          <div className="mb-12 flex justify-end">
+            <p className="max-w-sm text-right text-xl font-semibold italic leading-snug text-[#0c5aa6] sm:text-2xl">
+              “Managing the world&apos;s
+              <br />
+              water supply”
+            </p>
+          </div>
 
-          <div className="max-w-[900px] space-y-7 text-[15px] font-medium leading-8 text-[#4a4a4a] sm:text-base sm:leading-8">
-            {productContent.safeWaterStorage.map((item) => (
-              <p key={item} className="text-justify">
-                {item}
-              </p>
-            ))}
+          {/* Text Content */}
+          <div className="space-y-7 text-[15px] font-medium leading-8 text-[#4a4a4a] sm:text-base sm:leading-8">
+            <p className="text-justify">
+              It is an obvious fact, which nonetheless deserves emphasizing, that
+              water is fundamental to our daily lives. Whether for drinking, cooking,
+              washing or cleaning, as well as industrial and commercial requirements.
+              As demand grows year by year, the management and conservation of supplies
+              becomes ever more critical, the highest standards of purity of the
+              delivered product are insisted upon.
+            </p>
+
+            <p className="text-justify">
+              The FRP Panel Type Water Tanks storage system has been designed and
+              developed for the single purpose of meeting these demands, with utmost
+              efficiency and flexibility, with uncompromising levels of quality and
+              reliability. Specified to meet the most rigorous conditions, it has
+              become the system of choice around the world for applications from
+              individual homes to major building and industrial complexes.
+            </p>
+
+            <p className="text-justify">
+              The FRP Panel Type Water Tanks system is supremely flexible and provide
+              free-standing long term storage capacity. Our water tanks conserve water
+              to the highest quality standards, serving the needs of private
+              residences, accommodation complexes, hospitals, hotels and offices, as
+              well as industrial, municipal and irrigation projects where large-scale
+              water storage is required. Every unit is supplied to the same standard of
+              design and specification, to the size and shape best suited to every need
+              of the customer. Assembly and installation is straight forward, and can
+              be easily carried out by the user or contractor.
+            </p>
           </div>
         </div>
       </section>
