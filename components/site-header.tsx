@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Mail01, Menu01, Phone } from "@untitledui/icons";
 
 import { SiteLogo } from "@/components/site-logo";
@@ -6,8 +9,12 @@ import { Button } from "@/components/ui/button";
 import { contactDetails, navigation } from "@/data/site";
 
 export function SiteHeader() {
+  const pathname = usePathname();
+
   const phoneHref = `tel:${contactDetails.phone.replace(/\s+/g, "")}`;
-  const primaryNavigation = navigation.filter((item) => item.label !== "Contact Us");
+  const primaryNavigation = navigation.filter(
+    (item) => item.label !== "Contact Us",
+  );
 
   return (
     <header className="sticky top-0 z-50 border-b border-[#cfe0ef]/80 bg-white/90 shadow-[0_10px_35px_rgba(8,40,91,0.06)] backdrop-blur-2xl">
@@ -23,7 +30,11 @@ export function SiteHeader() {
               href={phoneHref}
               className="inline-flex items-center gap-2 rounded-full px-2 py-1 font-medium text-slate-700 transition hover:bg-white hover:text-[#0f60b2]"
             >
-              <Phone className="size-3.5" strokeWidth={1.9} aria-hidden="true" />
+              <Phone
+                className="size-3.5"
+                strokeWidth={1.9}
+                aria-hidden="true"
+              />
               {contactDetails.phone}
             </a>
 
@@ -33,7 +44,11 @@ export function SiteHeader() {
               href={`mailto:${contactDetails.email}`}
               className="inline-flex items-center gap-2 rounded-full px-2 py-1 font-medium text-slate-700 transition hover:bg-white hover:text-[#0f60b2]"
             >
-              <Mail01 className="size-3.5" strokeWidth={1.9} aria-hidden="true" />
+              <Mail01
+                className="size-3.5"
+                strokeWidth={1.9}
+                aria-hidden="true"
+              />
               {contactDetails.email}
             </a>
           </div>
@@ -49,22 +64,53 @@ export function SiteHeader() {
         {/* Desktop navigation */}
         <nav
           aria-label="Primary"
-          className="hidden items-center rounded-full border border-[#cfe0ef] bg-white/75 p-1.5 text-sm font-semibold text-slate-600 shadow-[inset_0_1px_0_rgba(255,255,255,0.85),0_10px_28px_rgba(8,40,91,0.06)] lg:flex"
+          className="hidden items-center rounded-full border border-[#cfe0ef]/90 bg-white/80 p-1.5 text-sm font-semibold text-slate-600 shadow-[inset_0_1px_0_rgba(255,255,255,0.9),0_14px_34px_rgba(8,40,91,0.08)] backdrop-blur-xl lg:flex"
         >
-          {primaryNavigation.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="relative rounded-full px-4 py-2.5 transition duration-200 hover:bg-[#eaf5fc] hover:text-[#0c3d86] focus-visible:bg-[#eaf5fc] focus-visible:text-[#0c3d86]"
-            >
-              {item.label}
-            </Link>
-          ))}
+          {primaryNavigation.map((item) => {
+            const isActive =
+              item.href === "/"
+                ? pathname === "/"
+                : pathname === item.href ||
+                  pathname.startsWith(`${item.href}/`);
+
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                aria-current={isActive ? "page" : undefined}
+                className={[
+                  "group relative isolate overflow-hidden rounded-full px-4 py-2.5 transition-all duration-300",
+                  "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#29b9ec]/40",
+                  isActive
+                    ? "bg-[#0c5aa6] text-white shadow-[0_10px_24px_rgba(12,90,166,0.24)]"
+                    : "text-slate-600 hover:bg-[#eaf5fc] hover:text-[#0c3d86] hover:shadow-[inset_0_0_0_1px_rgba(41,185,236,0.25)]",
+                ].join(" ")}
+              >
+                {!isActive && (
+                  <span className="pointer-events-none absolute inset-x-4 bottom-1.5 h-px origin-center scale-x-0 bg-[#29b9ec] transition-transform duration-300 group-hover:scale-x-100" />
+                )}
+
+                {isActive && (
+                  <>
+                    <span className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(135deg,#0c5aa6,#083f82)]" />
+                    <span className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_right,rgba(41,185,236,0.42),transparent_45%)]" />
+                    <span className="pointer-events-none absolute inset-x-4 bottom-1 h-1 rounded-full bg-[#29b9ec] shadow-[0_0_14px_rgba(41,185,236,0.75)]" />
+                  </>
+                )}
+
+                <span className="relative z-10">{item.label}</span>
+              </Link>
+            );
+          })}
         </nav>
 
         {/* Desktop CTA */}
         <div className="hidden items-center gap-3 lg:flex">
-          <Button href="/contact" variant="accent" className="shadow-[0_12px_24px_rgba(10,86,164,0.22)]">
+          <Button
+            href="/contact"
+            variant="accent"
+            className="shadow-[0_12px_24px_rgba(10,86,164,0.22)]"
+          >
             Contact Us
           </Button>
         </div>
@@ -87,15 +133,32 @@ export function SiteHeader() {
             </div>
 
             <nav aria-label="Mobile primary" className="grid gap-1 p-3">
-              {primaryNavigation.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="rounded-2xl px-4 py-3 text-sm font-semibold text-slate-700 transition hover:bg-[#eef7ff] hover:text-[#0c3d86]"
-                >
-                  {item.label}
-                </Link>
-              ))}
+              {primaryNavigation.map((item) => {
+                const isActive =
+                  item.href === "/"
+                    ? pathname === "/"
+                    : pathname === item.href ||
+                      pathname.startsWith(`${item.href}/`);
+
+                return (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    aria-current={isActive ? "page" : undefined}
+                    className={[
+                      "relative overflow-hidden rounded-2xl px-4 py-3 text-sm font-semibold transition",
+                      isActive
+                        ? "bg-[#0c5aa6] text-white shadow-[0_10px_24px_rgba(12,90,166,0.2)]"
+                        : "text-slate-700 hover:bg-[#eef7ff] hover:text-[#0c3d86]",
+                    ].join(" ")}
+                  >
+                    {isActive && (
+                      <span className="pointer-events-none absolute inset-y-3 left-2 w-1 rounded-full bg-[#29b9ec]" />
+                    )}
+                    <span className="relative z-10">{item.label}</span>
+                  </Link>
+                );
+              })}
             </nav>
 
             <div className="grid gap-2 border-t border-[#e1edf7] bg-[#f8fbff] p-3">

@@ -1,8 +1,8 @@
+"use client";
 import type { Metadata } from "next";
 import Image from "next/image";
 import { ArrowRight, Mail01, MarkerPin01, Phone } from "@untitledui/icons";
 
-import { SiteLogo } from "@/components/site-logo";
 import { Button } from "@/components/ui/button";
 import {
   aboutContent,
@@ -13,6 +13,7 @@ import {
   homeValueCards,
   pageMetadata,
 } from "@/data/site";
+import { useRef, useState, useEffect } from "react";
 
 export const metadata: Metadata = {
   title: pageMetadata.home.title,
@@ -39,7 +40,7 @@ const heroCollageItems = [
   {
     title: "Residential",
     src: "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80",
-    className: "col-start-6 col-span-1 row-start-1 row-span-4 rounded-tr-[1.75rem]",
+    className: "col-start-6 col-span-1 row-start-1 row-span-4 rounded-tr-[1.75rem] text-direction-ltr",
   },
   {
     title: "Infrastructure",
@@ -55,24 +56,24 @@ const heroCollageItems = [
 
 const aboutGalleryImages = [
   {
-    src: "https://images.unsplash.com/photo-1581093458791-9d42cc0301c5?auto=format&fit=crop&w=1200&q=80",
-    label: "Facility View",
-    alt: "Industrial facility and engineering structure",
+    src: "https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=1200&q=85",
+    label: "Industrial Facility",
+    alt: "Industrial facility for engineered water storage solutions",
   },
   {
-    src: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=80",
-    label: "Manufacturing",
-    alt: "Industrial manufacturing facility",
+    src: "https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=1200&q=85",
+    label: "Plant Operations",
+    alt: "Industrial plant and utility infrastructure",
   },
   {
-    src: "https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=1200&q=80",
+    src: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=85",
     label: "Infrastructure",
-    alt: "Large infrastructure project",
+    alt: "Large construction and infrastructure development",
   },
   {
-    src: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
-    label: "Commercial Projects",
-    alt: "Commercial building project",
+    src: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=85",
+    label: "Project Support",
+    alt: "Modern project planning and commercial workspace",
   },
 ];
 
@@ -197,13 +198,13 @@ function HeroCollage() {
         ))}
 
         {/* Center rounded logo block */}
-        <div className="relative col-span-2 col-start-4 row-span-2 row-start-3 flex items-center justify-center overflow-hidden rounded-[2rem] border border-[#d8e8f4] bg-white shadow-[0_20px_48px_rgba(8,40,91,0.16)] ring-1 ring-white/80 transition-all duration-500 hover:-translate-y-1 hover:scale-[1.03] hover:shadow-[0_28px_60px_rgba(8,40,91,0.2)]">
+        <div className="relative col-span-2 col-start-4 row-span-1 row-start-4 flex items-center justify-center overflow-hidden rounded-[2rem] border border-[#d8e8f4] bg-white shadow-[0_20px_48px_rgba(8,40,91,0.16)] ring-1 ring-white/80 transition-all duration-500 hover:-translate-y-1 hover:scale-[1.03] hover:shadow-[0_28px_60px_rgba(8,40,91,0.2)]">
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(41,185,236,0.12),transparent_42%)]" />
 
           <img
-            src="/images/logo.png"
+            src="/images/banco-logo.png"
             alt="BANCO Water Tank"
-            className="relative z-10 h-auto w-[62%] object-contain transition-transform duration-500 hover:scale-110"
+            className="relative z-10 h-50  w-[62%] object-contain transition-transform duration-500 hover:scale-110"
           />
         </div>
       </div>
@@ -212,12 +213,61 @@ function HeroCollage() {
 }
 
 function AboutGallery() {
+  const scrollRef = useRef<HTMLDivElement | null>(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+
+  const totalImages = aboutGalleryImages.length;
+
+  const scrollToIndex = (index: number) => {
+    const container = scrollRef.current;
+    if (!container) return;
+
+    const nextIndex = (index + totalImages) % totalImages;
+
+    container.scrollTo({
+      left: container.clientWidth * nextIndex,
+      behavior: "smooth",
+    });
+
+    setActiveIndex(nextIndex);
+  };
+
+  useEffect(() => {
+    if (isPaused || totalImages <= 1) return;
+
+    const timer = window.setInterval(() => {
+      scrollToIndex(activeIndex + 1);
+    }, 3500);
+
+    return () => window.clearInterval(timer);
+  }, [activeIndex, isPaused, totalImages]);
+
+  const handleScroll = () => {
+    const container = scrollRef.current;
+    if (!container) return;
+
+    const nextIndex = Math.round(container.scrollLeft / container.clientWidth);
+    setActiveIndex(nextIndex);
+  };
+
   return (
-    <div className="relative overflow-hidden rounded-[2rem] border border-white/70 bg-white p-3 shadow-[0_30px_80px_rgba(8,40,91,0.16)]">
+    <div
+      className="relative overflow-hidden rounded-[2rem] border border-white/70 bg-white p-3 shadow-[0_30px_80px_rgba(8,40,91,0.16)]"
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+    >
       <div className="relative aspect-[5/4] overflow-hidden rounded-[1.5rem] bg-[#08285b]">
-        <div className="no-scrollbar flex h-full snap-x snap-mandatory overflow-x-auto scroll-smooth">
+        <div
+          ref={scrollRef}
+          onScroll={handleScroll}
+          className="no-scrollbar flex h-full snap-x snap-mandatory overflow-x-auto scroll-smooth"
+        >
           {aboutGalleryImages.map((image, index) => (
-            <div key={image.src} className="relative h-full w-full shrink-0 snap-start">
+            <div
+              key={image.src}
+              className="relative h-full w-full shrink-0 snap-start"
+            >
               <Image
                 src={image.src}
                 alt={image.alt}
@@ -236,7 +286,7 @@ function AboutGallery() {
 
               <div className="absolute right-5 top-5 rounded-full border border-white/25 bg-[#08285b]/45 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.16em] text-white backdrop-blur-md">
                 {String(index + 1).padStart(2, "0")} /{" "}
-                {String(aboutGalleryImages.length).padStart(2, "0")}
+                {String(totalImages).padStart(2, "0")}
               </div>
             </div>
           ))}
@@ -244,11 +294,16 @@ function AboutGallery() {
 
         <div className="absolute bottom-5 right-5 flex gap-2">
           {aboutGalleryImages.map((image, index) => (
-            <span
+            <button
               key={`${image.src}-dot`}
+              type="button"
+              aria-label={`Go to gallery image ${index + 1}`}
+              onClick={() => scrollToIndex(index)}
               className={[
-                "h-2 rounded-full bg-white/75 shadow-sm",
-                index === 0 ? "w-7" : "w-2",
+                "h-2 rounded-full shadow-sm transition-all duration-300",
+                activeIndex === index
+                  ? "w-7 bg-white"
+                  : "w-2 bg-white/60 hover:bg-white/90",
               ].join(" ")}
             />
           ))}
@@ -444,7 +499,7 @@ export default function HomePage() {
               Safe Water Storage
             </p>
 
-            <h2 className="text-4xl font-extrabold uppercase leading-[0.95] tracking-[0.06em] text-[#0c5aa6] sm:text-5xl lg:text-6xl">
+            <h2 className="text-3xl font-extrabold uppercase leading-[0.95] tracking-[0.06em] text-[#0c5aa6] sm:text-3xl lg:text-4xl">
               Engineered For Reliable Water Storage
             </h2>
 
