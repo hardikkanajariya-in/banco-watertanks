@@ -2,29 +2,122 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { ArrowRight, Mail01, MarkerPin01, Phone } from "@untitledui/icons";
 
-import { SectionIntro } from "@/components/section-intro";
+import { SiteLogo } from "@/components/site-logo";
 import { Button } from "@/components/ui/button";
 import {
   aboutContent,
   applicationsContent,
-  contactContent,
   contactDetails,
   homeHero,
   homeTickerItems,
   homeValueCards,
-  pageMetadata
+  pageMetadata,
 } from "@/data/site";
 
 export const metadata: Metadata = {
   title: pageMetadata.home.title,
   description: pageMetadata.home.description,
   alternates: {
-    canonical: "/"
-  }
+    canonical: "/",
+  },
 };
 
 const marqueeItems = [...homeTickerItems, ...homeTickerItems];
 const compactApplications = applicationsContent.items.slice(0, 8);
+
+const heroCollageItems = [
+  {
+    title: "Industrial",
+    src: "https://images.unsplash.com/photo-1581093458791-9d42cc0301c5?auto=format&fit=crop&w=900&q=80",
+    className: "col-start-1 col-span-2 row-start-1 row-span-3 rounded-tl-[1.75rem]",
+  },
+  {
+    title: "Commercial",
+    src: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80",
+    className: "col-start-3 col-span-3 row-start-1 row-span-3",
+  },
+  {
+    title: "Residential",
+    src: "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80",
+    className: "col-start-6 col-span-1 row-start-1 row-span-4 rounded-tr-[1.75rem]",
+  },
+  {
+    title: "Infrastructure",
+    src: "https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=900&q=80",
+    className: "col-start-1 col-span-3 row-start-4 row-span-3 rounded-bl-[1.75rem]",
+  },
+  {
+    title: "Hospitality",
+    src: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=900&q=80",
+    className: "col-start-4 col-span-3 row-start-5 row-span-2 rounded-br-[1.75rem]",
+  },
+];
+
+const aboutGalleryImages = [
+  {
+    src: "https://images.unsplash.com/photo-1581093458791-9d42cc0301c5?auto=format&fit=crop&w=1200&q=80",
+    label: "Facility View",
+    alt: "Industrial facility and engineering structure",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=80",
+    label: "Manufacturing",
+    alt: "Industrial manufacturing facility",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=1200&q=80",
+    label: "Infrastructure",
+    alt: "Large infrastructure project",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
+    label: "Commercial Projects",
+    alt: "Commercial building project",
+  },
+];
+
+const sectorCards = [
+  {
+    title: "Industrial Facilities",
+    image:
+      "https://images.unsplash.com/photo-1581093458791-9d42cc0301c5?auto=format&fit=crop&w=900&q=80",
+  },
+  {
+    title: "Commercial Projects",
+    image:
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80",
+  },
+  {
+    title: "Infrastructure",
+    image:
+      "https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=900&q=80",
+  },
+  {
+    title: "Hospitals",
+    image:
+      "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=900&q=80",
+  },
+  {
+    title: "Hotels",
+    image:
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=900&q=80",
+  },
+  {
+    title: "Residential",
+    image:
+      "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80",
+  },
+  {
+    title: "Municipal",
+    image:
+      "https://images.unsplash.com/photo-1516937941344-00b4e0337589?auto=format&fit=crop&w=900&q=80",
+  },
+  {
+    title: "Irrigation",
+    image:
+      "https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=900&q=80",
+  },
+];
 
 function WaterBackground() {
   return (
@@ -39,7 +132,7 @@ function WaterBackground() {
 function BrochureHeading({
   eyebrow,
   title,
-  description
+  description,
 }: {
   eyebrow?: string;
   title: string;
@@ -53,7 +146,7 @@ function BrochureHeading({
         </p>
       ) : null}
 
-      <h2 className="text-[clamp(1.8rem,4vw,2.65rem)] font-extrabold uppercase tracking-[0.12em] text-[#0c5aa6]">
+      <h2 className="text-3xl font-extrabold uppercase leading-[1.06] tracking-[0.1em] text-[#0c5aa6] sm:text-4xl lg:text-[2.65rem]">
         {title}
       </h2>
 
@@ -68,34 +161,185 @@ function BrochureHeading({
   );
 }
 
+function HeroCollage() {
+  return (
+    <div className="relative">
+      <div className="pointer-events-none absolute -inset-5 rounded-[2.5rem] bg-[#0c5aa6]/10 blur-3xl" />
+
+      <div className="relative grid h-[390px] grid-cols-6 grid-rows-6 gap-3 sm:h-[500px] lg:h-[520px]">
+        {heroCollageItems.map((image, index) => (
+          <div
+            key={image.title}
+            className={[
+              "group relative overflow-hidden bg-[#08285b] shadow-[0_18px_38px_rgba(8,40,91,0.14)]",
+              "ring-1 ring-white/70 transition duration-500 hover:z-10 hover:-translate-y-1 hover:ring-[#29b9ec]/60",
+              image.className,
+            ].join(" ")}
+          >
+            <div
+              className="absolute inset-0 bg-cover bg-center transition duration-700 group-hover:scale-150"
+              style={{ backgroundImage: `url(${image.src})` }}
+            />
+
+            <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(8,40,91,0.08)_0%,rgba(8,40,91,0.62)_100%)]" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(41,185,236,0.18),transparent_38%)]" />
+
+            <div className="absolute left-3 top-3 rounded-full border border-white/25 bg-white/15 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.16em] text-white backdrop-blur-md sm:left-4 sm:top-4">
+              {String(index + 1).padStart(2, "0")}
+            </div>
+
+            <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4">
+              <p className="text-[11px] font-extrabold uppercase tracking-[0.18em] text-white sm:text-[12px]">
+                {image.title}
+              </p>
+            </div>
+          </div>
+        ))}
+
+        {/* Center rounded logo block */}
+        <div className="relative col-span-2 col-start-4 row-span-2 row-start-3 flex items-center justify-center overflow-hidden rounded-[2rem] border border-[#d8e8f4] bg-white shadow-[0_20px_48px_rgba(8,40,91,0.16)] ring-1 ring-white/80 transition-all duration-500 hover:-translate-y-1 hover:scale-[1.03] hover:shadow-[0_28px_60px_rgba(8,40,91,0.2)]">
+          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(41,185,236,0.12),transparent_42%)]" />
+
+          <img
+            src="/images/logo.png"
+            alt="BANCO Water Tank"
+            className="relative z-10 h-auto w-[62%] object-contain transition-transform duration-500 hover:scale-110"
+          />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function AboutGallery() {
+  return (
+    <div className="relative overflow-hidden rounded-[2rem] border border-white/70 bg-white p-3 shadow-[0_30px_80px_rgba(8,40,91,0.16)]">
+      <div className="relative aspect-[5/4] overflow-hidden rounded-[1.5rem] bg-[#08285b]">
+        <div className="no-scrollbar flex h-full snap-x snap-mandatory overflow-x-auto scroll-smooth">
+          {aboutGalleryImages.map((image, index) => (
+            <div key={image.src} className="relative h-full w-full shrink-0 snap-start">
+              <Image
+                src={image.src}
+                alt={image.alt}
+                fill
+                sizes="(max-width: 1024px) 100vw, 52vw"
+                className="object-cover transition duration-700 hover:scale-105"
+                unoptimized
+              />
+
+              <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(8,40,91,0.03)_0%,rgba(8,40,91,0.62)_100%)]" />
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(41,185,236,0.26),transparent_36%)]" />
+
+              <div className="absolute left-5 top-5 rounded-full border border-white/25 bg-white/14 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.18em] text-white backdrop-blur-md">
+                {image.label}
+              </div>
+
+              <div className="absolute right-5 top-5 rounded-full border border-white/25 bg-[#08285b]/45 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.16em] text-white backdrop-blur-md">
+                {String(index + 1).padStart(2, "0")} /{" "}
+                {String(aboutGalleryImages.length).padStart(2, "0")}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="absolute bottom-5 right-5 flex gap-2">
+          {aboutGalleryImages.map((image, index) => (
+            <span
+              key={`${image.src}-dot`}
+              className={[
+                "h-2 rounded-full bg-white/75 shadow-sm",
+                index === 0 ? "w-7" : "w-2",
+              ].join(" ")}
+            />
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function ClientSectorMarquee() {
+  const scrollingCards = [...sectorCards, ...sectorCards];
+
+  return (
+    <div className="relative banco-scroll-marquee">
+      <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-12 bg-gradient-to-r from-[#f6fbff] to-transparent" />
+      <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-12 bg-gradient-to-l from-[#f6fbff] to-transparent" />
+
+      <div className="overflow-x-auto pb-5 banco-scrollbar-none">
+        <div className="banco-scroll-marquee__track px-1">
+          {scrollingCards.map((item, index) => (
+            <article
+              key={`${item.title}-${index}`}
+              className="group relative flex min-h-[220px] w-[270px] shrink-0 flex-col justify-between overflow-hidden rounded-[1.75rem] border border-white/25 bg-[#08285b] p-6 text-white shadow-[0_22px_55px_rgba(8,40,91,0.18)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_30px_75px_rgba(8,40,91,0.26)] sm:w-[310px]"
+            >
+              <div
+                className="absolute inset-0 bg-cover bg-center transition duration-700 group-hover:scale-110"
+                style={{ backgroundImage: `url(${item.image})` }}
+              />
+
+              <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(8,40,91,0.18)_0%,rgba(8,40,91,0.72)_54%,rgba(8,40,91,0.94)_100%)]" />
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(41,185,236,0.35),transparent_42%)]" />
+              <div className="absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-white/80 to-transparent" />
+
+              <div className="relative">
+                <div className="mb-6 flex items-center justify-between">
+                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/15 text-sm font-extrabold text-white shadow-[inset_0_0_0_1px_rgba(255,255,255,0.28),0_16px_30px_rgba(0,0,0,0.18)] backdrop-blur-md">
+                    {String((index % sectorCards.length) + 1).padStart(2, "0")}
+                  </div>
+
+                  <span className="rounded-full border border-white/25 bg-white/12 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-white backdrop-blur-md">
+                    Sector
+                  </span>
+                </div>
+
+                <h3 className="max-w-[14rem] text-xl font-extrabold uppercase leading-tight tracking-[0.08em] text-white">
+                  {item.title}
+                </h3>
+              </div>
+
+              <div className="relative mt-8">
+                <p className="text-[14px] font-medium leading-7 text-white/82">
+                  BANCO FRP water storage solutions are suitable for demanding
+                  project environments.
+                </p>
+
+                <div className="mt-5 flex items-center justify-between border-t border-white/20 pt-4">
+                  <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#9fe9ff]">
+                    Trusted Use
+                  </span>
+
+                  <span className="text-lg font-bold text-white transition group-hover:translate-x-1">
+                    →
+                  </span>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function HomePage() {
   return (
     <>
-      {/* Hero - Brochure Style */}
-      <section className="relative isolate overflow-hidden bg-white px-4 py-14 sm:px-6 lg:px-10 lg:py-20 2xl:px-14">
-        {/* Brochure corner accents */}
-        <div className="pointer-events-none absolute left-0 top-0 h-24 w-24 bg-[#0c5aa6] [clip-path:polygon(0_0,100%_0,0_100%)]" />
-        <div className="pointer-events-none absolute left-24 top-0 h-16 w-16 bg-[#29b9ec] [clip-path:polygon(0_0,100%_0,0_100%)]" />
-
-        <WaterBackground />
-
-        <div className="relative mx-auto grid max-w-6xl gap-12 pt-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
-          <div>
-            <p className="text-[0.78rem] font-extrabold uppercase tracking-[0.3em] text-[#0c5aa6]">
-              BANCO Water Tank
-            </p>
-
-            <p className="mt-5 text-[0.72rem] font-bold uppercase tracking-[0.24em] text-[#10a8e8]">
+      {/* Hero */}
+      <section className="relative isolate overflow-hidden bg-[#f6fbff] px-4 py-12 sm:px-6 sm:py-14 lg:px-10 lg:py-5 2xl:px-14">
+        <div className="relative mx-auto grid max-w-[1320px] gap-10 pt-5 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:gap-14">
+          <div className="max-w-2xl">
+            <p className="mt-6 text-[11px] font-bold uppercase tracking-[0.24em] text-[#10a8e8] sm:text-xs">
               {homeHero.eyebrow}
             </p>
 
-            <h1 className="mt-4 max-w-3xl text-[clamp(2.2rem,5vw,4.4rem)] font-extrabold uppercase leading-[1.04] tracking-[0.08em] text-[#0c5aa6]">
+            <h1 className="mt-4 max-w-2xl text-4xl font-extrabold uppercase leading-[1.02] tracking-[0.06em] text-[#0c5aa6] sm:text-5xl lg:text-6xl">
               {homeHero.subLine}
             </h1>
 
-            <div className="mt-3 h-[3px] w-full max-w-[820px] bg-gradient-to-r from-[#0c5aa6] via-[#78aed7] to-transparent" />
+            <div className="mt-5 h-[3px] w-full max-w-[560px] bg-gradient-to-r from-[#0c5aa6] via-[#78aed7] to-transparent" />
 
-            <p className="mt-6 text-[0.8rem] font-extrabold uppercase tracking-[0.24em] text-[#0c5aa6]">
+            <p className="mt-6 text-[12px] font-extrabold uppercase tracking-[0.22em] text-[#0c5aa6] sm:text-[13px]">
               {homeHero.productLine}
             </p>
 
@@ -106,7 +350,7 @@ export default function HomePage() {
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <Button
                 href={homeHero.primaryCta.href}
-                className="w-full rounded-none bg-[#0c5aa6] px-6 py-3 text-sm font-bold uppercase tracking-[0.12em] text-white hover:bg-[#08457f] sm:w-auto"
+                className="w-full rounded-full bg-[#0c5aa6] px-7 py-3 text-sm font-extrabold uppercase tracking-[0.12em] text-white shadow-[0_18px_38px_rgba(12,90,166,0.22)] hover:bg-[#08457f] sm:w-auto"
               >
                 {homeHero.primaryCta.label}
                 <ArrowRight className="size-4" strokeWidth={2} aria-hidden="true" />
@@ -115,44 +359,34 @@ export default function HomePage() {
               <Button
                 href={homeHero.secondaryCta.href}
                 variant="secondary"
-                className="w-full rounded-none border border-[#0c5aa6] bg-white px-6 py-3 text-sm font-bold uppercase tracking-[0.12em] text-[#0c5aa6] hover:bg-[#f1f8fd] sm:w-auto"
+                className="w-full rounded-full border border-[#c7dced] bg-white px-7 py-3 text-sm font-extrabold uppercase tracking-[0.12em] text-[#0c5aa6] hover:border-[#0c5aa6] hover:bg-[#f1f8fd] sm:w-auto"
               >
                 {homeHero.secondaryCta.label}
               </Button>
             </div>
 
-            <p className="mt-8 text-sm font-medium leading-7 text-[#4a4a4a]">
+            <div className="mt-8 grid max-w-2xl gap-3 sm:grid-cols-3">
+              {["Hygienic Storage", "FRP Panel System", "Project Ready"].map((item) => (
+                <div
+                  key={item}
+                  className="border border-[#d8e8f4] bg-white/82 px-4 py-3 text-[11px] font-bold uppercase tracking-[0.16em] text-[#0c5aa6] shadow-sm backdrop-blur"
+                >
+                  {item}
+                </div>
+              ))}
+            </div>
+
+            <p className="mt-7 text-sm font-medium leading-7 text-[#4a4a4a]">
               A quality product by Neomech (T) Ltd.
             </p>
           </div>
 
-          <div className="relative">
-            <div className="absolute -inset-6 rounded-full bg-[#eaf5fb] opacity-70 blur-3xl" />
-
-            <div className="relative mx-auto max-w-[440px]">
-              <Image
-                src="/images/product-storage-tank.jpg"
-                alt="BANCO FRP Water Tank Product"
-                width={560}
-                height={620}
-                priority
-                className="h-auto w-full object-contain drop-shadow-[0_24px_45px_rgba(12,90,166,0.18)]"
-              />
-            </div>
-
-            <div className="relative mx-auto mt-6 max-w-[440px] bg-[#0c5aa6] px-5 py-4 text-white">
-              <p className="text-[13px] font-medium leading-7">
-                Designed for hygienic, durable, and long-term water storage
-                applications across residential, commercial, and industrial
-                requirements.
-              </p>
-            </div>
-          </div>
+          <HeroCollage />
         </div>
       </section>
 
       {/* Moving Stats Strip */}
-      <section className="border-y border-[#d8e8f4] bg-white">
+      <section className="mx-auto mt-10 border-y border-[#d8e8f4] bg-white">
         <div className="banco-marquee py-4">
           <div className="banco-marquee-track">
             {marqueeItems.map((item, index) => (
@@ -174,18 +408,53 @@ export default function HomePage() {
       </section>
 
       {/* About / Product Story */}
-      <section className="relative w-full overflow-hidden bg-white px-4 py-14 sm:px-6 lg:px-10 lg:py-20 2xl:px-14">
+      <section className="relative w-full overflow-hidden bg-[#f6fbff] px-4 py-16 sm:px-6 lg:px-10 lg:py-24 2xl:px-14">
         <WaterBackground />
 
-        <div className="relative mx-auto grid max-w-6xl gap-12 lg:grid-cols-[1fr_0.9fr] lg:items-start">
-          <div>
-            <BrochureHeading
-              eyebrow="Safe Water Storage"
-              title="Engineered for reliable water storage"
-              description={aboutContent.intro}
-            />
+        <div className="pointer-events-none absolute left-0 top-0 h-px w-full bg-gradient-to-r from-transparent via-[#bdd9ee] to-transparent" />
+        <div className="pointer-events-none absolute -left-24 top-24 h-80 w-80 rounded-full bg-[#29b9ec]/10 blur-3xl" />
+        <div className="pointer-events-none absolute -right-24 bottom-10 h-96 w-96 rounded-full bg-[#0c5aa6]/10 blur-3xl" />
 
-            <div className="space-y-6 text-[15px] font-medium leading-8 text-[#4a4a4a] sm:text-base">
+        <div className="relative mx-auto grid max-w-[1320px] gap-12 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
+          <div className="relative order-last lg:order-first">
+            <div className="absolute -left-5 top-8 hidden h-[82%] w-[82%] rounded-[2rem] bg-[#0c5aa6] lg:block" />
+            <div className="absolute -bottom-5 right-8 hidden h-32 w-32 rounded-full bg-[#29b9ec]/20 blur-2xl lg:block" />
+
+            <AboutGallery />
+
+            <div className="relative z-10 -mt-8 ml-6 grid max-w-[520px] grid-cols-2 overflow-hidden rounded-[1.5rem] border border-[#cfe0ef] bg-white shadow-[0_22px_55px_rgba(8,40,91,0.14)] sm:ml-10">
+              <div className="border-r border-[#d8e8f4] px-5 py-5">
+                <p className="text-3xl font-extrabold text-[#0c5aa6]">FRP</p>
+                <p className="mt-1 text-[11px] font-bold uppercase tracking-[0.18em] text-[#4a5c72]">
+                  Modular System
+                </p>
+              </div>
+
+              <div className="px-5 py-5">
+                <p className="text-3xl font-extrabold text-[#0c5aa6]">24/7</p>
+                <p className="mt-1 text-[11px] font-bold uppercase tracking-[0.18em] text-[#4a5c72]">
+                  Storage Reliability
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <p className="mb-3 text-[0.72rem] font-bold uppercase tracking-[0.28em] text-[#0c5aa6]">
+              Safe Water Storage
+            </p>
+
+            <h2 className="text-4xl font-extrabold uppercase leading-[0.95] tracking-[0.06em] text-[#0c5aa6] sm:text-5xl lg:text-6xl">
+              Engineered For Reliable Water Storage
+            </h2>
+
+            <div className="mt-5 h-[3px] w-full max-w-[520px] bg-gradient-to-r from-[#0c5aa6] via-[#78aed7] to-transparent" />
+
+            <p className="mt-6 max-w-2xl text-[16px] font-semibold leading-8 text-[#15324d]">
+              {aboutContent.intro}
+            </p>
+
+            <div className="mt-7 space-y-5 text-[15px] font-medium leading-8 text-[#4a4a4a] sm:text-base">
               {aboutContent.paragraphs.slice(0, 2).map((paragraph) => (
                 <p key={paragraph} className="text-justify">
                   {paragraph}
@@ -193,35 +462,25 @@ export default function HomePage() {
               ))}
             </div>
 
-            <div className="mt-8">
-              <Button
-                href="/about"
-                className="rounded-none bg-[#0c5aa6] px-6 py-3 text-sm font-bold uppercase tracking-[0.12em] text-white hover:bg-[#08457f]"
-              >
-                About Banco
-                <ArrowRight className="size-4" strokeWidth={2} aria-hidden="true" />
-              </Button>
-            </div>
-          </div>
-
-          <div className="border border-[#d8e8f4] bg-white shadow-[0_20px_45px_rgba(12,90,166,0.08)]">
-            <div className="flex items-center justify-between border-b border-[#d8e8f4] px-5 py-3">
-              <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-slate-500">
-                Facility View
-              </span>
-              <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#0c5aa6]">
-                BANCO
-              </span>
-            </div>
-
-            <div className="relative aspect-[5/4] overflow-hidden">
-              <Image
-                src="/images/company-aerial.jpg"
-                alt="BANCO manufacturing facility"
-                fill
-                sizes="(max-width: 1024px) 100vw, 45vw"
-                className="object-cover"
-              />
+            <div className="mt-8 grid gap-4 sm:grid-cols-2">
+              {[
+                "Designed for hygienic storage",
+                "Modular panel configuration",
+                "Suitable for large-scale projects",
+                "Built for long-term performance",
+              ].map((item) => (
+                <div
+                  key={item}
+                  className="group flex items-start gap-3 rounded-[1.25rem] border border-[#d8e8f4] bg-white/82 p-4 shadow-[0_14px_35px_rgba(8,40,91,0.06)] backdrop-blur transition hover:-translate-y-0.5 hover:border-[#9bcce9]"
+                >
+                  <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#0c5aa6] text-[10px] font-bold text-white">
+                    ✓
+                  </span>
+                  <p className="text-sm font-bold leading-6 text-[#15324d]">
+                    {item}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -238,14 +497,14 @@ export default function HomePage() {
             description="Key product strengths presented in a clean brochure-style layout for quick understanding."
           />
 
-          <div className="grid gap-0 border-y border-[#d8e8f4] md:grid-cols-3">
+          <div className="grid gap-0 border-y border-[#d8e8f4] md:grid-cols-2">
             {homeValueCards.slice(0, 6).map((item, index) => (
               <article
                 key={item.title}
                 className={[
                   "border-b border-[#d8e8f4] px-6 py-6 md:border-r",
-                  index >= 3 ? "md:border-b-0" : "",
-                  index % 3 === 2 ? "md:border-r-0" : ""
+                  index >= 4 ? "md:border-b-0" : "",
+                  index % 2 === 1 ? "md:border-r-0" : "",
                 ].join(" ")}
               >
                 <p className="text-[11px] font-extrabold uppercase tracking-[0.18em] text-[#0c5aa6]">
@@ -271,12 +530,21 @@ export default function HomePage() {
 
         <div className="relative mx-auto max-w-6xl">
           <div className="mb-10 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
-            <SectionIntro
-              eyebrow="Applications"
-              title="Built for varied water storage environments"
-              description={applicationsContent.intro}
-              align="left"
-            />
+            <div>
+              <p className="mb-2 text-[0.72rem] font-bold uppercase tracking-[0.28em] text-[#0c5aa6]">
+                Applications
+              </p>
+
+              <h2 className="max-w-3xl text-3xl font-extrabold uppercase leading-[1.06] tracking-[0.1em] text-[#0c5aa6] sm:text-4xl lg:text-[2.65rem]">
+                Built for varied water storage environments
+              </h2>
+
+              <div className="mt-2 h-[3px] w-full max-w-[820px] bg-gradient-to-r from-[#0c5aa6] via-[#78aed7] to-transparent" />
+
+              <p className="mt-5 max-w-3xl text-[15px] font-medium leading-8 text-[#4a4a4a] sm:text-base">
+                {applicationsContent.intro}
+              </p>
+            </div>
 
             <Button
               href="/applications"
@@ -326,94 +594,144 @@ export default function HomePage() {
             description="We partner with organizations across Tanzania to deliver reliable water storage solutions. Client logos can be added here later."
           />
 
-          <div className="grid grid-cols-2 border border-[#d8e8f4] bg-white md:grid-cols-4">
-            {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
-              <div
-                key={i}
-                className="flex min-h-32 items-center justify-center border-b border-r border-[#d8e8f4] px-4 text-center last:border-r-0"
-              >
-                <span className="text-sm font-bold uppercase tracking-[0.22em] text-slate-400">
-                  Logo {i}
-                </span>
-              </div>
-            ))}
-          </div>
+          <ClientSectorMarquee />
         </div>
       </section>
 
       {/* Contact Strip */}
-      <section className="w-full bg-white px-4 py-10 sm:px-6 lg:px-10 lg:py-12 2xl:px-14">
-        <div className="relative mx-auto max-w-6xl overflow-hidden bg-[#0c5aa6] text-white">
+      <section className="relative w-full overflow-hidden bg-white px-4 py-14 sm:px-6 lg:px-10 lg:py-20 2xl:px-14">
+        <div className="relative mx-auto max-w-[1320px] overflow-hidden rounded-[2rem] bg-[#08285b] text-white shadow-[0_34px_90px_rgba(8,40,91,0.24)]">
           <Image
             src="/images/contact-water-tower.jpg"
-            alt="BANCO contact section background"
+            alt=""
             fill
-            sizes="100vw"
-            className="object-cover object-center opacity-15"
+            sizes="(max-width: 768px) 100vw, 1320px"
+            className="object-cover object-center opacity-35"
           />
 
-          <div className="relative grid gap-8 px-6 py-8 sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:px-10 lg:py-10">
-            <div>
-              <p className="text-[11px] font-bold uppercase tracking-[0.24em] text-[#c7f4ff]">
-                Contact
-              </p>
+          <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(8,40,91,0.97)_0%,rgba(8,40,91,0.9)_42%,rgba(8,40,91,0.72)_100%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(41,185,236,0.34),transparent_34%),radial-gradient(circle_at_15%_90%,rgba(255,255,255,0.13),transparent_28%)]" />
+          <div className="absolute inset-x-12 top-0 h-px bg-gradient-to-r from-transparent via-white/70 to-transparent" />
 
-              <h2 className="mt-3 max-w-[34ch] text-3xl font-extrabold uppercase leading-tight tracking-[0.08em] text-white">
-                {contactContent.title}
-              </h2>
+          <div className="relative grid gap-10 p-6 sm:p-8 lg:grid-cols-[0.82fr_1.18fr] lg:p-10 xl:p-12">
+            <div className="flex min-h-[480px] flex-col justify-between">
+              <div>
+                <p className="inline-flex border border-white/20 bg-white/10 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.24em] text-[#c7f4ff] backdrop-blur-md">
+                  Contact Banco
+                </p>
 
-              <div className="mt-3 h-[3px] w-full max-w-[420px] bg-gradient-to-r from-white via-[#78d7ff] to-transparent" />
+                <h2 className="mt-6 max-w-[20ch] text-3xl font-extrabold uppercase leading-[0.94] tracking-[0.055em] text-white sm:text-4xl lg:text-5xl">
+                  Talk To The Neomech Team
+                </h2>
 
-              <p className="mt-5 max-w-lg text-[15px] font-medium leading-7 text-white/85">
-                {contactContent.description}
-              </p>
+                <div className="mt-6 h-[3px] w-full max-w-[430px] bg-gradient-to-r from-white via-[#78d7ff] to-transparent" />
 
-              <div className="mt-6">
+                <p className="mt-6 max-w-xl text-[15px] font-medium leading-8 text-white/84 sm:text-base">
+                  Reach our team for sizing support, technical discussions,
+                  project coordination, and commercial inquiries for BANCO FRP
+                  panel type water tanks.
+                </p>
+              </div>
+
+              <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                 <Button
                   href="/contact"
-                  className="rounded-none bg-white px-6 py-3 text-sm font-bold uppercase tracking-[0.12em] text-[#0c5aa6] hover:bg-[#eaf6ff]"
+                  className="rounded-full bg-white px-7 py-3 text-sm font-extrabold uppercase tracking-[0.12em] text-[#0c5aa6] shadow-[0_18px_40px_rgba(0,0,0,0.18)] hover:bg-[#eaf6ff]"
                 >
                   Contact Us
                   <ArrowRight className="size-4" strokeWidth={2} aria-hidden="true" />
                 </Button>
+
+                <a
+                  href={`tel:${contactDetails.phone.replace(/\s+/g, "")}`}
+                  className="inline-flex min-h-11 items-center justify-center rounded-full border border-white/25 bg-white/10 px-7 py-3 text-sm font-extrabold uppercase tracking-[0.12em] text-white backdrop-blur-md transition hover:border-white/50 hover:bg-white/16"
+                >
+                  Call Now
+                </a>
               </div>
             </div>
 
-            <div className="grid border border-white/20 bg-white/5 lg:grid-cols-3">
-              <div className="border-b border-white/20 px-5 py-5 lg:border-b-0 lg:border-r">
-                <Phone className="size-5 text-[#9fe9ff]" strokeWidth={1.7} aria-hidden="true" />
+            <div className="rounded-[1.75rem] border border-white/16 bg-white/[0.08] p-4 backdrop-blur-md sm:p-5 lg:p-6">
+              <div className="mb-5 flex flex-col gap-2 border-b border-white/14 pb-5 sm:flex-row sm:items-end sm:justify-between">
+                <div>
+                  <p className="text-[11px] font-bold uppercase tracking-[0.24em] text-[#9fe9ff]">
+                    Direct Lines
+                  </p>
+                  <h3 className="mt-2 text-2xl font-extrabold uppercase tracking-[0.06em] text-white">
+                    Contact Details
+                  </h3>
+                </div>
 
-                <span className="mt-4 block text-[11px] font-bold uppercase tracking-widest text-[#9fe9ff]">
-                  Phone
-                </span>
-
-                <span className="mt-2 block text-[15px] font-medium text-white">
-                  {contactDetails.phone}
-                </span>
+                <p className="max-w-xs text-sm font-medium leading-6 text-white/68 sm:text-right">
+                  For project inquiries, product support, and quotation discussions.
+                </p>
               </div>
 
-              <div className="border-b border-white/20 px-5 py-5 lg:border-b-0 lg:border-r">
-                <Mail01 className="size-5 text-[#9fe9ff]" strokeWidth={1.7} aria-hidden="true" />
+              <div className="grid gap-4">
+                <a
+                  href={`tel:${contactDetails.phone.replace(/\s+/g, "")}`}
+                  className="group grid gap-4 rounded-[1.35rem] border border-white/14 bg-white/[0.08] p-5 transition duration-300 hover:-translate-y-0.5 hover:border-[#9fe9ff]/60 hover:bg-white/[0.12] sm:grid-cols-[3.5rem_1fr_auto] sm:items-center"
+                >
+                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/12 text-[#9fe9ff] ring-1 ring-white/18 transition group-hover:bg-[#29b9ec] group-hover:text-white">
+                    <Phone className="size-5" strokeWidth={1.8} aria-hidden="true" />
+                  </div>
 
-                <span className="mt-4 block text-[11px] font-bold uppercase tracking-widest text-[#9fe9ff]">
-                  Email
-                </span>
+                  <div>
+                    <span className="block text-[11px] font-bold uppercase tracking-[0.22em] text-[#9fe9ff]">
+                      Phone
+                    </span>
+                    <span className="mt-2 block text-[16px] font-bold leading-7 text-white">
+                      {contactDetails.phone}
+                    </span>
+                  </div>
+                </a>
 
-                <span className="mt-2 block break-all text-[15px] font-medium text-white">
-                  {contactDetails.email}
-                </span>
+                <a
+                  href={`mailto:${contactDetails.email}`}
+                  className="group grid gap-4 rounded-[1.35rem] border border-white/14 bg-white/[0.08] p-5 transition duration-300 hover:-translate-y-0.5 hover:border-[#9fe9ff]/60 hover:bg-white/[0.12] sm:grid-cols-[3.5rem_1fr_auto] sm:items-center"
+                >
+                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/12 text-[#9fe9ff] ring-1 ring-white/18 transition group-hover:bg-[#29b9ec] group-hover:text-white">
+                    <Mail01 className="size-5" strokeWidth={1.8} aria-hidden="true" />
+                  </div>
+
+                  <div>
+                    <span className="block text-[11px] font-bold uppercase tracking-[0.22em] text-[#9fe9ff]">
+                      Email
+                    </span>
+                    <span className="mt-2 block break-all text-[16px] font-bold leading-7 text-white">
+                      {contactDetails.email}
+                    </span>
+                  </div>
+                </a>
+
+                <div className="group grid gap-4 rounded-[1.35rem] border border-white/14 bg-white/[0.08] p-5 transition duration-300 hover:-translate-y-0.5 hover:border-[#9fe9ff]/60 hover:bg-white/[0.12] sm:grid-cols-[3.5rem_1fr_auto] sm:items-center">
+                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/12 text-[#9fe9ff] ring-1 ring-white/18 transition group-hover:bg-[#29b9ec] group-hover:text-white">
+                    <MarkerPin01
+                      className="size-5"
+                      strokeWidth={1.8}
+                      aria-hidden="true"
+                    />
+                  </div>
+
+                  <div>
+                    <span className="block text-[11px] font-bold uppercase tracking-[0.22em] text-[#9fe9ff]">
+                      Address
+                    </span>
+                    <span className="mt-2 block text-[16px] font-bold leading-7 text-white">
+                      {contactDetails.address}
+                    </span>
+                  </div>
+                </div>
               </div>
 
-              <div className="px-5 py-5">
-                <MarkerPin01 className="size-5 text-[#9fe9ff]" strokeWidth={1.7} aria-hidden="true" />
-
-                <span className="mt-4 block text-[11px] font-bold uppercase tracking-widest text-[#9fe9ff]">
-                  Address
-                </span>
-
-                <span className="mt-2 block text-[15px] font-medium leading-relaxed text-white">
-                  {contactDetails.address}
-                </span>
+              <div className="mt-5 rounded-[1.25rem] border border-[#9fe9ff]/20 bg-[#29b9ec]/12 px-5 py-4">
+                <p className="text-[12px] font-bold uppercase tracking-[0.2em] text-[#9fe9ff]">
+                  Fast Support
+                </p>
+                <p className="mt-2 text-sm font-medium leading-6 text-white/78">
+                  Share your tank capacity, site location, and application type for
+                  faster technical guidance.
+                </p>
               </div>
             </div>
           </div>

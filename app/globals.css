@@ -143,7 +143,110 @@ body {
   }
 }
 
-@keyframes scrollApplications {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-33.3333%); }
+/* Auto scrolling sector/client cards */
+.banco-scroll-marquee {
+  position: relative;
+  overflow: hidden;
+}
+
+.banco-scroll-marquee__track {
+  display: flex;
+  width: max-content;
+  gap: 1.25rem;
+  animation: banco-scroll-left 34s linear infinite;
+  will-change: transform;
+}
+
+.banco-scroll-marquee:hover .banco-scroll-marquee__track {
+  animation-play-state: paused;
+}
+
+@keyframes banco-scroll-left {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Hide scrollbar but keep horizontal scroll usable */
+.banco-scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.banco-scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+/* Accessibility: reduce motion when user prefers it */
+@media (prefers-reduced-motion: reduce) {
+  .banco-scroll-marquee__track {
+    animation: none;
+    transform: none;
+  }
+}
+
+.banco-collage-tile {
+  animation: banco-collage-highlight 11s ease-in-out infinite;
+}
+
+@keyframes banco-collage-highlight {
+  0%,
+  100% {
+    filter: saturate(0.95) brightness(0.92);
+    transform: scale(1);
+  }
+
+  12% {
+    filter: saturate(1.18) brightness(1.05);
+    transform: scale(1.025);
+  }
+
+  24% {
+    filter: saturate(0.96) brightness(0.94);
+    transform: scale(1);
+  }
+}
+
+.banco-logo-orbit {
+  position: absolute;
+  inset: 0.5rem;
+  border-radius: 1.15rem;
+  border: 1px solid rgba(12, 90, 166, 0.12);
+  pointer-events: none;
+}
+
+.banco-logo-orbit::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -0.28rem;
+  height: 0.55rem;
+  width: 0.55rem;
+  border-radius: 999px;
+  background: #29b9ec;
+  box-shadow: 0 0 20px rgba(41, 185, 236, 0.75);
+  transform: translateX(-50%);
+  animation: banco-logo-orbit-spin 5.5s linear infinite;
+  transform-origin: 50% calc(100% + 4.25rem);
+}
+
+@keyframes banco-logo-orbit-spin {
+  from {
+    rotate: 0deg;
+  }
+
+  to {
+    rotate: 360deg;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .banco-collage-tile,
+  .banco-logo-orbit::after {
+    animation: none;
+  }
 }

@@ -68,7 +68,6 @@ export function SiteFooter() {
         <div className="flex w-full flex-col items-start justify-between gap-3 px-4 py-6 text-xs text-white/55 sm:flex-row sm:items-center sm:px-6 lg:px-10 2xl:px-14">
           <p>© {new Date().getFullYear()} Neomech (T) Ltd. All rights reserved.</p>
           <div className="flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:gap-6">
-            <p className="hidden lg:block">BANCO Water Tank | FRP panel type water storage systems</p>
             <p>
               Designed By{" "}
               <a
