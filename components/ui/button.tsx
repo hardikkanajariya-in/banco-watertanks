@@ -22,7 +22,7 @@ const buttonClasses = {
 };
 
 const sharedClassName =
-  "inline-flex min-h-11 items-center justify-center gap-2 rounded-full px-5 py-3 text-center font-semibold whitespace-normal transition duration-200";
+  "group relative overflow-hidden inline-flex min-h-11 items-center justify-center gap-2 rounded-full px-5 py-3 text-center font-semibold whitespace-normal transition duration-200";
 
 const sharedStyle = {
   fontSize: "0.875rem",
@@ -31,18 +31,32 @@ const sharedStyle = {
 
 export function Button({ children, href, type = "button", variant = "primary", className }: ButtonProps) {
   const resolvedClassName = cn(sharedClassName, buttonClasses[variant], className);
+  
+  const content = (
+    <>
+      <span className="relative z-10 flex items-center justify-center gap-2 transition-colors duration-300 group-hover:text-white">
+        {children}
+      </span>
+      <div 
+        className={cn(
+          "absolute left-1/2 top-[120%] h-[15em] w-[20em] -translate-x-1/2 rounded-[40%] bg-[#10a8e8] transition-all duration-[800ms] ease-in-out group-hover:-top-[80%] group-hover:rotate-180 sm:h-[20em] sm:w-[25em]"
+        )}
+        aria-hidden="true" 
+      />
+    </>
+  );
 
   if (href) {
     return (
       <Link href={href} className={resolvedClassName} style={sharedStyle}>
-        {children}
+        {content}
       </Link>
     );
   }
 
   return (
     <button type={type} className={resolvedClassName} style={sharedStyle}>
-      {children}
+      {content}
     </button>
   );
 }
