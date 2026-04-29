@@ -3,6 +3,7 @@ import { Building05, Mail01, Phone } from "@untitledui/icons";
 
 import { SiteLogo } from "@/components/site-logo";
 import { contactDetails, footerLinks } from "@/data/site";
+import { cn, siteContainer } from "@/lib/utils";
 
 const groups: { title: string; key: keyof typeof footerLinks }[] = [
   { title: "Company", key: "company" },
@@ -16,7 +17,7 @@ export function SiteFooter() {
 
   return (
     <footer className="border-t border-[#133b6c] bg-[#08213c] text-white">
-      <div className="grid w-full gap-10 px-4 py-14 sm:px-6 lg:grid-cols-[1.25fr_0.8fr_0.8fr_0.8fr_1fr] lg:px-10 2xl:px-14">
+      <div className={cn("grid gap-10 px-4 py-14 sm:px-6 lg:grid-cols-[1.25fr_0.8fr_0.8fr_0.8fr_1fr] lg:px-10 2xl:px-14", siteContainer)}>
         <div className="space-y-5">
           <SiteLogo theme="dark" />
           <p className="max-w-xl text-sm leading-7 text-white/72">
@@ -65,7 +66,7 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="border-t border-white/10">
-        <div className="flex w-full flex-col items-start justify-between gap-3 px-4 py-6 text-xs text-white/55 sm:flex-row sm:items-center sm:px-6 lg:px-10 2xl:px-14">
+        <div className={cn("flex flex-col items-start justify-between gap-3 px-4 py-6 text-xs text-white/55 sm:flex-row sm:items-center sm:px-6 lg:px-10 2xl:px-14", siteContainer)}>
           <p>© {new Date().getFullYear()} Neomech (T) Ltd. All rights reserved.</p>
           <div className="flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:gap-6">
             <p>

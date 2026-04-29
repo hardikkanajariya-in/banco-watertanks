@@ -5,6 +5,7 @@ import { CtaBanner } from "@/components/cta-banner";
 import { PageHero } from "@/components/page-hero";
 import { SpecTable } from "@/components/spec-table";
 import { ctaContent, pageMetadata, productContent } from "@/data/site";
+import { cn, siteContainer } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: pageMetadata.product.title,
@@ -31,7 +32,7 @@ export default function ProductPage() {
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-80 bg-gradient-to-t from-[#edf8ff] via-[#f8fcff] to-transparent opacity-95" />
         <div className="pointer-events-none absolute -bottom-24 left-0 h-80 w-full rounded-[50%] bg-[#dff1fb] opacity-40 blur-3xl" />
 
-        <div className="relative mx-auto max-w-5xl">
+        <div className={cn("relative", siteContainer)}>
           {/* Heading */}
           <div className="mb-7">
             <h2 className="text-[clamp(1.8rem,4vw,2.6rem)] font-extrabold uppercase tracking-[0.12em] text-[#0c5aa6]">
@@ -92,7 +93,7 @@ export default function ProductPage() {
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-72 bg-gradient-to-t from-[#edf8ff] via-[#f8fcff] to-transparent opacity-90" />
         <div className="pointer-events-none absolute -bottom-24 left-0 h-80 w-full rounded-[50%] bg-[#dff1fb] opacity-40 blur-3xl" />
 
-        <div className="relative mx-auto max-w-6xl">
+        <div className={cn("relative", siteContainer)}>
           <div className="mb-10">
             <h2 className="text-3xl font-extrabold uppercase tracking-[0.12em] text-[#0c5aa6] sm:text-4xl">
               Standard Panel Design
@@ -101,7 +102,7 @@ export default function ProductPage() {
             <div className="mt-2 h-[3px] w-full max-w-[820px] bg-gradient-to-r from-[#0c5aa6] via-[#78aed7] to-transparent" />
           </div>
 
-          <div className="mx-auto max-w-5xl">
+          <div className="mx-auto flex justify-center">
             <Image
               src="/images/standard-panel-design.png"
               alt="Standard panel design diagram"
@@ -135,7 +136,7 @@ export default function ProductPage() {
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-72 bg-gradient-to-t from-[#edf8ff] via-[#f8fcff] to-transparent opacity-90" />
         <div className="pointer-events-none absolute -bottom-24 left-0 h-80 w-full rounded-[50%] bg-[#dff1fb] opacity-40 blur-3xl" />
 
-        <div className="relative mx-auto max-w-6xl">
+        <div className={cn("relative", siteContainer)}>
           {/* Brochure-style heading */}
           <div className="mb-12">
             <p className="mb-2 text-sm font-bold uppercase tracking-[0.22em] text-[#0c5aa6]">
@@ -173,7 +174,7 @@ export default function ProductPage() {
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-64 bg-gradient-to-t from-[#eef8ff] via-[#f8fcff] to-transparent opacity-80" />
         <div className="pointer-events-none absolute -bottom-20 left-0 h-72 w-full rounded-[50%] bg-[#dff1fb] opacity-40 blur-3xl" />
 
-        <div className="relative mx-auto max-w-5xl">
+        <div className={cn("relative", siteContainer)}>
           {/* Main Heading */}
           <div className="mb-12">
             <h2 className="text-3xl font-extrabold uppercase tracking-wide text-[#0c5aa6] sm:text-4xl">

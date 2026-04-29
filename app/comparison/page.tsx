@@ -6,6 +6,7 @@ import { CtaBanner } from "@/components/cta-banner";
 import { PageHero } from "@/components/page-hero";
 import { Button } from "@/components/ui/button";
 import { comparisonContent, ctaContent, pageMetadata } from "@/data/site";
+import { cn, siteContainer } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: pageMetadata.comparison.title,
@@ -36,7 +37,7 @@ export default function ComparisonPage() {
       <section className="relative w-full overflow-hidden bg-white px-4 py-14 sm:px-6 lg:px-10 lg:py-20 2xl:px-14">
         <WaterBackground />
 
-        <div className="relative mx-auto w-full max-w-[1320px]">
+        <div className={cn("relative w-full", siteContainer)}>
           <div className="mb-14 max-w-[920px]">
             <p className="mb-2 text-[0.72rem] font-bold uppercase tracking-[0.28em] text-[#0c5aa6]">
               Banco Vs Others

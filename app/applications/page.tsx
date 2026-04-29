@@ -5,6 +5,7 @@ import { CtaBanner } from "@/components/cta-banner";
 import { PageHero } from "@/components/page-hero";
 import { SectionIntro } from "@/components/section-intro";
 import { applicationsContent, ctaContent, pageMetadata } from "@/data/site";
+import { cn, siteContainer } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: pageMetadata.applications.title,
@@ -24,7 +25,7 @@ export default function ApplicationsPage() {
       <section className="relative w-full px-4 py-16 sm:px-6 lg:px-10 lg:py-24 2xl:px-14 bg-[#f8fbff] overflow-hidden">
         <div className="absolute left-0 top-0 h-[600px] w-[600px] -translate-x-1/3 translate-y-1/4 rounded-full bg-[radial-gradient(circle,rgba(41,185,236,0.06)_0%,transparent_70%)] pointer-events-none" />
 
-        <div className="relative mx-auto max-w-[1440px]">
+        <div className={cn("relative", siteContainer)}>
           <div className="mb-14 max-w-4xl">
             <p className="mb-2 text-[0.72rem] font-bold uppercase tracking-[0.28em] text-[#0c5aa6]">
               Application Coverage
@@ -42,7 +43,7 @@ export default function ApplicationsPage() {
             </p>
           </div>
 
-          <div className="mt-8 mx-auto max-w-7xl">
+          <div className="mt-8">
             <ApplicationGrid items={applicationsContent.items} />
           </div>
         </div>

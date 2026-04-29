@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ChevronRight } from "@untitledui/icons";
+import { cn, siteContainer } from "@/lib/utils";
 
 type PageHeroProps = {
   eyebrow: string;
@@ -8,7 +9,7 @@ type PageHeroProps = {
 export function PageHero({ eyebrow }: PageHeroProps) {
   return (
     <section className="w-full border-b border-[#dcecf7] bg-[#f7fbff] px-4 py-5 sm:px-6 lg:px-10 2xl:px-14">
-      <div className="mx-auto w-full max-w-[1400px]">
+      <div className={cn("w-full", siteContainer)}>
         <nav
           aria-label="Breadcrumb"
           className="flex flex-wrap items-center gap-2 text-sm"

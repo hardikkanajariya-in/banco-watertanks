@@ -7,6 +7,7 @@ import { Mail01, Menu01, Phone } from "@untitledui/icons";
 import { SiteLogo } from "@/components/site-logo";
 import { Button } from "@/components/ui/button";
 import { contactDetails, navigation } from "@/data/site";
+import { cn, siteContainer } from "@/lib/utils";
 
 export function SiteHeader() {
   const pathname = usePathname();
@@ -19,8 +20,8 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-[#cfe0ef]/80 bg-white/90 shadow-[0_10px_35px_rgba(8,40,91,0.06)] backdrop-blur-2xl">
       {/* Top contact strip */}
-      <div className="hidden w-full border-b border-[#d9e8f5] bg-[linear-gradient(90deg,#f6fbff_0%,#eef7ff_50%,#f8fcff_100%)] px-4 py-2.5 text-xs text-slate-600 sm:block sm:px-6 lg:px-10 2xl:px-14">
-        <div className="flex items-center justify-between gap-6">
+      <div className="hidden border-b border-[#d9e8f5] bg-[linear-gradient(90deg,#f6fbff_0%,#eef7ff_50%,#f8fcff_100%)] text-xs text-slate-600 sm:block py-2.5">
+        <div className={cn("flex items-center justify-between gap-6 px-4 sm:px-6 lg:px-10 2xl:px-14", siteContainer)}>
           <p className="max-w-[54rem] truncate font-semibold uppercase tracking-[0.16em] text-[#0b386e]">
             FRP panel type water storage solutions by Neomech (T) Ltd.
           </p>
@@ -56,7 +57,7 @@ export function SiteHeader() {
       </div>
 
       {/* Main header */}
-      <div className="flex w-full items-center justify-between gap-4 px-4 py-3.5 sm:px-6 lg:px-10 lg:py-4 2xl:px-14">
+      <div className={cn("flex items-center justify-between gap-4 px-4 py-3.5 sm:px-6 lg:px-10 lg:py-4 2xl:px-14", siteContainer)}>
         <div className="flex min-w-0 items-center">
           <SiteLogo />
         </div>

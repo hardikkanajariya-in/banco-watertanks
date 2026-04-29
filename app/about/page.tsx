@@ -5,6 +5,7 @@ import { CtaBanner } from "@/components/cta-banner";
 import { PageHero } from "@/components/page-hero";
 import { SectionIntro } from "@/components/section-intro";
 import { StatsStrip } from "@/components/stats-strip";
+import { cn, siteContainer } from "@/lib/utils";
 import {
   aboutContent,
   brandStats,
@@ -44,7 +45,7 @@ export default function AboutPage() {
   <div className="pointer-events-none absolute inset-x-0 bottom-0 h-80 bg-gradient-to-t from-[#edf8ff] via-[#f8fcff] to-transparent opacity-95" />
   <div className="pointer-events-none absolute -bottom-24 left-0 h-80 w-full rounded-[50%] bg-[#dff1fb] opacity-40 blur-3xl" />
 
-  <div className="relative mx-auto max-w-6xl">
+  <div className={cn("relative", siteContainer)}>
     {/* Section Heading */}
     <div className="mb-10">
       <p className="mb-2 text-[0.72rem] font-bold uppercase tracking-[0.28em] text-[#0c5aa6]">
@@ -156,7 +157,7 @@ export default function AboutPage() {
   <div className="pointer-events-none absolute inset-x-0 bottom-0 h-80 bg-gradient-to-t from-[#edf8ff] via-[#f8fcff] to-transparent opacity-95" />
   <div className="pointer-events-none absolute -bottom-24 left-0 h-80 w-full rounded-[50%] bg-[#dff1fb] opacity-40 blur-3xl" />
 
-  <div className="relative mx-auto max-w-6xl">
+  <div className={cn("relative", siteContainer)}>
     {/* Heading */}
     <div className="mb-10">
       <p className="mb-2 text-[0.72rem] font-bold uppercase tracking-[0.28em] text-[#0c5aa6]">
@@ -251,7 +252,7 @@ export default function AboutPage() {
   <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-[#0f60b2]/10 blur-3xl" />
   <div className="absolute -bottom-28 -left-24 h-80 w-80 rounded-full bg-[#08285b]/10 blur-3xl" />
 
-  <div className="relative mx-auto max-w-[1320px]">
+  <div className={cn("relative", siteContainer)}>
     <div className="mx-auto max-w-3xl text-center">
       <span className="inline-flex rounded-full border border-[#0f60b2]/20 bg-white px-4 py-2 text-xs font-bold uppercase tracking-[0.22em] text-[#0f60b2] shadow-sm">
         Leadership

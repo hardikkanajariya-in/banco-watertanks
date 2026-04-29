@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { CtaBanner } from "@/components/cta-banner";
 import { ctaContent, pageMetadata } from "@/data/site";
 import { PageHero } from "@/components/page-hero";
+import { cn, siteContainer } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: pageMetadata.advantages.title,
@@ -131,7 +132,7 @@ export default function AdvantagesPage() {
       <section className="relative w-full overflow-hidden bg-white px-4 py-14 sm:px-6 lg:px-10 lg:py-20 2xl:px-14">
         <WaterBackground />
 
-        <div className="relative mx-auto max-w-5xl">
+        <div className={cn("relative", siteContainer)}>
           <BrochureHeading>FRP Tank Advantages</BrochureHeading>
 
           <div className="mb-8 flex justify-end">
@@ -173,7 +174,7 @@ export default function AdvantagesPage() {
       <section className="relative w-full overflow-hidden bg-white px-4 py-14 sm:px-6 lg:px-10 lg:py-20 2xl:px-14">
         <WaterBackground />
 
-        <div className="relative mx-auto max-w-5xl">
+        <div className={cn("relative", siteContainer)}>
           <BrochureHeading>Benefits of FRP Tanks</BrochureHeading>
 
           <div className="grid gap-x-14 gap-y-10 sm:grid-cols-2">

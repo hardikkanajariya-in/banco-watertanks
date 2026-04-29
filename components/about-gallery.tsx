@@ -5,22 +5,22 @@ import { useRef, useState, useEffect } from "react";
 
 const aboutGalleryImages = [
   {
-    src: "https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=1200&q=85",
+    src: "https://images.unsplash.com/photo-1678716399829-485f7c7fb1dd?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjZ8fGNvbW1lcmNpYWwlMjB3YXRlciUyMHRhbmtzfGVufDB8fDB8fHww",
     label: "Industrial Facility",
     alt: "Industrial facility for engineered water storage solutions",
   },
   {
-    src: "https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=1200&q=85",
+    src: "https://plus.unsplash.com/premium_photo-1683121591147-3f25b3be9c8e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjB8fGNvbW1lcmNpYWwlMjB3YXRlciUyMHRhbmtzfGVufDB8fDB8fHww",
     label: "Plant Operations",
     alt: "Industrial plant and utility infrastructure",
   },
   {
-    src: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=85",
+    src: "https://plus.unsplash.com/premium_photo-1661901232823-fd68a93377c9?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzJ8fGNvbW1lcmNpYWwlMjB3YXRlciUyMHRhbmtzfGVufDB8fDB8fHww",
     label: "Infrastructure",
     alt: "Large construction and infrastructure development",
   },
   {
-    src: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=85",
+    src: "https://images.unsplash.com/photo-1633129167930-2019e0ba8257?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzF8fGNvbW1lcmNpYWwlMjB3YXRlciUyMHRhbmtzfGVufDB8fDB8fHww",
     label: "Project Support",
     alt: "Modern project planning and commercial workspace",
   },

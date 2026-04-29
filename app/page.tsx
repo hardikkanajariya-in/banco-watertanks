@@ -4,6 +4,7 @@ import { ArrowRight, Mail01, MarkerPin01, Phone } from "@untitledui/icons";
 
 import { Button } from "@/components/ui/button";
 import { AboutGallery } from "@/components/about-gallery";
+import { cn, siteContainer } from "@/lib/utils";
 import {
   aboutContent,
   applicationsContent,
@@ -28,27 +29,27 @@ const compactApplications = applicationsContent.items.slice(0, 8);
 const heroCollageItems = [
   {
     title: "Industrial",
-    src: "https://images.unsplash.com/photo-1581093458791-9d42cc0301c5?auto=format&fit=crop&w=900&q=80",
+    src: "https://images.unsplash.com/photo-1669206296809-059cda8e7562?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     className: "col-start-1 col-span-2 row-start-1 row-span-3 rounded-tl-[1.75rem]",
   },
   {
     title: "Commercial",
-    src: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80",
+    src: "https://images.unsplash.com/photo-1613244528347-eebc96dc9248?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     className: "col-start-3 col-span-3 row-start-1 row-span-3",
   },
   {
     title: "Residential",
-    src: "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80",
+    src: "https://images.unsplash.com/photo-1646488993053-8c182b628696?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29tbWVyY2lhbCUyMHdhdGVyJTIwdGFua3N8ZW58MHx8MHx8fDA%3D",
     className: "col-start-6 col-span-1 row-start-1 row-span-4 rounded-tr-[1.75rem] text-direction-ltr",
   },
   {
     title: "Infrastructure",
-    src: "https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=900&q=80",
+    src: "https://plus.unsplash.com/premium_photo-1661963620419-32e7be221e59?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjh8fGNvbW1lcmNpYWwlMjB3YXRlciUyMHRhbmtzfGVufDB8fDB8fHww",
     className: "col-start-1 col-span-3 row-start-4 row-span-3 rounded-bl-[1.75rem]",
   },
   {
     title: "Hospitality",
-    src: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=900&q=80",
+    src: "https://images.unsplash.com/photo-1633129167930-2019e0ba8257?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzF8fGNvbW1lcmNpYWwlMjB3YXRlciUyMHRhbmtzfGVufDB8fDB8fHww",
     className: "col-start-4 col-span-3 row-start-5 row-span-2 rounded-br-[1.75rem]",
   },
 ];
@@ -57,42 +58,42 @@ const sectorCards = [
   {
     title: "Industrial Facilities",
     image:
-      "https://images.unsplash.com/photo-1581093458791-9d42cc0301c5?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1678716399829-485f7c7fb1dd?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjZ8fGNvbW1lcmNpYWwlMjB3YXRlciUyMHRhbmtzfGVufDB8fDB8fHww",
   },
   {
     title: "Commercial Projects",
     image:
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80",
+      "https://plus.unsplash.com/premium_photo-1683121591147-3f25b3be9c8e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjB8fGNvbW1lcmNpYWwlMjB3YXRlciUyMHRhbmtzfGVufDB8fDB8fHww",
   },
   {
     title: "Infrastructure",
     image:
-      "https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=900&q=80",
+      "https://plus.unsplash.com/premium_photo-1661901232823-fd68a93377c9?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzJ8fGNvbW1lcmNpYWwlMjB3YXRlciUyMHRhbmtzfGVufDB8fDB8fHww",
   },
   {
     title: "Hospitals",
     image:
-      "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1649261289623-2835ef98e42e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGNvbW1lcmNpYWwlMjB3YXRlciUyMHRhbmtzfGVufDB8fDB8fHww",
   },
   {
     title: "Hotels",
     image:
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=900&q=80",
+      "https://plus.unsplash.com/premium_photo-1672082110694-1198cbeaa93b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzZ8fGNvbW1lcmNpYWwlMjB3YXRlciUyMHRhbmtzfGVufDB8fDB8fHww",
   },
   {
     title: "Residential",
     image:
-      "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1659281608772-7e6df1a6fcba?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGNvbW1lcmNpYWwlMjB3YXRlciUyMHRhbmtzfGVufDB8fDB8fHww",
   },
   {
     title: "Municipal",
     image:
-      "https://images.unsplash.com/photo-1516937941344-00b4e0337589?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1613244528347-eebc96dc9248?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGNvbW1lcmNpYWwlMjB3YXRlciUyMHRhbmtzfGVufDB8fDB8fHww",
   },
   {
     title: "Irrigation",
     image:
-      "https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=900&q=80",
+      "https://plus.unsplash.com/premium_photo-1664302487872-e83f6d0ff1d9?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Y29tbWVyY2lhbCUyMHdhdGVyJTIwdGFua3N8ZW58MHx8MHx8fDA%3D",
   },
 ];
 
@@ -257,7 +258,7 @@ export default function HomePage() {
     <>
       {/* Hero */}
       <section className="relative isolate overflow-hidden bg-[#f6fbff] px-4 py-12 sm:px-6 sm:py-14 lg:px-10 lg:py-5 2xl:px-14">
-        <div className="relative mx-auto grid max-w-[1320px] gap-10 pt-5 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:gap-14">
+        <div className={cn("relative grid gap-10 pt-5 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:gap-14", siteContainer)}>
           <div className="max-w-2xl">
             <p className="mt-6 text-[11px] font-bold uppercase tracking-[0.24em] text-[#10a8e8] sm:text-xs">
               {homeHero.eyebrow}
@@ -345,7 +346,7 @@ export default function HomePage() {
         <div className="pointer-events-none absolute -left-24 top-24 h-80 w-80 rounded-full bg-[#29b9ec]/10 blur-3xl" />
         <div className="pointer-events-none absolute -right-24 bottom-10 h-96 w-96 rounded-full bg-[#0c5aa6]/10 blur-3xl" />
 
-        <div className="relative mx-auto grid max-w-[1320px] gap-12 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
+        <div className={cn("relative grid gap-12 lg:grid-cols-[0.92fr_1.08fr] lg:items-center", siteContainer)}>
           <div className="relative order-last lg:order-first">
             <div className="absolute -left-5 top-8 hidden h-[82%] w-[82%] rounded-[2rem] bg-[#0c5aa6] lg:block" />
             <div className="absolute -bottom-5 right-8 hidden h-32 w-32 rounded-full bg-[#29b9ec]/20 blur-2xl lg:block" />
@@ -420,7 +421,7 @@ export default function HomePage() {
       <section className="relative w-full overflow-hidden bg-white px-4 py-14 sm:px-6 lg:px-10 lg:py-20 2xl:px-14">
         <WaterBackground />
 
-        <div className="relative mx-auto max-w-6xl">
+        <div className={cn("relative", siteContainer)}>
           <BrochureHeading
             eyebrow="Product Strength"
             title="Why choose FRP panel tanks"
@@ -458,7 +459,7 @@ export default function HomePage() {
       <section className="relative w-full overflow-hidden bg-white px-4 py-14 sm:px-6 lg:px-10 lg:py-20 2xl:px-14">
         <WaterBackground />
 
-        <div className="relative mx-auto max-w-6xl">
+        <div className={cn("relative", siteContainer)}>
           <div className="mb-10 flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
             <div>
               <p className="mb-2 text-[0.72rem] font-bold uppercase tracking-[0.28em] text-[#0c5aa6]">
@@ -514,7 +515,7 @@ export default function HomePage() {
       <section id="our-clients" className="relative w-full overflow-hidden bg-white px-4 py-14 sm:px-6 lg:px-10 lg:py-20 2xl:px-14">
         <WaterBackground />
 
-        <div className="relative mx-auto max-w-6xl">
+        <div className={cn("relative", siteContainer)}>
           <BrochureHeading
             eyebrow="Our Clients"
             title="Trusted by industry stakeholders"
@@ -527,7 +528,7 @@ export default function HomePage() {
 
       {/* Contact Strip */}
       <section className="relative w-full overflow-hidden bg-white px-4 py-14 sm:px-6 lg:px-10 lg:py-20 2xl:px-14">
-        <div className="relative mx-auto max-w-[1320px] overflow-hidden rounded-[2rem] bg-[#08285b] text-white shadow-[0_34px_90px_rgba(8,40,91,0.24)]">
+        <div className={cn("relative overflow-hidden rounded-[2rem] bg-[#08285b] text-white shadow-[0_34px_90px_rgba(8,40,91,0.24)]", siteContainer)}>
           <Image
             src="/images/contact-water-tower.jpg"
             alt=""
@@ -649,16 +650,6 @@ export default function HomePage() {
                     </span>
                   </div>
                 </div>
-              </div>
-
-              <div className="mt-5 rounded-[1.25rem] border border-[#9fe9ff]/20 bg-[#29b9ec]/12 px-5 py-4">
-                <p className="text-[12px] font-bold uppercase tracking-[0.2em] text-[#9fe9ff]">
-                  Fast Support
-                </p>
-                <p className="mt-2 text-sm font-medium leading-6 text-white/78">
-                  Share your tank capacity, site location, and application type for
-                  faster technical guidance.
-                </p>
               </div>
             </div>
           </div>
