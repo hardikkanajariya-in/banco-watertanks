@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { ArrowRight, Mail01, MarkerPin01, Phone } from "@untitledui/icons";
+import { ArrowRight, Bell01, Building05, Globe01, Home01, LayersThree01, LifeBuoy01, Mail01, MarkerPin01, Phone, Tool01, User01 } from "@untitledui/icons";
 
 import { Button } from "@/components/ui/button";
 import { AboutGallery } from "@/components/about-gallery";
@@ -35,12 +35,12 @@ const heroCollageItems = [
   {
     title: "Commercial",
     src: "https://images.unsplash.com/photo-1613244528347-eebc96dc9248?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    className: "col-start-3 col-span-3 row-start-1 row-span-3",
+    className: "col-start-3 col-span-2 row-start-1 row-span-3",
   },
   {
     title: "Residential",
     src: "https://images.unsplash.com/photo-1646488993053-8c182b628696?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29tbWVyY2lhbCUyMHdhdGVyJTIwdGFua3N8ZW58MHx8MHx8fDA%3D",
-    className: "col-start-6 col-span-1 row-start-1 row-span-4 rounded-tr-[1.75rem] text-direction-ltr",
+    className: "col-start-5 col-span-2 row-start-1 row-span-4 rounded-tr-[1.75rem] text-direction-ltr",
   },
   {
     title: "Infrastructure",
@@ -96,6 +96,20 @@ const sectorCards = [
       "https://plus.unsplash.com/premium_photo-1664302487872-e83f6d0ff1d9?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Y29tbWVyY2lhbCUyMHdhdGVyJTIwdGFua3N8ZW58MHx8MHx8fDA%3D",
   },
 ];
+
+
+const icons = [
+  Building05,
+  Tool01,
+  Home01,
+  User01,
+  Bell01,
+  LayersThree01,
+  Globe01,
+  LifeBuoy01,
+  Building05,
+];
+
 
 function WaterBackground() {
   return (
@@ -162,10 +176,6 @@ function HeroCollage() {
             <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(8,40,91,0.08)_0%,rgba(8,40,91,0.62)_100%)]" />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(41,185,236,0.18),transparent_38%)]" />
 
-            <div className="absolute left-3 top-3 rounded-full border border-white/25 bg-white/15 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.16em] text-white backdrop-blur-md sm:left-4 sm:top-4">
-              {String(index + 1).padStart(2, "0")}
-            </div>
-
             <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4">
               <p className="text-[11px] font-extrabold uppercase tracking-[0.18em] text-white sm:text-[12px]">
                 {image.title}
@@ -175,13 +185,13 @@ function HeroCollage() {
         ))}
 
         {/* Center rounded logo block */}
-        <div className="relative col-span-2 col-start-4 row-span-1 row-start-4 flex items-center justify-center overflow-hidden rounded-[2rem] border border-[#d8e8f4] bg-white shadow-[0_20px_48px_rgba(8,40,91,0.16)] ring-1 ring-white/80 transition-all duration-500 hover:-translate-y-1 hover:scale-[1.03] hover:shadow-[0_28px_60px_rgba(8,40,91,0.2)]">
+        <div className="relative col-span-1 col-start-4 row-span-1 row-start-4 flex items-center justify-center overflow-hidden border border-[#d8e8f4] bg-white shadow-[0_20px_48px_rgba(8,40,91,0.16)] transition-all duration-500 hover:-translate-y-1 hover:scale-[1.03] hover:shadow-[0_28px_60px_rgba(8,40,91,0.2)]">
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(41,185,236,0.12),transparent_42%)]" />
 
           <img
             src="/images/banco-logo.png"
             alt="BANCO Water Tank"
-            className="relative z-10 h-50  w-[62%] object-contain transition-transform duration-500 hover:scale-110"
+            className="relative z-10 h-100 w-[20%] object-contain transition-transform duration-500 scale-550"
           />
         </div>
       </div>
@@ -215,10 +225,6 @@ function ClientSectorMarquee() {
 
               <div className="relative">
                 <div className="mb-6 flex items-center justify-between">
-                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/15 text-sm font-extrabold text-white shadow-[inset_0_0_0_1px_rgba(255,255,255,0.28),0_16px_30px_rgba(0,0,0,0.18)] backdrop-blur-md">
-                    {String((index % sectorCards.length) + 1).padStart(2, "0")}
-                  </div>
-
                   <span className="rounded-full border border-white/25 bg-white/12 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-white backdrop-blur-md">
                     Sector
                   </span>
@@ -438,10 +444,6 @@ export default function HomePage() {
                   index % 2 === 1 ? "md:border-r-0" : "",
                 ].join(" ")}
               >
-                <p className="text-[11px] font-extrabold uppercase tracking-[0.18em] text-[#0c5aa6]">
-                  {String(index + 1).padStart(2, "0")}
-                </p>
-
                 <h3 className="mt-3 text-lg font-extrabold uppercase italic tracking-wide text-[#0c5aa6]">
                   {item.title}
                 </h3>
@@ -487,26 +489,33 @@ export default function HomePage() {
           </div>
 
           <div className="grid gap-x-14 gap-y-7 sm:grid-cols-2">
-            {compactApplications.map((item, index) => (
-              <article
+            {compactApplications.map((item, index) => {
+              const Icon = icons[index % icons.length]
+              return (<article
                 key={item.title}
-                className="grid grid-cols-[3.5rem_1fr] gap-5 border-b border-[#d8e8f4] pb-6"
+                className="grid grid-cols-[58px_1fr] gap-5 border-b border-[#d8e8f4] pb-7"
               >
-                <div className="flex h-12 w-12 items-center justify-center rounded-full border-[3px] border-[#1aa7de] bg-[#1aa7de] text-sm font-extrabold text-white shadow-[inset_0_0_0_4px_white]">
-                  {String(index + 1).padStart(2, "0")}
+                <div className="flex h-[58px] w-[58px] shrink-0 items-center justify-center rounded-full border-[3px] border-[#1aa7de] bg-[#1aa7de] shadow-[inset_0_0_0_4px_white,0_8px_18px_rgba(12,90,166,0.18)]">
+                  <Icon
+                    className="size-7 text-white"
+                    strokeWidth={1.8}
+                    aria-hidden="true"
+                  />
                 </div>
 
                 <div>
-                  <h3 className="text-[15px] font-extrabold uppercase italic tracking-wide text-[#0c5aa6]">
-                    {item.title}
-                  </h3>
+                  <div className="mb-2 flex items-start justify-between gap-4">
+                    <h3 className="text-[15px] font-extrabold uppercase italic tracking-wide text-[#0c5aa6]">
+                      {item.title}
+                    </h3>
+                  </div>
 
-                  <p className="mt-2 text-[15px] font-medium leading-7 text-[#10a8e8]">
+                  <p className="text-[15px] font-extrabold leading-6 text-[#10a8e8]">
                     {item.description}
                   </p>
                 </div>
-              </article>
-            ))}
+              </article>)
+            })}
           </div>
         </div>
       </section>

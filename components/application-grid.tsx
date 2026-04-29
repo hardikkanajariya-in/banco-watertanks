@@ -60,10 +60,6 @@ export function ApplicationGrid({
                 <h3 className="text-[15px] font-extrabold uppercase italic tracking-wide text-[#0c5aa6]">
                   {item.title}
                 </h3>
-
-                <span className="shrink-0 text-[12px] font-extrabold tracking-[0.16em] text-[#b7d8ef]">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
               </div>
 
               <p className="text-[15px] font-extrabold leading-6 text-[#10a8e8]">

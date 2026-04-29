@@ -4,6 +4,8 @@ import { CtaBanner } from "@/components/cta-banner";
 import { ctaContent, pageMetadata } from "@/data/site";
 import { PageHero } from "@/components/page-hero";
 import { cn, siteContainer } from "@/lib/utils";
+import { Virus, Droplets01, BezierCurve01, PackageCheck, RefreshCcw01, ShieldTick, Waves, Zap, Columns03, Tool02, Sun, Settings01 } from "@untitledui/icons";
+
 
 export const metadata: Metadata = {
   title: pageMetadata.advantages.title,
@@ -12,6 +14,8 @@ export const metadata: Metadata = {
     canonical: "/advantages"
   }
 };
+
+
 
 const tankAdvantages = [
   {
@@ -111,13 +115,33 @@ function WaterBackground() {
     </>
   );
 }
+const benefitIconMap = {
+  "Excellent Hygiene": Virus,
+  "Pure Water Quality": Droplets01,
+  "Design Flexibility": BezierCurve01,
+  Portability: PackageCheck,
+  Relocation: RefreshCcw01,
+  "Leakage Resistance": ShieldTick,
+  Drainage: Waves,
+  "Strength and Durability": Zap,
+  "Internal Tank Partition": Columns03,
+  Repairing: Tool02,
+  "UV Resistance": Sun,
+  Maintenance: Settings01,
+};
 
-function BenefitIcon({ index }: { index: number }) {
+type BenefitTitle = keyof typeof benefitIconMap;
+
+function BenefitIcon({ title }: { title: BenefitTitle }) {
+  const Icon = benefitIconMap[title];
+
   return (
-    <div className="flex h-[58px] w-[58px] shrink-0 items-center justify-center rounded-full border-[3px] border-[#1aa7de] bg-[#1aa7de] shadow-[inset_0_0_0_4px_white,0_8px_18px_rgba(12,90,166,0.18)]">
-      <span className="text-sm font-extrabold text-white">
-        {String(index + 1).padStart(2, "0")}
-      </span>
+    <div className="group relative flex h-[62px] w-[62px] shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-[#1aa7de] via-[#1599cf] to-[#0c5aa6] shadow-[0_12px_26px_rgba(12,90,166,0.22)]">
+      <div className="absolute inset-[4px] rounded-[14px] border border-white/35" />
+
+      <div className="relative flex h-[42px] w-[42px] items-center justify-center rounded-xl bg-white/15 backdrop-blur-sm transition-transform duration-300 group-hover:scale-110">
+        <Icon className="h-6 w-6 text-white" />
+      </div>
     </div>
   );
 }
@@ -181,9 +205,9 @@ export default function AdvantagesPage() {
             {benefits.map((item, index) => (
               <article
                 key={item.title}
-                className="grid grid-cols-[58px_1fr] gap-5"
+                className="grid grid-cols-[62px_1fr] gap-5"
               >
-                <BenefitIcon index={index} />
+                <BenefitIcon title={item.title as BenefitTitle} />
 
                 <div>
                   <h3 className="mb-2 text-[15px] font-extrabold uppercase italic tracking-wide text-[#0c5aa6]">
