@@ -27,6 +27,9 @@ function WaterBackground() {
 }
 
 export default function ComparisonPage() {
+  var ctaContentNew = ctaContent;
+  ctaContentNew.secondary = {label: "", href: ""};
+
   return (
     <>
       <PageHero
@@ -59,7 +62,7 @@ export default function ComparisonPage() {
         </div>
       </section>
 
-      <CtaBanner {...ctaContent} />
+      <CtaBanner {...ctaContentNew} />
     </>
   );
 }
