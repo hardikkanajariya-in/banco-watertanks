@@ -72,7 +72,7 @@ export default function AboutPage() {
               <div className="relative overflow-hidden rounded-[2rem] bg-white p-3 shadow-[0_24px_70px_rgba(12,90,166,0.16)]">
                 <div className="relative aspect-[4/3] overflow-hidden rounded-[1.45rem]">
                   <Image
-                    src="/images/company-aerial.jpg"
+                    src="/images/product-storage-tank.jpg"
                     alt="BANCO manufacturing facility"
                     fill
                     sizes="(max-width: 1024px) 100vw, 48vw"

@@ -29,27 +29,27 @@ const compactApplications = applicationsContent.items.slice(0, 8);
 const heroCollageItems = [
   {
     title: "Industrial",
-    src: "https://images.unsplash.com/photo-1669206296809-059cda8e7562?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    src: "/images/water-tank-big.png",
     className: "col-start-1 col-span-2 row-start-1 row-span-3 rounded-tl-[1.75rem]",
   },
   {
     title: "Commercial",
-    src: "https://images.unsplash.com/photo-1613244528347-eebc96dc9248?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    src: "/images/frp-water-tank.png",
     className: "col-start-3 col-span-2 row-start-1 row-span-3",
   },
   {
     title: "Residential",
-    src: "https://images.unsplash.com/photo-1646488993053-8c182b628696?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29tbWVyY2lhbCUyMHdhdGVyJTIwdGFua3N8ZW58MHx8MHx8fDA%3D",
+    src: "/images/product-storage-tank.jpg",
     className: "col-start-5 col-span-2 row-start-1 row-span-4 rounded-tr-[1.75rem] text-direction-ltr",
   },
   {
     title: "Infrastructure",
-    src: "https://plus.unsplash.com/premium_photo-1661963620419-32e7be221e59?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjh8fGNvbW1lcmNpYWwlMjB3YXRlciUyMHRhbmtzfGVufDB8fDB8fHww",
+    src: "/images/water-tank-square.png",
     className: "col-start-1 col-span-3 row-start-4 row-span-3 rounded-bl-[1.75rem]",
   },
   {
     title: "Hospitality",
-    src: "https://images.unsplash.com/photo-1633129167930-2019e0ba8257?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzF8fGNvbW1lcmNpYWwlMjB3YXRlciUyMHRhbmtzfGVufDB8fDB8fHww",
+    src: "/images/standard-panel-design.png",
     className: "col-start-4 col-span-3 row-start-5 row-span-2 rounded-br-[1.75rem]",
   },
 ];
@@ -57,43 +57,35 @@ const heroCollageItems = [
 const sectorCards = [
   {
     title: "Industrial Facilities",
-    image:
-      "https://images.unsplash.com/photo-1678716399829-485f7c7fb1dd?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjZ8fGNvbW1lcmNpYWwlMjB3YXRlciUyMHRhbmtzfGVufDB8fDB8fHww",
+    image: "/images/water-tank-big.png",
   },
   {
     title: "Commercial Projects",
-    image:
-      "https://plus.unsplash.com/premium_photo-1683121591147-3f25b3be9c8e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjB8fGNvbW1lcmNpYWwlMjB3YXRlciUyMHRhbmtzfGVufDB8fDB8fHww",
+    image: "/images/frp-water-tank.png",
   },
   {
     title: "Infrastructure",
-    image:
-      "https://plus.unsplash.com/premium_photo-1661901232823-fd68a93377c9?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzJ8fGNvbW1lcmNpYWwlMjB3YXRlciUyMHRhbmtzfGVufDB8fDB8fHww",
+    image: "/images/water-tank-square.png",
   },
   {
     title: "Hospitals",
-    image:
-      "https://images.unsplash.com/photo-1649261289623-2835ef98e42e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGNvbW1lcmNpYWwlMjB3YXRlciUyMHRhbmtzfGVufDB8fDB8fHww",
+    image: "/images/product-storage-tank.jpg",
   },
   {
     title: "Hotels",
-    image:
-      "https://plus.unsplash.com/premium_photo-1672082110694-1198cbeaa93b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzZ8fGNvbW1lcmNpYWwlMjB3YXRlciUyMHRhbmtzfGVufDB8fDB8fHww",
+    image: "/images/standard-panel-design.png",
   },
   {
     title: "Residential",
-    image:
-      "https://images.unsplash.com/photo-1659281608772-7e6df1a6fcba?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGNvbW1lcmNpYWwlMjB3YXRlciUyMHRhbmtzfGVufDB8fDB8fHww",
+    image: "/images/blueprint.png",
   },
   {
     title: "Municipal",
-    image:
-      "https://images.unsplash.com/photo-1613244528347-eebc96dc9248?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGNvbW1lcmNpYWwlMjB3YXRlciUyMHRhbmtzfGVufDB8fDB8fHww",
+    image: "/images/frp-water-tank.png",
   },
   {
     title: "Irrigation",
-    image:
-      "https://plus.unsplash.com/premium_photo-1664302487872-e83f6d0ff1d9?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Y29tbWVyY2lhbCUyMHdhdGVyJTIwdGFua3N8ZW58MHx8MHx8fDA%3D",
+    image: "/images/water-tank-big.png",
   },
 ];
 
@@ -539,7 +531,7 @@ export default function HomePage() {
       <section className="relative w-full overflow-hidden bg-white px-4 py-14 sm:px-6 lg:px-10 lg:py-20 2xl:px-14">
         <div className={cn("relative overflow-hidden rounded-[2rem] bg-[#08285b] text-white shadow-[0_34px_90px_rgba(8,40,91,0.24)]", siteContainer)}>
           <Image
-            src="/images/contact-water-tower.jpg"
+            src="/images/water-tank-big.png"
             alt=""
             fill
             sizes="(max-width: 768px) 100vw, 1320px"
