@@ -29,27 +29,27 @@ const compactApplications = applicationsContent.items.slice(0, 8);
 const heroCollageItems = [
   {
     title: "Industrial",
-    src: "/images/water-tank-big.png",
+    src: "/images/hero/industrial.png",
     className: "col-start-1 col-span-2 row-start-1 row-span-3 rounded-tl-[1.75rem]",
   },
   {
     title: "Commercial",
-    src: "/images/frp-water-tank.png",
+    src: "/images/hero/commercial.png",
     className: "col-start-3 col-span-2 row-start-1 row-span-3",
   },
   {
     title: "Residential",
-    src: "/images/product-storage-tank.jpg",
+    src: "/images/hero/residential.png",
     className: "col-start-5 col-span-2 row-start-1 row-span-4 rounded-tr-[1.75rem] text-direction-ltr",
   },
   {
     title: "Infrastructure",
-    src: "/images/water-tank-square.png",
+    src: "/images/hero/infra.png",
     className: "col-start-1 col-span-3 row-start-4 row-span-3 rounded-bl-[1.75rem]",
   },
   {
     title: "Hospitality",
-    src: "/images/standard-panel-design.png",
+    src: "/images/hero/hospitality.png",
     className: "col-start-4 col-span-3 row-start-5 row-span-2 rounded-br-[1.75rem]",
   },
 ];
@@ -57,35 +57,35 @@ const heroCollageItems = [
 const sectorCards = [
   {
     title: "Industrial Facilities",
-    image: "/images/water-tank-big.png",
+    image: "/images/gallery/1.png",
   },
   {
     title: "Commercial Projects",
-    image: "/images/frp-water-tank.png",
+    image: "/images/gallery/2.png",
   },
   {
     title: "Infrastructure",
-    image: "/images/water-tank-square.png",
+    image: "/images/gallery/3.png",
   },
   {
     title: "Hospitals",
-    image: "/images/product-storage-tank.jpg",
+    image: "/images/gallery/4.png",
   },
   {
     title: "Hotels",
-    image: "/images/standard-panel-design.png",
+    image: "/images/gallery/5.png",
   },
   {
     title: "Residential",
-    image: "/images/blueprint.png",
+    image: "/images/gallery/1.png",
   },
   {
     title: "Municipal",
-    image: "/images/frp-water-tank.png",
+    image: "/images/gallery/2.png",
   },
   {
     title: "Irrigation",
-    image: "/images/water-tank-big.png",
+    image: "/images/gallery/3.png",
   },
 ];
 

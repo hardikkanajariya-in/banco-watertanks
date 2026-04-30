@@ -5,22 +5,22 @@ import { useRef, useState, useEffect } from "react";
 
 const aboutGalleryImages = [
   {
-    src: "/images/water-tank-big.png",
+    src: "/images/about/4.png",
     label: "Industrial Facility",
     alt: "Industrial facility for engineered water storage solutions",
   },
   {
-    src: "/images/frp-water-tank.png",
+    src: "/images/about/2.png",
     label: "Plant Operations",
     alt: "Industrial plant and utility infrastructure",
   },
   {
-    src: "/images/water-tank-square.png",
+    src: "/images/about/3.png",
     label: "Infrastructure",
     alt: "Large construction and infrastructure development",
   },
   {
-    src: "/images/product-storage-tank.jpg",
+    src: "/images/about/1.png",
     label: "Project Support",
     alt: "Modern project planning and commercial workspace",
   },

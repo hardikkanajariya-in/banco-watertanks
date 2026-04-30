@@ -146,17 +146,26 @@ export default function AboutPage() {
           </div>
 
           {/* Bottom Statement */}
-          <div className="mt-14 overflow-hidden rounded-[2rem] bg-[#0c5aa6] shadow-[0_24px_60px_rgba(12,90,166,0.22)]">
-            <div className="relative px-6 py-8 sm:px-8 lg:px-10">
-              <div className="pointer-events-none absolute right-[-5%] top-[-60%] h-56 w-56 rounded-full bg-white/10 blur-2xl" />
+          <div className="mt-14 overflow-hidden rounded-[2rem] shadow-[0_24px_60px_rgba(12,90,166,0.22)]">
+            <div className="relative grid gap-7 p-6 sm:p-8 lg:p-10 grid-cols-[1.05fr_0.95fr] lg:items-center">
+              <div>
+                <Image
+                  src="/images/blueprint-white.png"
+                  alt="Standard panel design diagram"
+                  width={720}
+                  height={480}
+                  className="h-auto w-[80%] object-contain"
+                  priority={false}
+                />
+              </div>
 
-              <div className="relative grid gap-5 lg:grid-cols-[1fr_auto] lg:items-center">
-                <p className="max-w-4xl text-lg font-bold leading-8 text-white sm:text-xl">
+              <div className="relative">
+                <p className="max-w-4xl text-lg font-bold leading-8 sm:text-xl">
                   BANCO combines manufacturing experience, engineering reliability,
                   and regional presence to deliver dependable water storage solutions.
                 </p>
 
-                <div className="inline-flex w-fit rounded-full border border-white/25 px-5 py-3 text-[11px] font-extrabold uppercase tracking-[0.24em] text-white">
+                <div className="inline-flex w-fit rounded-full border border-blue/75 px-5 py-3 text-[11px] font-extrabold uppercase tracking-[0.24em]">
                   Reliable Water Storage
                 </div>
               </div>

@@ -50,36 +50,48 @@ export default function ProductPage() {
           </div>
 
           {/* Text Content */}
-          <div className="space-y-7 text-[15px] font-medium leading-8 text-[#4a4a4a] sm:text-base sm:leading-8">
-            <p className="text-justify">
-              It is an obvious fact, which nonetheless deserves emphasizing, that
-              water is fundamental to our daily lives. Whether for drinking, cooking,
-              washing or cleaning, as well as industrial and commercial requirements.
-              As demand grows year by year, the management and conservation of supplies
-              becomes ever more critical, the highest standards of purity of the
-              delivered product are insisted upon.
-            </p>
+          <div className="space-y-7 text-[15px] font-medium leading-8 text-[#4a4a4a] sm:text-base sm:leading-8 grid lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
+            <div>
+              <p className="text-justify">
+                It is an obvious fact, which nonetheless deserves emphasizing, that
+                water is fundamental to our daily lives. Whether for drinking, cooking,
+                washing or cleaning, as well as industrial and commercial requirements.
+                As demand grows year by year, the management and conservation of supplies
+                becomes ever more critical, the highest standards of purity of the
+                delivered product are insisted upon.
+              </p>
 
-            <p className="text-justify">
-              The FRP Panel Type Water Tanks storage system has been designed and
-              developed for the single purpose of meeting these demands, with utmost
-              efficiency and flexibility, with uncompromising levels of quality and
-              reliability. Specified to meet the most rigorous conditions, it has
-              become the system of choice around the world for applications from
-              individual homes to major building and industrial complexes.
-            </p>
+              <p className="text-justify">
+                The FRP Panel Type Water Tanks storage system has been designed and
+                developed for the single purpose of meeting these demands, with utmost
+                efficiency and flexibility, with uncompromising levels of quality and
+                reliability. Specified to meet the most rigorous conditions, it has
+                become the system of choice around the world for applications from
+                individual homes to major building and industrial complexes.
+              </p>
 
-            <p className="text-justify">
-              The FRP Panel Type Water Tanks system is supremely flexible and provide
-              free-standing long term storage capacity. Our water tanks conserve water
-              to the highest quality standards, serving the needs of private
-              residences, accommodation complexes, hospitals, hotels and offices, as
-              well as industrial, municipal and irrigation projects where large-scale
-              water storage is required. Every unit is supplied to the same standard of
-              design and specification, to the size and shape best suited to every need
-              of the customer. Assembly and installation is straight forward, and can
-              be easily carried out by the user or contractor.
-            </p>
+              <p className="text-justify">
+                The FRP Panel Type Water Tanks system is supremely flexible and provide
+                free-standing long term storage capacity. Our water tanks conserve water
+                to the highest quality standards, serving the needs of private
+                residences, accommodation complexes, hospitals, hotels and offices, as
+                well as industrial, municipal and irrigation projects where large-scale
+                water storage is required. Every unit is supplied to the same standard of
+                design and specification, to the size and shape best suited to every need
+                of the customer. Assembly and installation is straight forward, and can
+                be easily carried out by the user or contractor.
+              </p>
+            </div>
+            <div className="mx-5 flex flex-1 items-center justify-center">
+              <Image
+                src="/images/water-tank-big.png"
+                alt="Standard panel design diagram"
+                width={1080}
+                height={720}
+                className="h-auto w-full object-contain"
+                priority={false}
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -100,30 +112,30 @@ export default function ProductPage() {
 
           <div className="flex">
             <div className="mx-auto flex justify-center">
-            <Image
-              src="/images/standard-panel-design.png"
-              alt="Standard panel design diagram"
-              width={720}
-              height={480}
-              className="h-auto w-[80%] object-contain"
-              priority={false}
-            />
-          </div>
+              <Image
+                src="/images/standard-panel-design.png"
+                alt="Standard panel design diagram"
+                width={720}
+                height={480}
+                className="h-auto w-[80%] object-contain"
+                priority={false}
+              />
+            </div>
 
-          {/* Optional callouts for mobile/content support */}
-          <div className="mt-10">
-            {productContent.standardPanelDesign.callouts.map((item) => (
-              <ul
-                key={item}
-                className="px-4 py-3 text-sm font-medium leading-6 text-slate-600 shadow-[0_8px_24px_rgba(12,90,166,0.05)] backdrop-blur"
-              >
-                <li className="relative pl-5 text-[#2b2b2b]">
-                  <span className="absolute left-0 top-[11px] h-1.5 w-1.5 rounded-full bg-[#0c5aa6]" />
-                  {item}
-                </li>
-              </ul>
-            ))}
-          </div>
+            {/* Optional callouts for mobile/content support */}
+            <div className="mt-10">
+              {productContent.standardPanelDesign.callouts.map((item) => (
+                <ul
+                  key={item}
+                  className="px-4 py-3 text-sm font-medium leading-6 text-slate-600 shadow-[0_8px_24px_rgba(12,90,166,0.05)] backdrop-blur"
+                >
+                  <li className="relative pl-5 text-[#2b2b2b]">
+                    <span className="absolute left-0 top-[11px] h-1.5 w-1.5 rounded-full bg-[#0c5aa6]" />
+                    {item}
+                  </li>
+                </ul>
+              ))}
+            </div>
           </div>
         </div>
       </section>
