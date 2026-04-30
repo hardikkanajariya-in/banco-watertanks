@@ -204,7 +204,7 @@ function ClientSectorMarquee() {
           {scrollingCards.map((item, index) => (
             <article
               key={`${item.title}-${index}`}
-              className="group relative flex min-h-[220px] w-[270px] shrink-0 flex-col justify-between overflow-hidden rounded-[1.75rem] border border-white/25 bg-[#08285b] p-6 text-white shadow-[0_22px_55px_rgba(8,40,91,0.18)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_30px_75px_rgba(8,40,91,0.26)] sm:w-[310px]"
+              className="group relative flex min-h-[220px] w-[270px] shrink-0 flex-col justify-end overflow-hidden rounded-[1.75rem] border border-white/25 bg-[#08285b] p-6 text-white shadow-[0_22px_55px_rgba(8,40,91,0.18)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_30px_75px_rgba(8,40,91,0.26)] sm:w-[310px]"
             >
               <div
                 className="absolute inset-0 bg-cover bg-center transition duration-700 group-hover:scale-110"
@@ -215,31 +215,10 @@ function ClientSectorMarquee() {
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(41,185,236,0.35),transparent_42%)]" />
               <div className="absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-white/80 to-transparent" />
 
-              <div className="relative">
-                <div className="mb-6 flex items-center justify-between">
-                  <span className="rounded-full border border-white/25 bg-white/12 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-white backdrop-blur-md">
-                    Sector
-                  </span>
-                </div>
-
-                <h3 className="max-w-[14rem] text-xl font-extrabold uppercase leading-tight tracking-[0.08em] text-white">
-                  {item.title}
-                </h3>
-              </div>
-
               <div className="relative mt-8">
-                <p className="text-[14px] font-medium leading-7 text-white/82">
-                  BANCO FRP water storage solutions are suitable for demanding
-                  project environments.
-                </p>
-
                 <div className="mt-5 flex items-center justify-between border-t border-white/20 pt-4">
                   <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#9fe9ff]">
-                    Trusted Use
-                  </span>
-
-                  <span className="text-lg font-bold text-white transition group-hover:translate-x-1">
-                    →
+                    {item.title}
                   </span>
                 </div>
               </div>

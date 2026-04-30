@@ -89,10 +89,6 @@ export default function ProductPage() {
         id="standard-panel-design"
         className="relative w-full overflow-hidden bg-white px-4 py-14 sm:px-6 lg:px-10 lg:py-20 2xl:px-14"
       >
-        {/* Soft water background */}
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-72 bg-gradient-to-t from-[#edf8ff] via-[#f8fcff] to-transparent opacity-90" />
-        <div className="pointer-events-none absolute -bottom-24 left-0 h-80 w-full rounded-[50%] bg-[#dff1fb] opacity-40 blur-3xl" />
-
         <div className={cn("relative", siteContainer)}>
           <div className="mb-10">
             <h2 className="text-3xl font-extrabold uppercase tracking-[0.12em] text-[#0c5aa6] sm:text-4xl">
@@ -102,27 +98,32 @@ export default function ProductPage() {
             <div className="mt-2 h-[3px] w-full max-w-[820px] bg-gradient-to-r from-[#0c5aa6] via-[#78aed7] to-transparent" />
           </div>
 
-          <div className="mx-auto flex justify-center">
+          <div className="flex">
+            <div className="mx-auto flex justify-center">
             <Image
               src="/images/standard-panel-design.png"
               alt="Standard panel design diagram"
-              width={1100}
-              height={820}
-              className="h-auto w-full object-contain"
+              width={720}
+              height={480}
+              className="h-auto w-[80%] object-contain"
               priority={false}
             />
           </div>
 
           {/* Optional callouts for mobile/content support */}
-          <div className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-10">
             {productContent.standardPanelDesign.callouts.map((item) => (
-              <div
+              <ul
                 key={item}
-                className="rounded-xl border border-[#dcecf7] bg-white/80 px-4 py-3 text-sm font-medium leading-6 text-slate-600 shadow-[0_8px_24px_rgba(12,90,166,0.05)] backdrop-blur"
+                className="px-4 py-3 text-sm font-medium leading-6 text-slate-600 shadow-[0_8px_24px_rgba(12,90,166,0.05)] backdrop-blur"
               >
-                {item}
-              </div>
+                <li className="relative pl-5 text-[#2b2b2b]">
+                  <span className="absolute left-0 top-[11px] h-1.5 w-1.5 rounded-full bg-[#0c5aa6]" />
+                  {item}
+                </li>
+              </ul>
             ))}
+          </div>
           </div>
         </div>
       </section>

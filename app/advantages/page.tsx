@@ -106,15 +106,6 @@ function BrochureHeading({ children }: { children: string }) {
   );
 }
 
-function WaterBackground() {
-  return (
-    <>
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-80 bg-gradient-to-t from-[#edf8ff] via-[#f8fcff] to-transparent opacity-95" />
-      <div className="pointer-events-none absolute -bottom-24 left-0 h-80 w-full rounded-[50%] bg-[#dff1fb] opacity-40 blur-3xl" />
-      <div className="pointer-events-none absolute bottom-0 left-0 h-52 w-full bg-[radial-gradient(circle_at_30%_50%,rgba(12,90,166,0.08),transparent_18%),radial-gradient(circle_at_60%_55%,rgba(12,90,166,0.06),transparent_16%),radial-gradient(circle_at_75%_70%,rgba(12,90,166,0.05),transparent_20%)]" />
-    </>
-  );
-}
 const benefitIconMap = {
   "Excellent Hygiene": Virus,
   "Pure Water Quality": Droplets01,
@@ -154,7 +145,6 @@ export default function AdvantagesPage() {
       />
       {/* FRP Tank Advantages */}
       <section className="relative w-full overflow-hidden bg-white px-4 py-14 sm:px-6 lg:px-10 lg:py-20 2xl:px-14">
-        <WaterBackground />
 
         <div className={cn("relative", siteContainer)}>
           <BrochureHeading>FRP Tank Advantages</BrochureHeading>
@@ -196,8 +186,6 @@ export default function AdvantagesPage() {
 
       {/* Benefits of FRP Tanks */}
       <section className="relative w-full overflow-hidden bg-white px-4 py-14 sm:px-6 lg:px-10 lg:py-20 2xl:px-14">
-        <WaterBackground />
-
         <div className={cn("relative", siteContainer)}>
           <BrochureHeading>Benefits of FRP Tanks</BrochureHeading>
 
