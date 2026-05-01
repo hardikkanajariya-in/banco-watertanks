@@ -32,6 +32,16 @@ const tankAdvantages = [
     title: "Minimal Cleaning Requirement",
     description:
       "The smooth interior surfaces, and free-draining design of FRP Panel Type Water Tanks minimizes any opportunity for pollutants, whether originating internally or externally to develop and accumulate. Routine cleaning requirements are consequently simple and infrequent, with no risk of leaving residual material or cleaning agents inside the tank."
+  },
+  {
+    title: "Complete Drainage",
+    description:
+      "The base of the FRP Panel Type Water Tank is constructed with convex bottom panels. This not only provides a positive sealing pressure, which increases as the water height increases, but also enables a free flow of water from all parts of the tank to the concave drainage panel. Complete and fast drainage from the lowest point is thus ensured, with no possibility for static water to accumulate and become stale or contaminated."
+  },
+  {
+    title: "Flexural Strength",
+    description:
+      "FRP Panel Type Water Tanks have excellent flexural strength, also known as modulus of rupture, bend strength, or fracture strength. It is defined as a material’s ability to resist deformation under load."
   }
 ];
 
