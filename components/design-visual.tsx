@@ -4,7 +4,7 @@ import { LayersThree01 } from "@untitledui/icons";
 import { Badge } from "@/components/ui/badge";
 
 const designCallouts = [
-  "1000 x 1000 mm modular panel system",
+  "1000mm x 1000mm modular panel system",
   "Bolted assembly with sealing gaskets",
   "Interior bracing in galvanized steel or SS304/316",
   "Integrated ladder, overflow, and drain accessories"

@@ -33,14 +33,14 @@ export function StatsStrip({ items }: StatsStripProps) {
               <article
                 key={item.value}
                 className={cn(
-                  "flex flex-col items-center text-center px-4 relative",
+                  "flex flex-col items-center text-center px-0 relative",
                   index > 0 && "pt-10 sm:pt-0 border-t border-white/10 sm:border-t-0"
                 )}
               >
                 <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-white/5 text-[#29b9ec] ring-1 ring-white/20 shadow-[0_0_30px_rgba(41,185,236,0.15)]">
                   <Icon className="size-7" strokeWidth={1.5} aria-hidden="true" />
                 </div>
-                <h4 className="text-4xl lg:text-[2.6rem] font-bold tracking-tight text-white mb-4">
+                <h4 className="text-4xl lg:text-[2rem] font-bold tracking-tight text-white mb-4">
                   {item.value}
                 </h4>
                 <p className="text-[15px] leading-relaxed text-[#bad9ee] max-w-[260px]">

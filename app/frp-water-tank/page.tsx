@@ -234,13 +234,13 @@ export default function ProductPage() {
 
             {/* Right Product Image */}
             <div className="flex justify-center lg:justify-end">
-              <div className="relative mt-2 w-full max-w-[380px]">
+              <div className="relative mt-2 w-full max-w-[480px]">
                 <div className="absolute -inset-6 rounded-full bg-[#eaf5fb] opacity-50 blur-3xl" />
 
                 <img
                   src="/images/frp-water-tank.png"
                   alt="FRP panel type water tank assembly"
-                  className="relative z-10 w-full object-contain drop-shadow-[0_20px_35px_rgba(15,74,130,0.18)]"
+                  className="relative z-10 h-100 w-100 object-contain drop-shadow-[0_20px_35px_rgba(15,74,130,0.18)]"
                 />
               </div>
             </div>

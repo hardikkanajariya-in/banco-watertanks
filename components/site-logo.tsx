@@ -7,9 +7,11 @@ type SiteLogoProps = {
   compact?: boolean;
   theme?: "light" | "dark";
   className?: string;
+  width?: number;
+  height?: number;
 };
 
-export function SiteLogo({ compact = false, theme = "light", className }: SiteLogoProps) {
+export function SiteLogo({ compact = false, theme = "light", className, width, height }: SiteLogoProps) {
   const isDark = theme === "dark";
 
   return (
@@ -18,9 +20,9 @@ export function SiteLogo({ compact = false, theme = "light", className }: SiteLo
         <Image 
           src="/images/banco-logo.png" 
           alt="Banco Water Tank Logo" 
-          width={180} 
-          height={64} 
-          className="h-12 w-auto object-contain"
+          width={width || 180} 
+          height={height || 64} 
+          className="h-auto w-auto object-contain"
           priority
         />
       </div>

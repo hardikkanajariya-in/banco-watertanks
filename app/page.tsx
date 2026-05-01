@@ -402,7 +402,6 @@ export default function HomePage() {
           <BrochureHeading
             eyebrow="Product Strength"
             title="Why choose FRP panel tanks"
-            description="Key product strengths presented in a clean brochure-style layout for quick understanding."
           />
 
           <div className="grid gap-0 border-y border-[#d8e8f4] md:grid-cols-2">
@@ -444,10 +443,6 @@ export default function HomePage() {
               </h2>
 
               <div className="mt-2 h-[3px] w-full max-w-[820px] bg-gradient-to-r from-[#0c5aa6] via-[#78aed7] to-transparent" />
-
-              <p className="mt-5 max-w-3xl text-[15px] font-medium leading-8 text-[#4a4a4a] sm:text-base">
-                {applicationsContent.intro}
-              </p>
             </div>
 
             <Button
@@ -499,7 +494,6 @@ export default function HomePage() {
           <BrochureHeading
             eyebrow="Our Clients"
             title="Trusted by industry stakeholders"
-            description="We partner with organizations across Tanzania to deliver reliable water storage solutions. Client logos can be added here later."
           />
 
           <ClientSectorMarquee />

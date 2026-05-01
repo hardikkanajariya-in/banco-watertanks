@@ -121,24 +121,52 @@ export default function AboutPage() {
           </div>
 
           {/* Bottom Statement */}
-          <div className="mt-14 overflow-hidden rounded-[2rem] shadow-[0_24px_60px_rgba(12,90,166,0.22)]">
-            <div className="relative grid gap-7 p-6 sm:p-8 lg:p-10 grid-cols-[1.05fr_0.95fr] lg:items-center">
-              <div>
+          <div className="mt-12 overflow-hidden rounded-[2rem] border border-[#cfe5f6] bg-white shadow-[0_24px_60px_rgba(12,90,166,0.16)]">
+            <div className="relative grid items-center gap-8 bg-[radial-gradient(circle_at_18%_20%,rgba(41,185,236,0.12),transparent_34%),linear-gradient(135deg,#ffffff_0%,#eef7fd_100%)] p-6 sm:p-8 lg:grid-cols-[0.95fr_1.05fr] lg:p-10">
+              {/* Blueprint visual */}
+              <div className="relative flex min-h-[300px] items-center justify-center overflow-hidden rounded-[1.5rem] border border-[#d8eaf7] bg-white">
+                <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(135deg,rgba(12,90,166,0.04),transparent_45%,rgba(41,185,236,0.08))]" />
+
                 <Image
                   src="/images/blueprint-white.png"
                   alt="Standard panel design diagram"
                   width={720}
                   height={480}
-                  className="h-auto w-[80%] object-contain"
+                  className="relative h-auto w-full max-w-[520px] object-contain p-4"
                   priority={false}
                 />
               </div>
 
+              {/* Content */}
               <div className="relative">
-                <p className="max-w-4xl text-lg font-bold leading-8 sm:text-xl">
-                  BANCO combines manufacturing experience, engineering reliability,
-                  and regional presence to deliver dependable water storage solutions.
+                <span className="mb-4 inline-flex rounded-full border border-[#29b9ec]/30 bg-[#29b9ec]/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.22em] text-[#0c5aa6]">
+                  Engineered Confidence
+                </span>
+
+                <h3 className="max-w-2xl font-heading text-2xl font-bold leading-tight text-[#08285b] sm:text-3xl">
+                  Built for reliable water storage performance.
+                </h3>
+
+                <p className="mt-4 max-w-2xl text-base font-medium leading-8 text-[#365f82]">
+                  BANCO combines manufacturing experience, engineering reliability, and
+                  regional presence to deliver dependable FRP panel type water storage
+                  solutions.
                 </p>
+
+                <div className="mt-7 grid gap-3 sm:grid-cols-3">
+                  {[
+                    "Modular panel design",
+                    "Reliable installation",
+                    "Long-term durability"
+                  ].map((item) => (
+                    <div
+                      key={item}
+                      className="rounded-2xl border border-[#d7eaf7] bg-white/80 px-4 py-4 text-sm font-semibold text-[#0a3158] shadow-[0_12px_30px_rgba(12,90,166,0.08)]"
+                    >
+                      {item}
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -171,23 +199,25 @@ export default function AboutPage() {
 
           <div className="grid gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:items-stretch">
             {/* Left Statement Panel */}
-            <div className="relative overflow-hidden rounded-[2rem] bg-[#0c5aa6] p-7 text-white shadow-[0_24px_60px_rgba(12,90,166,0.22)] sm:p-8 lg:p-9">
+            <div className="relative overflow-hidden rounded-[2rem] bg-[#0c5aa6] px-7 py-10 text-white shadow-[0_24px_60px_rgba(12,90,166,0.22)] sm:px-8 sm:py-12 lg:px-9 lg:py-12">
               <div className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-white/10 blur-2xl" />
               <div className="pointer-events-none absolute -bottom-20 -left-20 h-56 w-56 rounded-full bg-[#1aa7de]/30 blur-2xl" />
 
-              <div className="relative">
-                <div className="mb-7 inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-2 backdrop-blur-sm">
+              <div className="relative flex h-full min-h-[260px] flex-col items-center justify-center text-center">
+                <div className="mb-5 inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-2 backdrop-blur-sm">
                   <p className="text-[11px] font-extrabold uppercase tracking-[0.24em] text-[#c7f4ff]">
                     Network Strength
                   </p>
                 </div>
 
-                <h3 className="max-w-md text-3xl font-black uppercase leading-[1.05] tracking-[0.07em] text-white sm:text-4xl lg:text-[2.6rem]">
+                <h3 className="max-w-[14ch] text-3xl font-black uppercase leading-[1.05] tracking-[0.06em] text-white sm:text-4xl lg:text-[2.5rem]">
                   Reliable Production
-                  <span className="block text-[#78d7ff]">Manufacturing Base</span>
+                  <span className="mt-2 block text-[#78d7ff]">
+                    Manufacturing Base
+                  </span>
                 </h3>
 
-                <div className="my-7 h-[3px] w-full bg-gradient-to-r from-white via-[#78d7ff] to-transparent" />
+                <div className="mt-6 h-[3px] w-28 bg-gradient-to-r from-white via-[#78d7ff] to-transparent" />
               </div>
             </div>
 
