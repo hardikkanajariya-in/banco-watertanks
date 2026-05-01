@@ -31,7 +31,6 @@ export function CtaBanner({ title, text, primary, secondary }: CtaBannerProps) {
               {primary.label}
               <ArrowRight className="size-4" strokeWidth={2} aria-hidden="true" />
             </Button>
-            {secondary?.href != "" ? <Button href={secondary?.href} variant="secondary" className="w-full border-white/20 bg-white/10 text-white hover:border-white/50 hover:bg-white/14 hover:text-white sm:w-auto">{secondary?.label}</Button> : null}
           </div>
         </div>
       </div>

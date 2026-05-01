@@ -50,16 +50,6 @@ export function ContactBlock() {
               </div>
             </div>
 
-            <div className="group flex items-start gap-5">  
-              <div className="mt-1 flex h-12 w-12 shrink-0 items-center justify-center rounded-[1rem] bg-white/10 ring-1 ring-white/20 transition-all group-hover:bg-[#29b9ec]">
-                <User01 className="size-6 text-white" strokeWidth={1.5} aria-hidden="true" />
-              </div>
-              <div>
-                <span className="block text-[11px] font-semibold uppercase tracking-widest text-[#9fe9ff]">Contact Person</span>
-                <span className="mt-1 block text-base font-medium text-white">{contactDetails.person}</span>
-              </div>
-            </div>
-
             <div className="group flex items-start gap-5">
               <div className="mt-1 flex h-12 w-12 shrink-0 items-center justify-center rounded-[1rem] bg-white/10 ring-1 ring-white/20 transition-all group-hover:bg-[#29b9ec]">
                 <Phone className="size-6 text-white" strokeWidth={1.5} aria-hidden="true" />

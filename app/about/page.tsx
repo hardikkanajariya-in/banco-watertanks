@@ -120,31 +120,6 @@ export default function AboutPage() {
             </div>
           </div>
 
-          {/* Bullet Points */}
-          <div className="mt-14 rounded-[2rem] border border-[#d8e8f4] bg-white p-6 shadow-[0_18px_45px_rgba(12,90,166,0.07)] sm:p-8">
-            <div className="mb-7">
-              <p className="text-[12px] font-extrabold uppercase tracking-[0.28em] text-[#1aa7de]">
-                Why It Matters
-              </p>
-
-              <h3 className="mt-2 text-2xl font-black uppercase tracking-[0.08em] text-[#0c5aa6] sm:text-3xl">
-                Built On Practical Advantages
-              </h3>
-            </div>
-
-            <ul className="grid gap-x-10 gap-y-5 md:grid-cols-2">
-              {aboutContent.bullets.map((item) => (
-                <li key={item} className="flex gap-4">
-                  <span className="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-[#1aa7de] shadow-[0_0_0_5px_rgba(26,167,222,0.12)]" />
-
-                  <p className="text-[15px] font-medium leading-7 text-[#4a4a4a]">
-                    {item}
-                  </p>
-                </li>
-              ))}
-            </ul>
-          </div>
-
           {/* Bottom Statement */}
           <div className="mt-14 overflow-hidden rounded-[2rem] shadow-[0_24px_60px_rgba(12,90,166,0.22)]">
             <div className="relative grid gap-7 p-6 sm:p-8 lg:p-10 grid-cols-[1.05fr_0.95fr] lg:items-center">
@@ -164,10 +139,6 @@ export default function AboutPage() {
                   BANCO combines manufacturing experience, engineering reliability,
                   and regional presence to deliver dependable water storage solutions.
                 </p>
-
-                <div className="inline-flex w-fit rounded-full border border-blue/75 px-5 py-3 text-[11px] font-extrabold uppercase tracking-[0.24em]">
-                  Reliable Water Storage
-                </div>
               </div>
             </div>
           </div>
@@ -196,11 +167,6 @@ export default function AboutPage() {
             </h2>
 
             <div className="mt-3 h-[3px] w-full max-w-[900px] bg-gradient-to-r from-[#0c5aa6] via-[#78aed7] to-transparent" />
-
-            <p className="mt-5 text-[15px] font-medium leading-8 text-[#4a4a4a] sm:text-base">
-              Our operations are strategically placed across Tanzania to ensure rapid
-              distribution and exceptional project coordination across the region.
-            </p>
           </div>
 
           <div className="grid gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:items-stretch">
@@ -218,16 +184,10 @@ export default function AboutPage() {
 
                 <h3 className="max-w-md text-3xl font-black uppercase leading-[1.05] tracking-[0.07em] text-white sm:text-4xl lg:text-[2.6rem]">
                   Reliable Production
-                  <span className="block text-[#78d7ff]">Regional Reach</span>
+                  <span className="block text-[#78d7ff]">Manufacturing Base</span>
                 </h3>
 
                 <div className="my-7 h-[3px] w-full bg-gradient-to-r from-white via-[#78d7ff] to-transparent" />
-
-                <p className="text-[15px] font-medium leading-8 text-white/85 sm:text-base">
-                  BANCO&apos;s manufacturing network supports consistent quality, faster
-                  coordination, and dependable supply for water storage projects across
-                  residential, commercial, industrial, and infrastructure requirements.
-                </p>
               </div>
             </div>
 
@@ -242,7 +202,7 @@ export default function AboutPage() {
                   <div className="relative grid gap-5 lg:grid-cols-[12rem_1fr] lg:items-start">
                     <div>
                       <p className="text-[11px] font-extrabold uppercase tracking-[0.2em] text-[#1aa7de]">
-                        Primary Hub
+                        Primary Manufacturing Site
                       </p>
 
                       <h3 className="mt-3 text-2xl font-black uppercase leading-tight tracking-[0.06em] text-[#0c5aa6]">
@@ -283,72 +243,6 @@ export default function AboutPage() {
                 ))}
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section
-        id="leadership"
-        className="relative overflow-hidden bg-gradient-to-br from-[#eef6ff] via-white to-[#f7fbff] px-4 py-16 sm:px-6 lg:px-10 lg:py-24 2xl:px-14"
-      >
-        <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-[#0f60b2]/10 blur-3xl" />
-        <div className="absolute -bottom-28 -left-24 h-80 w-80 rounded-full bg-[#08285b]/10 blur-3xl" />
-
-        <div className={cn("relative", siteContainer)}>
-          <div className="mx-auto max-w-3xl text-center">
-            <span className="inline-flex rounded-full border border-[#0f60b2]/20 bg-white px-4 py-2 text-xs font-bold uppercase tracking-[0.22em] text-[#0f60b2] shadow-sm">
-              Leadership
-            </span>
-
-            <h2 className="mt-5 text-3xl font-extrabold tracking-tight text-[#08285b] sm:text-4xl lg:text-5xl">
-              Executive Team
-            </h2>
-
-            <h3 className="mt-3 text-lg font-semibold text-[#0c3d86] sm:text-xl">
-              Meet the leaders driving our vision
-            </h3>
-
-            <p className="mx-auto mt-5 max-w-2xl text-[15px] leading-7 text-slate-600 sm:text-base">
-              Our executive team brings decades of manufacturing and industry experience to guide the group&apos;s strategic growth.
-            </p>
-          </div>
-
-          <div className="mt-14 grid gap-8 sm:grid-cols-2">
-            {[1, 2].map((i) => (
-              <article
-                key={i}
-                className="group relative overflow-hidden rounded-3xl border border-white/70 bg-white/80 p-6 shadow-[0_20px_60px_rgba(8,40,91,0.12)] backdrop-blur transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_30px_80px_rgba(8,40,91,0.18)]"
-              >
-                <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#08285b] via-[#0f60b2] to-[#57a6ff]" />
-
-                <div className="grid gap-7 md:grid-cols-[9rem_1fr] md:items-start">
-                  <div className="relative">
-                    <div className="absolute inset-0 rounded-2xl bg-[#0f60b2]/20 blur-xl transition group-hover:bg-[#0f60b2]/30" />
-                    <div className="relative flex h-36 w-36 items-center justify-center overflow-hidden rounded-2xl border border-[#d3dee7] bg-gradient-to-br from-white to-[#eef6ff] text-xs font-bold uppercase tracking-[0.2em] text-slate-400 shadow-inner">
-                      Image
-                    </div>
-                  </div>
-
-                  <div>
-                    <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#0f60b2]">
-                      Leadership Profile
-                    </p>
-
-                    <h3 className="mt-3 text-2xl font-bold text-[#08285b]">
-                      Jane Doe
-                    </h3>
-
-                    <p className="mt-2 inline-flex rounded-full bg-[#0f60b2]/10 px-3 py-1 text-xs font-bold uppercase tracking-[0.14em] text-[#0c3d86]">
-                      Managing Director
-                    </p>
-
-                    <p className="mt-5 max-w-xl text-[15px] leading-7 text-slate-600">
-                      Jane brings over 20 years of manufacturing experience, leading the company&apos;s expansion across East Africa.
-                    </p>
-                  </div>
-                </div>
-              </article>
-            ))}
           </div>
         </div>
       </section>

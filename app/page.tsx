@@ -525,11 +525,11 @@ export default function HomePage() {
             <div className="flex min-h-[480px] flex-col justify-between">
               <div>
                 <p className="inline-flex border border-white/20 bg-white/10 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.24em] text-[#c7f4ff] backdrop-blur-md">
-                  Contact Banco
+                  Contact US
                 </p>
 
                 <h2 className="mt-6 max-w-[20ch] text-3xl font-extrabold uppercase leading-[0.94] tracking-[0.055em] text-white sm:text-4xl lg:text-5xl">
-                  Talk To The Neomech Team
+                  Talk To The BANCO Team
                 </h2>
 
                 <div className="mt-6 h-[3px] w-full max-w-[430px] bg-gradient-to-r from-white via-[#78d7ff] to-transparent" />
@@ -562,9 +562,6 @@ export default function HomePage() {
             <div className="rounded-[1.75rem] border border-white/16 bg-white/[0.08] p-4 backdrop-blur-md sm:p-5 lg:p-6">
               <div className="mb-5 flex flex-col gap-2 border-b border-white/14 pb-5 sm:flex-row sm:items-end sm:justify-between">
                 <div>
-                  <p className="text-[11px] font-bold uppercase tracking-[0.24em] text-[#9fe9ff]">
-                    Direct Lines
-                  </p>
                   <h3 className="mt-2 text-2xl font-extrabold uppercase tracking-[0.06em] text-white">
                     Contact Details
                   </h3>

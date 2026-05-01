@@ -5,7 +5,7 @@ export const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.com"
 export const contactDetails = {
   company: "Neomech (T) Ltd.",
   person: "Mr. Dipesh Joshi",
-  phone: "+255 799 056 641",
+  phone: "+255 713 530 644",
   email: "sales@neomech.co.tz",
   address: "46/3 Nyerere Road, Dar es Salaam, Tanzania"
 };
@@ -42,14 +42,14 @@ export const brandStats = [
   { value: "1965", label: "BANCO's manufacturing story in Tanzania began in 1965." },
   { value: "3 Plants", label: "Production presence across Dar es Salaam, Mwanza, and Mbeya." },
   { value: "10 Branches", label: "Nationwide branch network serving customers across Tanzania." },
-  { value: "1000 x 1000", label: "Standard modular FRP panel format for flexible tank assembly." }
+  { value: "1000mm x 1000mm", label: "Standard modular FRP panel format for flexible tank assembly." }
 ];
 
 export const homeTickerItems = [
   { value: "1965", label: "Manufacturing legacy in Tanzania." },
   { value: "3 Plants", label: "Dar es Salaam, Mwanza, and Mbeya." },
   { value: "10 Branches", label: "Nationwide customer reach." },
-  { value: "1000 x 1000", label: "Standard modular FRP panel size." }
+  { value: "1000mm x 1000mm", label: "Standard modular FRP panel size." }
 ];
 
 export const homeHero = {
@@ -72,7 +72,7 @@ export const homeValueCards = [
   {
     title: "Flexible Panel Design",
     description:
-      "The modular 1000 x 1000 mm system allows shape, capacity, and accessories to match project constraints."
+      "The modular 1000mm x 1000mm system allows shape, capacity, and accessories to match project constraints."
   },
   {
     title: "Built for Real Projects",
@@ -122,8 +122,8 @@ export const aboutContent = {
     "Established in 1965, BANCO pioneered the foam mattress industry in Tanzania and quickly became a trusted name for everyday comfort products. The group later expanded into plastics manufacturing and now introduces FRP water tanks as its latest innovation through Neomech (T) Ltd.",
   paragraphs: [
     "With three state-of-the-art manufacturing plants strategically located in Dar es Salaam, Mwanza, and Mbeya, BANCO serves customers across the country through a network of 10 branches.",
-    "The broader BANCO portfolio now includes plastics manufacturing focused on shearing film, jerry cans, and buckets alongside the new FRP panel type water tank system.",
-    "The water tank division builds on the group's long-standing manufacturing discipline to deliver a safer, more durable, and more flexible water storage solution for residential, commercial, and industrial projects."
+    "The broader BANCO portfolio now includes plastics manufacturing focused on extrusion film, jerry cans, and buckets alongside the new FRP panel type water tank system.",
+    "The water tank division builds on the group's long-standing manufacturing principles to deliver a safer, more durable, and more flexible water storage solution for residential, commercial, and industrial projects."
   ],
   bullets: [
     "Established Tanzanian manufacturing legacy dating back to 1965",
@@ -160,10 +160,10 @@ export const productContent = {
     description:
       "Every unit is supplied to a consistent design and specification standard, then configured to the size and shape best suited to the customer's needs.",
     callouts: [
-      "Standard roof, side, bottom, and manhole panels at 1000 x 1000 mm",
+      "Standard roof, side, bottom, and manhole panels at 1000mm x 1000mm",
       "On-site bolted assembly using nuts, bolts, washers, sealing gaskets, and steel stiffeners",
       "Interior bracing available in stainless steel SS304/316 or galvanized steel",
-      "Included system accessories such as ladders, flanges, level indicators, overflow and drain nozzles"
+      "Included are system accessories such as ladders, flanges, level indicators, overflow and drain nozzles"
     ]
   },
   technicalSpecifications: [
@@ -206,7 +206,7 @@ export const productContent = {
     {
       title: "Standard Accessories",
       items: [
-        "Roof, side, bottom, and manhole panels in 1000 x 1000 mm format",
+        "Roof, side, bottom, and manhole panels in 1000mm x 1000mm mm format",
         "Steel angle and C-channel with HDG nuts, bolts, and washers",
         "Inside or outside ladders in galvanized or stainless steel",
         "HDG or SS304/316 flanges, plus overflow and drain nozzles",
@@ -487,7 +487,7 @@ export const contactContent = {
 export const ctaContent = {
   title: "Need a safer and more flexible water storage solution?",
   text:
-    "Speak with Neomech (T) Ltd. about BANCO FRP panel type water tanks for your next residential, commercial, or industrial project.",
+    "Speak with our team about BANCO FRP panel type water tanks for your next residential, commercial, or industrial project.",
   primary: { label: "Contact Us", href: "/contact" },
   secondary: { label: "View Comparison", href: "/comparison" }
 };

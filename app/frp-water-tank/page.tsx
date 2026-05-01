@@ -56,7 +56,7 @@ export default function ProductPage() {
                 It is an obvious fact, which nonetheless deserves emphasizing, that
                 water is fundamental to our daily lives. Whether for drinking, cooking,
                 washing or cleaning, as well as industrial and commercial requirements.
-                As demand grows year by year, the management and conservation of supplies
+                As demand grows year by year, the management and conservation of water supplies
                 becomes ever more critical, the highest standards of purity of the
                 delivered product are insisted upon.
               </p>
@@ -161,11 +161,6 @@ export default function ProductPage() {
             </h2>
 
             <div className="mt-3 h-[3px] w-full max-w-[780px] bg-gradient-to-r from-[#0c5aa6] via-[#78aed7] to-transparent" />
-
-            <p className="mt-5 max-w-2xl text-[15px] font-medium leading-7 text-slate-600">
-              Operating conditions and mechanical properties taken directly from the brochure,
-              presented in a clean engineering-friendly format.
-            </p>
           </div>
 
           {/* Tables */}

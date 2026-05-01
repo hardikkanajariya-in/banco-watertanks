@@ -20,10 +20,6 @@ export function SiteFooter() {
       <div className={cn("grid gap-10 px-4 py-14 sm:px-6 lg:grid-cols-[1.25fr_0.8fr_0.8fr_0.8fr_1fr] lg:px-10 2xl:px-14", siteContainer)}>
         <div className="space-y-5">
           <SiteLogo theme="dark" />
-          <p className="max-w-xl text-sm leading-7 text-white/72">
-            BANCO Water Tank by Neomech (T) Ltd. supplies modular FRP panel type water tanks for hygienic, durable,
-            and flexible water storage across residential, commercial, industrial, and public-use projects.
-          </p>
         </div>
 
         {groups.map((group) => (
