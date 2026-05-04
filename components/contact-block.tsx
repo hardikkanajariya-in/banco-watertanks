@@ -106,12 +106,14 @@ export function ContactBlock() {
 
     try {
       const recaptchaToken = await getRecaptchaToken(contactFormConfig.recaptchaV3SiteKey);
+      if (!recaptchaToken.trim()) {
+        throw new Error("reCAPTCHA verification failed. Please try again.");
+      }
 
       const payload = {
         access_key: contactFormConfig.web3FormsAccessKey,
         subject: "New BANCO contact inquiry",
         from_name: "BANCO Water Tanks Website",
-        recaptcha_response: recaptchaToken,
         ...Object.fromEntries(formData.entries()),
       };
 

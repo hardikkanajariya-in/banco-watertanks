@@ -177,13 +177,13 @@ function HeroCollage() {
         ))}
 
         {/* Center rounded logo block */}
-        <div className="relative col-span-1 col-start-4 row-span-1 row-start-4 flex items-center justify-center overflow-hidden border border-[#d8e8f4] bg-white shadow-[0_20px_48px_rgba(8,40,91,0.16)] transition-all duration-500 hover:-translate-y-1 hover:scale-[1.03] hover:shadow-[0_28px_60px_rgba(8,40,91,0.2)]">
+        <div className="relative col-span-1 col-start-4 row-span-1 row-start-4 flex items-center justify-center overflow-hidden bg-transparent transition-all duration-500 hover:-translate-y-1 hover:scale-[1.03]">
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(41,185,236,0.12),transparent_42%)]" />
 
           <img
-            src="/images/banco-logo.png"
+            src="/images/logo.png"
             alt="BANCO Water Tank"
-            className="relative z-10 h-full w-full object-contain p-2 transition-transform duration-500"
+            className="relative z-10 scale-175 h-full w-full object-contain p-2 transition-transform duration-500"
           />
         </div>
       </div>
