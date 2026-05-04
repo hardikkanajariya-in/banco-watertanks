@@ -1,4 +1,4 @@
 export const contactFormConfig = {
-  web3FormsAccessKey: "3064cd8e-c4a4-479e-a0d5-fda67955ab06",
+  web3FormsAccessKey: "2c26b364-f076-4523-861e-33c33a2b5b7b",
   recaptchaV3SiteKey: "6LeSk9gsAAAAAMI-UwPCCmtww9YLVhJ9Jjmimlvx",
 } as const;
