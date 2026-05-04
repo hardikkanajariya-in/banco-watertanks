@@ -88,7 +88,6 @@ export function AboutGallery() {
                 fill
                 sizes="(max-width: 1024px) 100vw, 52vw"
                 className="object-cover transition duration-700 hover:scale-105"
-                unoptimized
               />
 
               <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(8,40,91,0.03)_0%,rgba(8,40,91,0.62)_100%)]" />

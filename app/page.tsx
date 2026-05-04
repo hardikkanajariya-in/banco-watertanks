@@ -151,7 +151,7 @@ function HeroCollage() {
       <div className="pointer-events-none absolute -inset-5 rounded-[2.5rem] bg-[#0c5aa6]/10 blur-3xl" />
 
       <div className="relative grid h-[390px] grid-cols-6 grid-rows-6 gap-3 sm:h-[500px] lg:h-[520px]">
-        {heroCollageItems.map((image, index) => (
+        {heroCollageItems.map((image) => (
           <div
             key={image.title}
             className={[
@@ -160,9 +160,14 @@ function HeroCollage() {
               image.className,
             ].join(" ")}
           >
-            <div
-              className="absolute inset-0 bg-cover bg-center transition duration-700 group-hover:scale-150"
-              style={{ backgroundImage: `url(${image.src})` }}
+            <Image
+              src={image.src}
+              alt={`${image.title} water storage application`}
+              fill
+              priority={image.title === "Infrastructure"}
+              fetchPriority={image.title === "Infrastructure" ? "high" : undefined}
+              sizes="(max-width: 640px) 33vw, (max-width: 1024px) 28vw, 33vw"
+              className="object-cover transition duration-700 group-hover:scale-150"
             />
 
             <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(8,40,91,0.08)_0%,rgba(8,40,91,0.62)_100%)]" />
@@ -180,10 +185,12 @@ function HeroCollage() {
         <div className="relative col-span-1 col-start-4 row-span-1 row-start-4 flex items-center justify-center overflow-hidden bg-transparent transition-all duration-500 hover:-translate-y-1 hover:scale-[1.03]">
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(41,185,236,0.12),transparent_42%)]" />
 
-          <img
+          <Image
             src="/images/logo.png"
             alt="BANCO Water Tank"
-            className="relative z-10 scale-175 h-full w-full object-contain p-2 transition-transform duration-500"
+            fill
+            sizes="140px"
+            className="relative z-10 h-full w-full scale-175 object-contain p-2 transition-transform duration-500"
           />
         </div>
       </div>
@@ -206,9 +213,12 @@ function ClientSectorMarquee() {
               key={`${item.title}-${index}`}
               className="group relative flex min-h-[220px] w-[270px] shrink-0 flex-col justify-end overflow-hidden rounded-[1.75rem] border border-white/25 bg-[#08285b] p-6 text-white shadow-[0_22px_55px_rgba(8,40,91,0.18)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_30px_75px_rgba(8,40,91,0.26)] sm:w-[310px]"
             >
-              <div
-                className="absolute inset-0 bg-cover bg-center transition duration-700 group-hover:scale-110"
-                style={{ backgroundImage: `url(${item.image})` }}
+              <Image
+                src={item.image}
+                alt={`${item.title} water storage projects`}
+                fill
+                sizes="(max-width: 640px) 270px, 310px"
+                className="object-cover transition duration-700 group-hover:scale-110"
               />
 
               <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(8,40,91,0.18)_0%,rgba(8,40,91,0.72)_54%,rgba(8,40,91,0.94)_100%)]" />
@@ -237,7 +247,7 @@ export default function HomePage() {
       <section className="relative isolate overflow-hidden bg-[#f6fbff] px-4 py-12 sm:px-6 sm:py-14 lg:px-10 lg:py-5 2xl:px-14">
         <div className={cn("relative grid gap-10 pt-5 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:gap-14", siteContainer)}>
           <div className="max-w-2xl">
-            <p className="mt-6 text-[11px] font-bold uppercase tracking-[0.24em] text-[#10a8e8] sm:text-xs">
+            <p className="mt-6 text-[11px] font-bold uppercase tracking-[0.24em] text-[#0f60b2] sm:text-xs">
               {homeHero.eyebrow}
             </p>
 
@@ -476,7 +486,7 @@ export default function HomePage() {
                     </h3>
                   </div>
 
-                  <p className="text-[15px] font-extrabold leading-6 text-[#10a8e8]">
+                  <p className="text-[15px] font-extrabold leading-6 text-[#0f60b2]">
                     {item.description}
                   </p>
                 </div>

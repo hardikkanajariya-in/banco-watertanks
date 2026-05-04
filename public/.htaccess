@@ -1,0 +1,14 @@
+Options -MultiViews
+RewriteEngine On
+
+# Serve real files and directories directly.
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Map clean URLs to exported HTML files.
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI}.html -f
+RewriteRule ^(.+?)/?$ $1.html [L,QSA]
+
+# Use the exported 404 page when Apache resolves a missing route.
+ErrorDocument 404 /404.html

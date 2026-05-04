@@ -62,7 +62,7 @@ export function ApplicationGrid({
                 </h3>
               </div>
 
-              <p className="text-[15px] font-extrabold leading-6 text-[#10a8e8]">
+              <p className="text-[15px] font-extrabold leading-6 text-[#0f60b2]">
                 {item.description}
               </p>
             </div>
