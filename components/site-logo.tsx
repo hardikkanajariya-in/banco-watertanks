@@ -16,7 +16,7 @@ export function SiteLogo({ compact = false, theme = "light", className, width, h
 
   return (
     <Link href="/" className={cn("flex items-center gap-3", className)}>
-      <div className="relative flex h-16 w-auto items-center justify-center overflow-hidden">
+      <div className="relative flex h-16 w-50 items-center justify-center overflow-hidden">
         <Image 
           src="/images/banco-logo.png" 
           alt="Banco Water Tank Logo" 
