@@ -181,7 +181,7 @@ function HeroCollage() {
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(41,185,236,0.12),transparent_42%)]" />
 
           <img
-            src="/images/logo.png"
+            src="/images/banco-logo.png"
             alt="BANCO Water Tank"
             className="relative z-10 h-full w-full object-contain p-2 transition-transform duration-500"
           />
