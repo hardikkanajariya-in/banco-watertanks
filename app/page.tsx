@@ -293,10 +293,6 @@ export default function HomePage() {
                 </div>
               ))}
             </div>
-
-            <p className="mt-7 text-sm font-medium leading-7 text-[#4a4a4a]">
-              A quality product by Neomech (T) Ltd.
-            </p>
           </div>
 
           <HeroCollage />

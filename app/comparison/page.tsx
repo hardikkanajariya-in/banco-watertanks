@@ -37,25 +37,16 @@ export default function ComparisonPage() {
       />
 
       {/* Comparison Table */}
-      <section className="relative w-full overflow-hidden bg-white px-4 py-14 sm:px-6 lg:px-10 lg:py-20 2xl:px-14">
+      <section className="relative w-full overflow-hidden bg-white px-4 py-14 sm:px-6 lg:px-10 lg:py-10 2xl:px-14">
         <WaterBackground />
 
         <div className={cn("relative w-full", siteContainer)}>
           <div className="mb-14 max-w-[920px]">
-            <p className="mb-2 text-[0.72rem] font-bold uppercase tracking-[0.28em] text-[#0c5aa6]">
-              Banco Vs Others
-            </p>
-
-            <h2 className="max-w-[900px] text-[clamp(1.8rem,4vw,2.65rem)] font-extrabold uppercase leading-[1.08] tracking-[0.12em] text-[#0c5aa6]">
-              Comparison Table Aligned To The Supplied Flyer
+            <h2 className="max-w-full text-[clamp(1.3rem,6vw,2.45rem)] font-extrabold uppercase leading-[1.08] tracking-[0.12em] text-[#0c5aa6]">
+              Comparison of Banco Water Tanks with Others
             </h2>
 
             <div className="mt-3 h-[3px] w-full max-w-[900px] bg-gradient-to-r from-[#0c5aa6] via-[#78aed7] to-transparent" />
-
-            <p className="mt-5 max-w-[850px] text-[15px] font-medium leading-8 text-[#4a4a4a] sm:text-base">
-              The wording below has been corrected from the image you shared so
-              the table matches the brochure comparison more closely.
-            </p>
           </div>
 
           <ComparisonTable rows={comparisonContent.rows} />

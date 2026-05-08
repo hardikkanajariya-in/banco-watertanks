@@ -82,10 +82,6 @@ export default function AboutPage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-[#071f3d]/70 via-transparent to-transparent" />
 
                   <div className="absolute bottom-5 left-5 right-5">
-                    <div className="inline-flex rounded-full bg-white/15 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.22em] text-white backdrop-blur-md">
-                      Facility View
-                    </div>
-
                     <h3 className="mt-4 max-w-md text-2xl font-black uppercase leading-tight tracking-[0.08em] text-white sm:text-3xl">
                       BANCO Manufacturing Facility
                     </h3>
@@ -210,9 +206,9 @@ export default function AboutPage() {
                   </p>
                 </div>
 
-                <h3 className="max-w-[14ch] text-3xl font-black uppercase leading-[1.05] tracking-[0.06em] text-white sm:text-4xl lg:text-[2.5rem]">
+                <h3 className="max-w-[20ch] text-3xl font-black uppercase leading-[1.05] tracking-[0.06em] text-white sm:text-4xl lg:text-[2.5rem]">
                   Reliable Production
-                  <span className="mt-2 block text-[#78d7ff]">
+                  <span className="mt-2 block text-center text-[#78d7ff]">
                     Manufacturing Base
                   </span>
                 </h3>
